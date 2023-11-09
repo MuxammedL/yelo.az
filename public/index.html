@@ -1,16 +1,508 @@
 <!DOCTYPE html>
-<html lang="az">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../public/images/apple-touch-icon-152x152.webp" type="image/x-icon">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="../public/images/apple-touch-icon-152x152.webp"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../src/scss/style.css" />
     <title>Yelo Bank - Müasir Bank Xidmətləri</title>
-</head>
-<body>
-    
+  </head>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+  <body>
+
+    <div class="mobile-top" style="background-image: url(images/modal_bg.webp)">
+      <div class="mobile-top-inner">
+        <div class="logo-side">
+          <div class="logo">
+            <a
+              href="index.html"
+              style="background-image: url(images/short_logo.svg)"
+            ></a>
+          </div>
+          <p>Yelo-dan çoxfunksiyalı mobil əlavə</p>
+        </div>
+        <div class="app-links">
+          <ul>
+            <li>
+              <a
+                href="https://apps.apple.com/az/app/yelo/id1515449668"
+                target="_blank"
+                class="app-link"
+              >
+                <div
+                  class="app apple"
+                  style="background-image: url(images/apple_black.svg)"
+                >
+                  <span>Download on the</span>
+                  <p>App Store</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/details?id=az.yelo.app&hl=ru&pli=1"
+                target="_blank"
+                class="app-link"
+              >
+                <div
+                  class="app android"
+                  style="background-image: url(images/google_play_black.svg)"
+                >
+                  <span>Get it on</span>
+                  <p>Google Play</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://appgallery.huawei.com/#/app/C104500649"
+                target="_blank"
+                class="app-link"
+              >
+                <div
+                  class="app huawei"
+                  style="background-image: url(images/huawei_play_black.svg)"
+                >
+                  <span>Get it on</span>
+                  <p>AppGallery</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="right-side">
+          <button
+            class="close-btn"
+            style="background-image: url(images/white_close_icon.svg)"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-section">
+      <div class="search-inner">
+        <div class="wrapper">
+          <form>
+            <input type="text" name="search" placeholder="Axtarış" />
+            <button
+              type="submit"
+              style="background-image: url(images/search_header.svg)"
+            ></button>
+          </form>
+          <button
+            type="button"
+            style="background-image: url(images/menu_toggle_close.svg)"
+            class="close-btn-search"
+          ></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-color"></div>
+
+    <header class="d-none">
+      <div class="header-top">
+        <div class="wrapper">
+          <div class="section-nav">
+            <ul>
+              <li>
+                <a href="index.html" class="active">Fərdi</a>
+              </li>
+              <li>
+                <a href="#">Biznes</a>
+              </li>
+              <li>
+                <a href="#">Bank Haqqında</a>
+              </li>
+            </ul>
+          </div>
+          <div class="contact-nav">
+            <ul>
+              <li>
+                <a href="#">Onlayn növbə</a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="icon">
+                    <img src="images/ht_location.svg" alt="ht_location" />
+                  </div>
+                  <span>ATM və Filiallar</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="icon">
+                    <img src="images/ht_call.svg" alt="ht_call" />
+                  </div>
+                  <span>981</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  style="background-image: url(images/search_header.svg)"
+                  class="search-btn"
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  style="background-image: url(images/active_lang.svg)"
+                  class="selected-lang"
+                  >AZ</a
+                >
+                <div class="select-box">
+                  <div class="select-box-inner">
+                    <ul>
+                      <li><a href="#" class="active">AZ</a></li>
+                      <li><a href="#">EN</a></li>
+                      <li><a href="#">RU</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="header-main">
+          <div class="wrapper">
+            <div class="left-side">
+              <a href="index.html">
+                <img src="images/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <nav class="navbar">
+              <ul>
+                <li>
+                  <a href="loans.html">Kreditlər</a>
+                </li>
+                <li>
+                  <a href="cards.html">Kartlar</a>
+                </li>
+                <li>
+                  <a href="№">Əmanətlət</a>
+                </li>
+                <li>
+                  <a href="cashback.html">Cashback</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="right-side">
+              <a href="javascript:void(0)" class="message">
+                <img src="images/message_trigger.svg" alt="message" />
+              </a>
+              <a href="#" class="internet-bank">
+                <img src="images/o_banking.svg" alt="o_banking" />
+                <span>İnternet-bank</span>
+              </a>
+              <a href="javascript:void(0)" class="menu-toggle">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="header-additions">
+          <div class="wrapper">
+            <div class="additions">
+              <div class="top-additions">
+                <ul>
+                  <li>
+                    <a href="#">Onlayn növbə</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="icon">
+                        <img src="images/ht_location.svg" alt="ht_location" />
+                      </div>
+                      <span>ATM və Filiallar</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu">
+                <div class="menu-item">
+                  <a href="loans.html">Kreditlər</a>
+                  <ul>
+                    <li>
+                      <a href="loans.html">İstehlak krediti</a>
+                    </li>
+                    <li>
+                      <a href="loans.html">Onlayn kredit</a>
+                    </li>
+                    <li>
+                      <a href="loans.html">Daşınmaz əmlak girov krediti</a>
+                    </li>
+                    <li>
+                      <a href="loans.html">Əmanət təminatlı kredit</a>
+                    </li>
+                    <li>
+                      <a href="loans.html">İpoteka krediti</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-item">
+                  <a href="cards.html">Kartlar</a>
+                  <ul>
+                    <li>
+                      <a href="cards.html">Yelo Light</a>
+                    </li>
+                    <li>
+                      <a href="cards.html">Yelo Premium</a>
+                    </li>
+                    <li>
+                      <a href="cards.html">Yelo kredit/taksit kartı</a>
+                    </li>
+                    <li>
+                      <a href="cards.html">Yelo Digital Card</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-item">
+                  <a href="#">Əmanətlər</a>
+                  <ul>
+                    <li>
+                      <a href="#">Yelo Sabit</a>
+                    </li>
+                    <li>
+                      <a href="#">Yelo Yığım</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-item">
+                  <a href="#">Kart xidmətləri</a>
+                  <ul>
+                    <li>
+                      <a href="#">Google Pay</a>
+                    </li>
+                    <li>
+                      <a href="#">Apple Pay</a>
+                    </li>
+                    <li>
+                      <a href="#">Onlayn PIN SET</a>
+                    </li>
+                    <li>
+                      <a href="#">Cashback</a>
+                    </li>
+                    <li>
+                      <a href="#">PIN Reset</a>
+                    </li>
+                    <li>
+                      <a href="#">PIN kodun dəyişdirilməsi</a>
+                    </li>
+                    <li>
+                      <a href="#">SMS məlumatlandırma</a>
+                    </li>
+                    <li>
+                      <a href="#">Premium kart xidmətləri</a>
+                    </li>
+                    <li>
+                      <a href="#">3D secure</a>
+                    </li>
+                    <li>
+                      <a href="#">Cash by code</a>
+                    </li>
+                    <li>
+                      <a href="#">Card to Card</a>
+                    </li>
+                    <li>
+                      <a href="#">ATM PIN SET</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-item">
+                  <a href="#">Pul köçürmələri</a>
+                  <ul>
+                    <li>
+                      <a href="#">Zolotaya Korona</a>
+                    </li>
+                    <li>
+                      <a href="#">Visa Direct</a>
+                    </li>
+                    <li>
+                      <a href="#">Mastercard Moneysend </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-item">
+                  <a href="#">Onlayn xidmətlər</a>
+                  <ul>
+                    <li>
+                      <a href="#">Online kredit sifarişi</a>
+                    </li>
+                    <li>
+                      <a href="#">Onlayn ödəmə</a>
+                    </li>
+                    <li>
+                      <a href="#">Online kredit ödənişi</a>
+                    </li>
+                    <li>
+                      <a href="#">ƏDV geri al</a>
+                    </li>
+                    <li>
+                      <a href="#">ASAN pay </a>
+                    </li>
+                    <li>
+                      <a href="#">Təhsil ödənişləri</a>
+                    </li>
+                    <li>
+                      <a href="#">Parkinq ödənişləri</a>
+                    </li>
+                    <li>
+                      <a href="#">Onlayn növbə</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-item">
+                  <a href="#">Digər xidmətlər</a>
+                  <ul>
+                    <li>
+                      <a href="#">Hesablaşma-kassa xidməti</a>
+                    </li>
+                    <li>
+                      <a href="#">Depozit qutuları</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-item">
+                  <a href="cashback.html">Cashback</a>
+                </div>
+                <div class="menu-item">
+                  <a href="#">Forum</a>
+                </div>
+                <div class="menu-item">
+                  <a href="#">Kredit kalkulyatoru</a>
+                </div>
+                <div class="menu-item">
+                  <a href="#">Təklif və iradlar</a>
+                </div>
+              </div>
+              <div class="contact">
+                <div class="item">
+                  <p>Bizi tap</p>
+                  <b>Həsən bəy Zərdabi pros. 81k</b>
+                </div>
+                <div class="item">
+                  <p>Əlaqə nömrəsi</p>
+                  <b>981</b>
+                </div>
+                <div class="item">
+                  <p>Bizə yazın</p>
+                  <b
+                    ><a href="mailto:bank@yelo.az" target="_blank"
+                      >bank@yelo.az</a
+                    ></b
+                  >
+                </div>
+              </div>
+            </div>
+            <a href="#" class="promotion">
+              <img src="images/pre-sifaris-aze.webp" alt="pre-sifaris-aze" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="entrance">
+        <div class="swiper entranceSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <div class="yellow-bg"></div>
+                <div class="image">
+                  <img src="images/9_9-fb-cover_1_1.png" alt="9_9-fb-cover_1_1">
+                </div>
+              </div>
+              <div class="slide-content">
+                <div class="content-inner">
+                  <h3>50 000 AZN-dək</h3>
+                  <p>Qızıl payız krediti</p>
+                  <a href="#" class="curved-btn">Sifariş et</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <div class="yellow-bg"></div>
+                <div class="image">
+                  <img src="images/taksit_karti_-_sayt_cover-aze_updated.webp" alt="taksit_karti_-_sayt_cover-aze_updated">
+                </div>
+              </div>
+              <div class="slide-content">
+                <div class="content-inner">
+                  <h3>Taksit funksiyalı kredit kartı</h3>
+                  <p>70/24 üstünlüklərlə</p>
+                  <a href="#">
+                    <div class="more-details">
+                      <span>Daha ətraflı</span>
+                      <img src="images/bl_arr_bttn.svg" alt="bl_arr_bttn">
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <div class="yellow-bg"></div>
+                <div class="image">
+                  <img src="images/onlayn_kredit-saytcover_1.png" alt="onlayn_kredit-saytcover_1">
+                </div>
+              </div>
+              <div class="slide-content">
+                <div class="content-inner">
+                  <h3>Banka gəlmədən</h3>
+                  <p>Tam onlayn kredit</p>
+                  <a href="#" class="curved-btn">Sifariş et</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slide-img">
+                <div class="yellow-bg"></div>
+                <div class="image">
+                  <img src="images/2-deq-krdt-aze.png" alt="2-deq-krdt-aze">
+                </div>
+              </div>
+              <div class="slide-content">
+                <div class="content-inner">
+                  <h3>Krediti cəmi 2 dəqiqəyə al</h3>
+                  <p>Onlayn sifariş et, filiala gəlmə</p>
+                  <a href="#">Sifariş et</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/swiper.js"></script>
+  </body>
 </html>

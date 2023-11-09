@@ -1,14 +1,27 @@
 @font-face {
   font-family: "TT Commons Medium";
-  src: url("../../fonts/TT\ Commons\ Medium.otf");
+  src: url("../fonts/subset-TTCommons-Medium.woff2");
 }
 
 @font-face {
-  font-family: "TT Commons Light";
-  src: url("../../fonts/TT\ Commons\ Light.otf");
+  font-family: "TT Commons Regular";
+  src: url("../fonts/subset-TTCommons-Regular.woff2") ;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "TT Commons Bold";
-  src: url("../../fonts/TT\ Commons\ Bold.otf");
+  src: url("../fonts/subset-TTCommons-DemiBold.woff2");
+  font-weight: normal;
+  font-style: normal;
 }
+
+
+@font-face {
+  font-family: "TTFirsNeue Medium";
+  src: url('../fonts/subset-TTFirsNeue-Medium.woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+

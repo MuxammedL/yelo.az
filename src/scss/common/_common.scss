@@ -1,0 +1,78 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
+a, img, i, ol, ul, li,
+footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+a,*,
+button,
+span,
+p,
+i,
+input,
+select,
+textarea,
+img,
+*::after,
+*::before,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transition: all 0.3s ease;
+}
+
+button,input{
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    &:focus{
+      outline: none;
+    }
+}
+
+button,input,select{
+  font-family: "TT Commons Regular";
+}
+
+header, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body{
+  font: 16px/1.6 "TT Commons Regular", Arial, sans-serif;
+  &.o-hidden{
+    overflow: hidden ;
+    .header-bottom{
+      background-color: #fff;
+    }
+  }
+}
+
+.wrapper{
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @include Flexible($j-cont:space-between,$a-items:center); 
+}
+
+
+
+
+
