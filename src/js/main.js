@@ -12,17 +12,24 @@ const body = document.querySelector('body')
 const headerAdditions = document.querySelector('.header-additions')
 const navbar = document.querySelector('.navbar')
 const bgColor = document.querySelector('.bg-color')
-
+let prevScrollY = window.scrollY;
 
 
 
 
 window.addEventListener('scroll',()=>{
-  if(window.scrollY>10){
+  let currentScrollY = window.scrollY;
+  if(currentScrollY>prevScrollY && currentScrollY>10){
     header.classList.add('fix-head')
   }else{
     header.classList.remove('fix-head')
   }
+  if(window.scrollY>10){
+    header.classList.add('add-bg')
+  }else{
+    header.classList.remove('add-bg')
+  }
+  prevScrollY = currentScrollY
 })
 
 menuToggle.addEventListener('click',()=>{
