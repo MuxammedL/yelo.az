@@ -1,5 +1,5 @@
 var swiper = new Swiper(".entranceSwiper", {
-    spaceBetween: 30,
+    loop:true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

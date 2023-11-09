@@ -1,0 +1,69 @@
+%curved-btn {
+  margin: 20px 0;
+  padding: 13px 20px;
+  display: inline-block;
+  font-family: "TT Commons Bold";
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  span{
+    transition: none;
+  }
+  &::after {
+    content: "";
+    border-radius: 6px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+  @media (min-width: 992px) {
+    border-radius: 0;
+    font-size: 20px;
+    margin: 0;
+    width: 230px;
+    padding: 14px 20px;
+    color: #fff;
+    &::after {
+        border-radius: 0;
+      transform: skew(-14deg, 0);
+    }
+  }
+  &:hover {
+    color: #000;
+    &::after {
+      background-color: #fff;
+    }
+  }
+}
+
+%more-details {
+  margin: 20px 0;
+  padding: 13px 0;
+  font-family: "TT Commons Bold";
+  color: #000;
+  @include Flexible($a-items: center);
+  img {
+    width: 20px;
+    margin-left: 10px;
+    object-fit: contain;
+  }
+  @media (min-width: 992px) {
+    font-size: 20px;
+    padding: 14px 0;
+    margin: 0;
+    img{
+        width: 35px;
+    }
+  }
+  &:hover {
+    img {
+      margin-left: 20px;
+    }
+  }
+}
