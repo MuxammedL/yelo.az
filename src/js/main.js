@@ -13,7 +13,34 @@ const headerAdditions = document.querySelector(".header-additions");
 const navbar = document.querySelector(".navbar");
 const bgColor = document.querySelector(".bg-color");
 const main = document.querySelector("main");
+const modals = document.querySelector('.modals')
+const modalItems = modals.querySelectorAll('.modal-item')
+const modalClose = document.querySelector('.modal-close')
 let prevScrollY = window.scrollY;
+
+
+
+modalClose.addEventListener('click', () => {
+  modalItems.forEach((modalItem) => {
+    if (modalItem.dataset.modal == "stories-modal") {
+      modalItem.classList.remove('show');
+    }
+  });
+  setTimeout(() => {
+    modalItems.forEach((modalItem) => {
+      if (!modalItem.classList.contains('show')) {
+        modals.classList.remove('active');
+      }
+    });
+  }, 200);
+});
+
+window.addEventListener('click',(e)=>{
+  if(e.target==modals||e.target.dataset.modal=="stories-modal"){
+    modalClose.click()
+  }
+})
+
 
 window.addEventListener("scroll", () => {
   let currentScrollY = window.scrollY;

@@ -5,7 +5,10 @@
   top: 0px;
   left: 0px;
   z-index: 9999999;
-  display: block;
+  display: none;
+  &.active {
+    display: block;
+  }
   &::after {
     content: "";
     display: block;
@@ -18,25 +21,32 @@
     transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
   }
   .modals-group {
-    display: flex;
-    align-items: center;
+    @include Flexible($a-items: center);
     width: 100%;
     height: 100%;
     .modal-item {
       position: relative;
       z-index: 2;
       width: 100%;
-      display: none;
       transition: all 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
       opacity: 0;
       top: 50px;
-      opacity: 1;
-      top: 0;
       display: block;
+      padding: 0 15px;
+      &.show {
+        opacity: 1;
+        top: 0;
+      }
+      @media (min-width: 768px) {
+        padding: 0;
+      }
       .modal-content {
         position: relative;
         max-width: 760px;
-        margin: 0 auto;
+        margin: -55px auto 0;
+        @media (min-width: 768px) {
+          margin: 0 auto;
+        }
         .swiper {
           width: 100%;
           height: 480px;
@@ -51,7 +61,11 @@
               width: 100%;
               height: 100%;
               position: relative;
-              display: flex;
+              display: block;
+              @include Flexible($f-dir: column, $j-cont: space-between);
+              @media (min-width: 768px) {
+                @include Flexible($f-dir: row, $j-cont: normal);
+              }
               &.bg-green {
                 background-color: $green_color;
               }
@@ -64,37 +78,46 @@
               .text {
                 position: relative;
                 z-index: 2;
-                @include Flexible(
-                  $f-dir: column,
-                  $a-cont: stretch,
-                  $a-items: stretch,
-                  $j-cont: center
-                );
-                width: 50%;
-                height: 100%;
-                padding: 0 20px 0 60px;
+                width: 100%;
+                padding: 50px 20px 0;
                 color: #fff;
-                b {
-                  font-size: 27px;
-                  font-family: "TT Commons Medium";
-                  font-weight: normal;
-                  line-height: 1.3;
-                  margin-bottom: 20px;
-                  p {
-                    font-size: 19px;
-                    line-height: 22px;
-                  }
-                }
-                .action {
+                @media (min-width: 768px) {
                   @include Flexible(
                     $f-dir: column,
-                    $a-cont: stretch,
                     $a-items: stretch,
                     $j-cont: center
                   );
+                  width: 50%;
+                  height: 100%;
+                  padding: 0 20px 0 60px;
+                }
+                b {
+                  font-size: 24px;
+                  line-height: 28px;
+                  margin-bottom: 15px;
+                  font-family: "TT Commons Medium";
+                  font-weight: normal;
+                  display: block;
+                  p {
+                    font-size: 16px;
+                    line-height: 20px;
+                  }
+                  @media (min-width: 768px) {
+                    font-size: 27px;
+                    line-height: 1.3;
+                    margin-bottom: 20px;
+                    p {
+                      font-size: 19px;
+                      line-height: 22px;
+                    }
+                  }
+                }
+                .action {
+                  padding: 15px 0px;
+                  @include Flexible($a-items: center, $j-cont: flex-start);
+
                   .left-side {
                     width: 100%;
-                    padding-bottom: 30px;
                     .yelo-btn {
                       @extend %yelo-btn;
                     }
@@ -110,6 +133,7 @@
                           filter: brightness(0) invert(1);
                         }
                         padding: 5px 0;
+                        margin: 0;
                         @media (min-width: 992px) {
                           font-size: 16px;
                           padding: 5px 0;
@@ -126,14 +150,33 @@
                       }
                     }
                   }
+                  @media (min-width: 768px) {
+                    @include Flexible(
+                      $f-dir: column,
+                      $a-items: stretch,
+                      $j-cont: center
+                    );
+                    padding: 0;
+                    .left-side {
+                      padding-bottom: 30px;
+                    }
+                  }
                 }
               }
               .bg-img {
-                width: 50%;
-                @include Flexible($a-items: flex-end);
+                width: 100%;
+                height: 220px;
                 img {
                   object-fit: contain;
-                  height: auto;
+                  height: 100%;
+                }
+                @media (min-width: 768px) {
+                  width: 50%;
+                  height: 100%;
+                  @include Flexible($a-items: flex-end);
+                  img {
+                    height: auto;
+                  }
                 }
               }
             }
@@ -141,35 +184,48 @@
         }
         .stories-nav {
           .modal-close {
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 40px;
             position: absolute;
-            right: -70px;
-            top: 0px;
-            background: no-repeat center;
+            right: 0px;
+            top: 8px;
             display: block;
             z-index: 4;
+            background: no-repeat center;
+            background-size: 16px;
+            cursor: pointer;
+            transition: none;
+            @media (min-width: 992px) {
+              width: 70px;
+              height: 70px;
+              right: -70px;
+              top: 0px;
+              background-size: auto;
+            }
           }
-          .swiper-button-next {
-            right: -55px;
+          .swiper-button {
             width: 40px;
+            display: none;
             &::after {
               content: "";
               width: 33px;
               height: 22px;
-              background: url("../../public/images/next_story.svg") no-repeat
-                center/contain;
+              background: no-repeat center/contain;
+            }
+            @media (min-width: 992px) {
+              display: flex;
+            }
+          }
+          .swiper-button-next {
+            right: -55px;
+            &::after {
+              background-image: url("../../public/images/next_story.svg");
             }
           }
           .swiper-button-prev {
             left: -55px;
-            width: 40px;
             &::after {
-              content: "";
-              width: 33px;
-              height: 22px;
-              background: url("../../public/images/prev_story.svg") no-repeat
-                center/contain;
+              background-image: url("../../public/images/prev_story.svg");
             }
           }
           .swiper-stories-pagination {
@@ -206,25 +262,28 @@
           left: 0px;
           z-index: 5;
           width: 100%;
-          ul{
-            @include Flexible($j-cont:space-around);
-            padding: 0 15px;
-            li{
+          ul {
+            @include Flexible($j-cont: space-around);
+            padding: 0 50px 0 10px;
+            @media (min-width: 992px) {
+              padding: 0 15px;
+            }
+            li {
+              width: 100%;
+              padding: 0 10px;
+              .bar {
+                height: 4px;
                 width: 100%;
-                padding: 0 10px;
-                .bar{
-                    height: 4px;
-                    width: 100%;
-                    background: rgba(53, 18, 18, 0.3);
-                    border-radius: 10px;
-                    overflow: hidden;
-                    .holder{
-                        width: 0%;
-                        height: 100%;
-                        background: white;
-                        border-radius: 10px;
-                    }
+                background: rgba(255, 255, 255, 0.3);
+                border-radius: 10px;
+                overflow: hidden;
+                .holder {
+                  width: 0%;
+                  height: 100%;
+                  background: white;
+                  border-radius: 10px;
                 }
+              }
             }
           }
         }
