@@ -215,7 +215,7 @@
                 .bar{
                     height: 4px;
                     width: 100%;
-                    background: rgba(255,255,255,0.3);
+                    background: rgba(53, 18, 18, 0.3);
                     border-radius: 10px;
                     overflow: hidden;
                     .holder{
@@ -223,8 +223,6 @@
                         height: 100%;
                         background: white;
                         border-radius: 10px;
-                        // visibility: hidden;
-                        // animation: fillBar 10.1s linear infinite;
                     }
                 }
             }
