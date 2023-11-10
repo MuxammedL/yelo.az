@@ -7,7 +7,7 @@
   font-size: 16px;
   text-align: center;
   position: relative;
-  span{
+  span {
     transition: none;
   }
   &::after {
@@ -30,7 +30,7 @@
     padding: 14px 20px;
     color: #fff;
     &::after {
-        border-radius: 0;
+      border-radius: 0;
       transform: skew(-14deg, 0);
     }
   }
@@ -57,13 +57,31 @@
     font-size: 20px;
     padding: 14px 0;
     margin: 0;
-    img{
-        width: 35px;
+    img {
+      width: 35px;
     }
   }
   &:hover {
     img {
       margin-left: 20px;
     }
+  }
+}
+
+%yelo-btn {
+  height: 55px;
+  border-radius: 10px;
+  color: #000;
+  font-family: "TT Commons Bold";
+  font-size: 18px;
+  text-align: center;
+  padding: 13px 25px;
+  display: inline-block;
+  background: $primary_color;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
+  &:hover{
+    background-color: #000;
+    color: #fff;
   }
 }

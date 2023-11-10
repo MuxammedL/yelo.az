@@ -1,0 +1,236 @@
+.modals {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 9999999;
+  display: block;
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
+  }
+  .modals-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    .modal-item {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: none;
+      transition: all 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
+      opacity: 0;
+      top: 50px;
+      opacity: 1;
+      top: 0;
+      display: block;
+      .modal-content {
+        position: relative;
+        max-width: 760px;
+        margin: 0 auto;
+        .swiper {
+          width: 100%;
+          height: 480px;
+          border-radius: 20px;
+          overflow: hidden;
+          position: relative;
+          z-index: 2;
+          .swiper-slide {
+            width: 100%;
+            height: 480px;
+            .slide-content {
+              width: 100%;
+              height: 100%;
+              position: relative;
+              display: flex;
+              &.bg-green {
+                background-color: $green_color;
+              }
+              &.bg-blue {
+                background-color: $blue_color;
+              }
+              &.bg-red {
+                background-color: $red_color;
+              }
+              .text {
+                position: relative;
+                z-index: 2;
+                @include Flexible(
+                  $f-dir: column,
+                  $a-cont: stretch,
+                  $a-items: stretch,
+                  $j-cont: center
+                );
+                width: 50%;
+                height: 100%;
+                padding: 0 20px 0 60px;
+                color: #fff;
+                b {
+                  font-size: 27px;
+                  font-family: "TT Commons Medium";
+                  font-weight: normal;
+                  line-height: 1.3;
+                  margin-bottom: 20px;
+                  p {
+                    font-size: 19px;
+                    line-height: 22px;
+                  }
+                }
+                .action {
+                  @include Flexible(
+                    $f-dir: column,
+                    $a-cont: stretch,
+                    $a-items: stretch,
+                    $j-cont: center
+                  );
+                  .left-side {
+                    width: 100%;
+                    padding-bottom: 30px;
+                    .yelo-btn {
+                      @extend %yelo-btn;
+                    }
+                  }
+                  .right-side {
+                    width: 100%;
+                    a {
+                      display: inline-block;
+                      .more-details {
+                        @extend %more-details;
+                        color: #fff;
+                        img {
+                          filter: brightness(0) invert(1);
+                        }
+                        padding: 5px 0;
+                        @media (min-width: 992px) {
+                          font-size: 16px;
+                          padding: 5px 0;
+                          margin: 0;
+                          img {
+                            width: 30px;
+                          }
+                        }
+                        &:hover {
+                          img {
+                            margin-left: 20px;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .bg-img {
+                width: 50%;
+                @include Flexible($a-items: flex-end);
+                img {
+                  object-fit: contain;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+        .stories-nav {
+          .modal-close {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            right: -70px;
+            top: 0px;
+            background: no-repeat center;
+            display: block;
+            z-index: 4;
+          }
+          .swiper-button-next {
+            right: -55px;
+            width: 40px;
+            &::after {
+              content: "";
+              width: 33px;
+              height: 22px;
+              background: url("../../public/images/next_story.svg") no-repeat
+                center/contain;
+            }
+          }
+          .swiper-button-prev {
+            left: -55px;
+            width: 40px;
+            &::after {
+              content: "";
+              width: 33px;
+              height: 22px;
+              background: url("../../public/images/prev_story.svg") no-repeat
+                center/contain;
+            }
+          }
+          .swiper-stories-pagination {
+            position: absolute;
+            top: 100%;
+            text-align: center;
+            width: 100%;
+            padding: 15px 0 0 0;
+            span {
+              width: 50px;
+              height: 50px;
+              background-position: center;
+              background-size: cover;
+              border-radius: 100%;
+              opacity: 1;
+              &:first-child {
+                background-color: $green_color;
+                background-image: url("../../public/images/yelo-kart-500x500_1.webp");
+              }
+              &:nth-child(2) {
+                background-color: $blue_color;
+                background-image: url("../../public/images/kredit-banner-500x500.webp");
+              }
+              &:last-child {
+                background-color: $red_color;
+                background-image: url("../../public/images/taksit-karti-500x500.webp");
+              }
+            }
+          }
+        }
+        .stories-progress {
+          position: absolute;
+          top: 25px;
+          left: 0px;
+          z-index: 5;
+          width: 100%;
+          ul{
+            @include Flexible($j-cont:space-around);
+            padding: 0 15px;
+            li{
+                width: 100%;
+                padding: 0 10px;
+                .bar{
+                    height: 4px;
+                    width: 100%;
+                    background: rgba(255,255,255,0.3);
+                    border-radius: 10px;
+                    overflow: hidden;
+                    .holder{
+                        width: 0%;
+                        height: 100%;
+                        background: white;
+                        border-radius: 10px;
+                        // visibility: hidden;
+                        // animation: fillBar 10.1s linear infinite;
+                    }
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}
