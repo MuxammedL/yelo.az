@@ -94,9 +94,28 @@
   margin-left: 20px;
 }
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p,
-a, img, i, ol, ul, li,
-footer, header, nav, section, video {
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+i,
+ol,
+ul,
+li,
+footer,
+header,
+nav,
+section,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -104,7 +123,8 @@ footer, header, nav, section, video {
   box-sizing: border-box;
 }
 
-a, *,
+a,
+*,
 button,
 span,
 p,
@@ -124,26 +144,33 @@ h6 {
   transition: all 0.3s ease;
 }
 
-button, input {
+button,
+input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   border: none;
   background-color: transparent;
 }
-button:focus, input:focus {
+button:focus,
+input:focus {
   outline: none;
 }
 
-button, input, select {
+button,
+input,
+select {
   font-family: "TT Commons Regular";
 }
 
-header, nav, section {
+header,
+nav,
+section {
   display: block;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
@@ -171,6 +198,26 @@ body.o-hidden .header-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.b-red {
+  background-color: red;
+  margin-top: 50px;
 }
 
 .mobile-top {
@@ -1024,4 +1071,119 @@ header.fix-head .header-bottom .header-additions.show {
 }
 .entrance .swiper .swiper-pagination span.swiper-pagination-bullet-active {
   box-shadow: 0 0 0 4px #ffc628;
+}
+
+.stroies-section .title {
+  font-family: "TT Commons Bold";
+}
+.stroies-section .title b {
+  padding: 7px 0;
+  font-size: 20px;
+  line-height: normal;
+  display: inline-block;
+  vertical-align: middle;
+}
+.stroies-section .title span {
+  display: none;
+}
+@media (min-width: 992px) {
+  .stroies-section .title b {
+    font-size: 25px;
+  }
+  .stroies-section .title span {
+    width: 32px;
+    height: 32px;
+    background: #ffc628;
+    color: white;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 18px;
+    line-height: 36px;
+    margin: 0 0 0 8px;
+    vertical-align: baseline;
+  }
+}
+.stroies-section .stories.container {
+  padding: 0;
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide {
+  margin-left: 15px;
+  width: 305px !important;
+  height: 140px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+@media (min-width: 992px) {
+  .stroies-section .stories .swiper-wrapper .swiper-slide {
+    width: 346.5px !important;
+    margin-left: 20px;
+  }
+  .stroies-section .stories .swiper-wrapper .swiper-slide:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide:first-child {
+  background-color: #81BD5B;
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide:first-child span {
+  color: #81BD5B;
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide:nth-child(2) {
+  background-color: #0071c7;
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide:nth-child(2) span {
+  color: #0071c7;
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide:last-child {
+  background-color: #d82a34;
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide:last-child span {
+  color: #d82a34;
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide a .story-desc {
+  max-width: 140px;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide a .story-desc span {
+  background: white;
+  font-size: 13px;
+  font-family: "TT Commons Bold";
+  height: 24px;
+  line-height: 22px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 3px 12px;
+  box-sizing: border-box;
+  margin: 0 0 5px 0;
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide a .story-desc b {
+  width: 100%;
+  font-family: "TT Commons Medium";
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 0.19px;
+  line-height: 22px;
+  display: -webkit-box;
+  height: 66px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: normal;
+}
+@media (min-width: 992px) {
+  .stroies-section .stories .swiper-wrapper .swiper-slide a .story-desc {
+    max-width: 180px;
+  }
+}
+.stroies-section .stories .swiper-wrapper .swiper-slide a .story-image {
+  margin-left: auto;
+  width: 140px;
+  height: 140px;
 }/*# sourceMappingURL=style.css.map */

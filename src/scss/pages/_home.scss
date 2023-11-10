@@ -133,3 +133,121 @@
     }
   }
 }
+.stroies-section {
+  .title {
+    font-family: "TT Commons Bold";
+    b {
+      padding: 7px 0;
+      font-size: 20px;
+      line-height: normal;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span {
+      display: none;
+    }
+    @media (min-width: 992px) {
+      b {
+        font-size: 25px;
+      }
+      span {
+        width: 32px;
+        height: 32px;
+        background: #ffc628;
+        color: white;
+        border-radius: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 18px;
+        line-height: 36px;
+        margin: 0 0 0 8px;
+        vertical-align: baseline;
+      }
+    }
+  }
+  .stories {
+    &.container {
+      padding: 0;
+    }
+    .swiper-wrapper {
+      .swiper-slide {
+        margin-left: 15px;
+        width: 305px !important;
+        height: 140px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: block;
+        position: relative;
+        @media (min-width:992px) {
+            width: 346.5px !important;
+            margin-left: 20px;
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+        &:first-child {
+          background-color: $green_color;
+          span {
+            color: $green_color;
+          }
+        }
+        &:nth-child(2) {
+          background-color: $blue_color;
+          span {
+            color: $blue_color;
+          }
+        }
+        &:last-child {
+          background-color: $red_color;
+          span {
+            color: $red_color;
+          }
+        }
+        a {
+          .story-desc {
+            max-width: 140px;
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            span {
+              background: white;
+              font-size: 13px;
+              font-family: "TT Commons Bold";
+              height: 24px;
+              line-height: 22px;
+              border-radius: 20px;
+              display: inline-block;
+              padding: 3px 12px;
+              box-sizing: border-box;
+              margin: 0 0 5px 0;
+            }
+            b {
+              width: 100%;
+              font-family: "TT Commons Medium";
+              font-size: 18px;
+              color: #ffffff;
+              letter-spacing: 0.19px;
+              line-height: 22px;
+              display: -webkit-box;
+              height: 66px;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-weight: normal;
+            }
+            @media (min-width:992px) {
+                max-width: 180px;
+            }
+          }
+          .story-image {
+            margin-left: auto;
+            width: 140px;
+            height: 140px;
+          }
+        }
+      }
+    }
+  }
+}
