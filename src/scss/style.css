@@ -1,6 +1,8 @@
 @font-face {
   font-family: "TT Commons Medium";
   src: url("../fonts/subset-TTCommons-Medium.woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "TT Commons Regular";
@@ -237,6 +239,10 @@ body.o-hidden .header-bottom {
   }
 }
 
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
 .d-none {
   display: none;
 }
@@ -349,6 +355,7 @@ body.o-hidden .header-bottom {
   background: 50% no-repeat;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1490196078);
+  cursor: pointer;
 }
 
 .bg-color {
@@ -579,7 +586,7 @@ header .header-bottom .header-main .left-side {
   padding: 5px 0;
 }
 header .header-bottom .header-main .left-side a {
-  display: block;
+  display: flex;
   width: 94px;
 }
 header .header-bottom .header-main .left-side a img {
@@ -1364,7 +1371,7 @@ header.fix-head .header-bottom .header-additions.show {
 }
 @media (min-width: 992px) {
   .entrance .swiper .swiper-slide .slide-content {
-    max-width: 1100px;
+    max-width: 1140px;
     padding: 0 20px;
     margin: 0 auto;
     height: 100%;

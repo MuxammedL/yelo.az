@@ -96,6 +96,7 @@
         background: 50% no-repeat;
         border-radius: 50%;
         border: 1px solid $black_15;
+        cursor: pointer;
       }
     }
   }
@@ -345,7 +346,7 @@ header {
       .left-side {
         padding: 5px 0;
         a {
-          display: block;
+          display: flex;
           width: 94px;
           img {
             object-fit: contain;
