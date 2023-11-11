@@ -134,6 +134,10 @@
   }
 }
 .stroies-section {
+  margin-bottom: 30px;
+  @media (min-width: 992px) {
+    margin-bottom: 50px;
+  }
   .title {
     font-family: "TT Commons Bold";
     @include Flexible($a-items: center);
@@ -268,21 +272,69 @@
       background: $socials_bg_color;
       perspective: 2000px;
       position: relative;
-      .card-img{
+      .card-img {
         right: 40px;
-        box-shadow: 50px 60px 80px rgba(0,0,0,0.2);
-        transition: all 0.4s cubic-bezier(.52, .01, .16, 1);
+        box-shadow: 50px 60px 80px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s cubic-bezier(0.52, 0.01, 0.16, 1);
         position: absolute;
         top: 20px;
         border-radius: 10px;
-        transform: matrix3d(0.858606, 0.298387, 0, -0.000414946, -0.651602, 0.939378, 0, -4.94499e-05, 0, 0, 1, 0, 216, -3, 0, 1);
+        transform: matrix3d(
+          0.858606,
+          0.298387,
+          0,
+          -0.000414946,
+          -0.651602,
+          0.939378,
+          0,
+          -4.94499e-5,
+          0,
+          0,
+          1,
+          0,
+          216,
+          -3,
+          0,
+          1
+        );
         transform-origin: center;
         width: 130px;
         height: 210px;
         left: -47%;
+        overflow: hidden;
       }
-      .card-desc{
+      .card-desc {
         padding: 240px 20px 20px;
+        b {
+          font-family: "TT Commons Bold";
+          display: block;
+          font-size: 20px;
+          font-weight: normal;
+        }
+        p {
+          line-height: 20px;
+          color: $black_50;
+        }
+        .group{
+          @include Flexible($j-cont:space-between);
+          margin: 10px 0;
+          .g-item{
+            width: 50%;
+            p{
+              font-size: 15px;
+            }
+            b{
+              font-size: 22px;
+              font-family: "TT Commons Medium";
+            }
+          }
+        }
+        .yelo-btn{
+          width: 100%;
+          font-size: 16px;
+          height: auto;
+          line-height: 25.6px;
+        }
       }
     }
   }
@@ -296,6 +348,11 @@
         width: 50%;
         margin: 0;
         padding: 0 15px;
+        .card-desc {
+          b {
+            font-size: 22px;
+          }
+        }
       }
     }
   }

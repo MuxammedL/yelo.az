@@ -1422,6 +1422,14 @@ header.fix-head .header-bottom .header-additions.show {
   box-shadow: 0 0 0 4px #ffc628;
 }
 
+.stroies-section {
+  margin-bottom: 30px;
+}
+@media (min-width: 992px) {
+  .stroies-section {
+    margin-bottom: 50px;
+  }
+}
 .stroies-section .title {
   font-family: "TT Commons Bold";
   display: flex;
@@ -1570,9 +1578,41 @@ header.fix-head .header-bottom .header-additions.show {
   width: 130px;
   height: 210px;
   left: -47%;
+  overflow: hidden;
 }
 .loan-calculator .col .card .card-desc {
   padding: 240px 20px 20px;
+}
+.loan-calculator .col .card .card-desc b {
+  font-family: "TT Commons Bold";
+  display: block;
+  font-size: 20px;
+  font-weight: normal;
+}
+.loan-calculator .col .card .card-desc p {
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+.loan-calculator .col .card .card-desc .group {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.loan-calculator .col .card .card-desc .group .g-item {
+  width: 50%;
+}
+.loan-calculator .col .card .card-desc .group .g-item p {
+  font-size: 15px;
+}
+.loan-calculator .col .card .card-desc .group .g-item b {
+  font-size: 22px;
+  font-family: "TT Commons Medium";
+}
+.loan-calculator .col .card .card-desc .yelo-btn {
+  width: 100%;
+  font-size: 16px;
+  height: auto;
+  line-height: 25.6px;
 }
 @media (min-width: 992px) {
   .loan-calculator {
@@ -1586,5 +1626,8 @@ header.fix-head .header-bottom .header-additions.show {
     width: 50%;
     margin: 0;
     padding: 0 15px;
+  }
+  .loan-calculator .row .col .card-desc b {
+    font-size: 22px;
   }
 }/*# sourceMappingURL=style.css.map */
