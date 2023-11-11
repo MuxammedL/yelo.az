@@ -43,27 +43,28 @@ var swiperStories = new Swiper(".stories", {
 });
 
 function fillBars() {
-  const item = document.querySelector(".swiper-slide-active");
-  const holder0 = document.querySelector(".index-0");
-  const label = item.getAttribute("aria-label");
-  switch (label) {
-    case "1 / 4":
-      holder0.style.animation = `fillBar 10.2s linear infinite`;
-      break;
-    case "3 / 3":
-      holder0.style.animation = `fillBar 10.2s linear infinite`;
-      break;
-    case "1 / 3":
-      const holder1 = document.querySelector(".index-1");
-      holder1.style.animation = `fillBar 10.2s linear infinite`;
-      break;
-    case "2 / 3":
-      const holder2 = document.querySelector(".index-2");
-      holder2.style.animation = `fillBar 10.2s linear infinite`;
-      break;
+  const item = document.querySelector(".modals .swiper-slide-active");
+  if(item){
+    const holder0 = document.querySelector(".index-0");
+    const label = item.dataset.swiperSlideIndex;
+    switch (+label) {
+      case 0:
+        holder0.style.animation = `fillBar 10.2s linear infinite`;
+        break;
+      case 1:
+        const holder1 = document.querySelector(".index-1");
+        holder1.style.animation = `fillBar 10.2s linear infinite`;
+        break;
+      case 2:
+        const holder2 = document.querySelector(".index-2");
+        holder2.style.animation = `fillBar 10.2s linear infinite`;
+        break;
+    }
   }
 }
 var swiper = new Swiper(".storiesSwiper", {
+  loop:true,
+  cssMode: true,
   autoplay: {
     delay: 10000,
     disableOnInteraction: false,
@@ -76,36 +77,29 @@ var swiper = new Swiper(".storiesSwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  thumbs: {
+    swiper: swiperStories,
+  },
   on: fillBars(),
 });
 
 swiper.on("slideChange", () => {
   const holders = document.querySelectorAll(".bar .holder");
-  const item = document.querySelector(".swiper-slide-active");
+  const item = document.querySelector(".modals .swiper-slide-active");
   holders.forEach((hold) => {
     hold.style.width = "0";
     hold.style.animation = ``;
   });
-  fillBars();
+  fillBars()
 });
 
-const swiperPaginationBullets = document.querySelectorAll(
-  ".swiper-pagination-bullet"
-);
-const stories = document.querySelectorAll(".story");
+const stories = document.querySelectorAll(".story a");
+
 stories.forEach((story) => {
-  story.addEventListener("click", (e) => {
-    const slideNumber = +e.target.dataset.slide;
+  story.addEventListener("click", () => {
+    const slideNumber = +story.dataset.slide;
 
     const handleCommonActions = (slideLabel) => {
-      swiperPaginationBullets.forEach((bullet) => {
-        if (bullet.getAttribute("aria-label") === slideLabel) {
-          bullet.click();
-          console.log(bullet.getAttribute("aria-label"))
-          console.log(slideLabel)
-        }
-      });
-
       modals.classList.add('active');
       setTimeout(() => {
         modalItems.forEach((modalItem) => {
@@ -115,7 +109,6 @@ stories.forEach((story) => {
         });
       }, 200);
     };
-
     switch (slideNumber) {
       case 1:
         handleCommonActions('Go to slide 1');
@@ -129,5 +122,6 @@ stories.forEach((story) => {
     }
   });
 });
+
 
 

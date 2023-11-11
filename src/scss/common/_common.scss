@@ -109,6 +109,11 @@ body {
 h1, h2, h3, h4 {
   font-weight: normal;
 }
+
+.yelo-btn{
+  @extend %yelo-btn;
+}
+
 .d-none{
   display: none;
 }

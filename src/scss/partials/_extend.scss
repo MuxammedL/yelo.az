@@ -79,6 +79,7 @@
   display: inline-block;
   background: $primary_color;
   cursor: pointer;
+  line-height: 34px;
   transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
   &:hover{
     background-color: #000;
