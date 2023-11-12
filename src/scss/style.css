@@ -259,7 +259,27 @@ body.o-hidden .header-bottom {
   }
 }
 
-h1, h2, h3, h4 {
+.row .col:first-child {
+  margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+  .row {
+    display: flex;
+    margin: 0 -15px;
+  }
+  .row .col {
+    width: 50%;
+    padding: 0 15px;
+  }
+  .row .col:first-child {
+    margin-bottom: 0px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
   font-weight: normal;
 }
 
@@ -1573,13 +1593,17 @@ header.fix-head .header-bottom .header-additions.show {
 .loan-calculator {
   margin-bottom: 30px;
 }
-.loan-calculator .col:first-child {
-  margin-bottom: 15px;
-}
 .loan-calculator .col b {
   font-family: "TT Commons Bold";
   font-size: 20px;
   font-weight: normal;
+  display: block;
+}
+.loan-calculator .col .yelo-btn {
+  width: 100%;
+  font-size: 16px;
+  height: auto;
+  line-height: 25.6px;
 }
 .loan-calculator .col .card {
   border-radius: 10px;
@@ -1625,12 +1649,6 @@ header.fix-head .header-bottom .header-additions.show {
 .loan-calculator .col .card .card-desc .group .g-item b {
   font-size: 22px;
   font-family: "TT Commons Medium";
-}
-.loan-calculator .col .card .card-desc .yelo-btn {
-  width: 100%;
-  font-size: 16px;
-  height: auto;
-  line-height: 25.6px;
 }
 .loan-calculator .col .loan-calc {
   padding: 20px;
@@ -1682,6 +1700,7 @@ header.fix-head .header-bottom .header-additions.show {
 .loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range] {
   width: 100%;
   position: absolute;
+  margin: 0;
   left: 0px;
   bottom: 0px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -1695,7 +1714,6 @@ header.fix-head .header-bottom .header-additions.show {
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: #ffffff;
   cursor: pointer;
   background: #ffffff;
   border: 3px solid #ffc628;
@@ -1739,21 +1757,46 @@ header.fix-head .header-bottom .header-additions.show {
   background: #ffffff;
   border: 3px solid #ffc628;
 }
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=number]::-webkit-outer-spin-button, .loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-result {
+  margin-top: 20px;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-result .loan-result-inner {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-result .loan-result-inner .loan-item {
+  width: 33%;
+  text-align: center;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-result .loan-result-inner .loan-item p {
+  color: rgba(0, 0, 0, 0.5019607843);
+  line-height: 16px;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-result .loan-result-inner .loan-item b {
+  font-size: 26px;
+  font-family: "TT Commons Medium";
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-result .loan-result-inner .loan-item b span {
+  font-size: 18px;
+}
 @media (min-width: 992px) {
   .loan-calculator {
     margin-bottom: 50px;
   }
-  .loan-calculator .row {
-    display: flex;
-    margin: 0 -15px;
-  }
-  .loan-calculator .row .col {
-    width: 50%;
-    margin: 0;
-    padding: 0 15px;
-  }
   .loan-calculator .row .col b {
     font-size: 22px;
+  }
+  .loan-calculator .row .col .yelo-btn {
+    font-size: 18px;
+    width: 200px;
+    line-height: 29px;
+    height: 55px;
   }
   .loan-calculator .row .col .card .card-img {
     width: 190px;
@@ -1771,12 +1814,7 @@ header.fix-head .header-bottom .header-additions.show {
     font-size: 16px;
   }
   .loan-calculator .row .col .card .card-desc .group {
-    margin: 15px 0 25px 0;
-  }
-  .loan-calculator .row .col .card .card-desc .yelo-btn {
-    font-size: 18px;
-    width: 200px;
-    line-height: 29px;
+    margin: 18px 0 32px 0;
   }
   .loan-calculator .row .col .loan-calc {
     padding: 30px;
@@ -1792,6 +1830,21 @@ header.fix-head .header-bottom .header-additions.show {
     border-radius: 10px 10px 10px 0;
     display: flex;
     justify-content: space-between;
+  }
+  .loan-calculator .row .col .loan-calc .loan-desc .loan-inputs .loan-item:not(:last-child) {
+    border-right: 1px solid #e7e7e7;
+  }
+  .loan-calculator .row .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range] {
+    background-color: #ffffff;
+  }
+  .loan-calculator .row .col .loan-calc .loan-desc .loan-result {
+    margin-top: 45px;
+    height: 59.6px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .loan-calculator .row .col .loan-calc .loan-desc .loan-result .loan-result-inner {
+    width: calc(100% - 50px);
   }
   .loan-calculator .row .col:first-child:hover .card .card-img {
     transform: translateY(-10px);

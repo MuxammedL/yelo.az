@@ -130,6 +130,7 @@
     }
   }
 }
+
 .stroies-section {
   margin-bottom: 30px;
   @media (min-width: 992px) {
@@ -255,16 +256,21 @@
     }
   }
 }
+
 .loan-calculator {
   margin-bottom: 30px;
   .col {
-    &:first-child {
-      margin-bottom: 15px;
-    }
     b {
       font-family: "TT Commons Bold";
       font-size: 20px;
       font-weight: normal;
+      display: block;
+    }
+    .yelo-btn {
+      width: 100%;
+      font-size: 16px;
+      height: auto;
+      line-height: 25.6px;
     }
     .card {
       border-radius: 10px;
@@ -325,12 +331,6 @@
             }
           }
         }
-        .yelo-btn {
-          width: 100%;
-          font-size: 16px;
-          height: auto;
-          line-height: 25.6px;
-        }
       }
     }
     .loan-calc {
@@ -375,9 +375,11 @@
               bottom: 20px;
               line-height: 15px;
             }
+            
             input[type="range"] {
               width: 100%;
               position: absolute;
+              margin: 0;
               left: 0px;
               bottom: 0px;
               background-color: $black_10;
@@ -389,7 +391,6 @@
                 height: 20px;
                 width: 20px;
                 border-radius: 100%;
-                background: #ffffff;
                 cursor: pointer;
                 background: #ffffff;
                 border: 3px solid #ffc628;
@@ -434,6 +435,34 @@
                 border: 3px solid #ffc628;
               }
             }
+            input[type="number"] {
+              &::-webkit-outer-spin-button,&::-webkit-inner-spin-button{
+                appearance: none;
+                margin: 0;
+              }
+            }
+          }
+        }
+        .loan-result {
+          margin-top: 20px;
+          .loan-result-inner {
+            @include Flexible($j-cont: center);
+            margin-bottom: 5px;
+            .loan-item {
+              width: 33%;
+              text-align: center;
+              p {
+                color: $black_50;
+                line-height: 16px;
+              }
+              b {
+                font-size: 26px;
+                font-family: "TT Commons Medium";
+                span {
+                  font-size: 18px;
+                }
+              }
+            }
           }
         }
       }
@@ -443,14 +472,15 @@
   @media (min-width: 992px) {
     margin-bottom: 50px;
     .row {
-      @include Flexible();
-      margin: 0 -15px;
       .col {
-        width: 50%;
-        margin: 0;
-        padding: 0 15px;
         b {
           font-size: 22px;
+        }
+        .yelo-btn {
+          font-size: 18px;
+          width: 200px;
+          line-height: 29px;
+          height: 55px;
         }
         .card {
           .card-img {
@@ -468,12 +498,7 @@
               font-size: 16px;
             }
             .group {
-              margin: 15px 0 25px 0;
-            }
-            .yelo-btn {
-              font-size: 18px;
-              width: 200px;
-              line-height: 29px;
+              margin: 18px 0 32px 0;
             }
           }
         }
@@ -490,6 +515,22 @@
               height: 70px;
               border-radius: 10px 10px 10px 0;
               @include Flexible($j-cont: space-between);
+              .loan-item{
+                &:not(:last-child){
+                  border-right: 1px solid #e7e7e7;
+                }
+                input[type="range"] {
+                  background-color: #ffffff;
+                }
+              }
+            }
+            .loan-result {
+              margin-top: 45px;
+              height: 59.6px;
+              @include Flexible($j-cont: space-between);
+              .loan-result-inner {
+                width: calc(100% - 50px);
+              }
             }
           }
         }

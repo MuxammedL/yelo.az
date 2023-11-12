@@ -13,53 +13,142 @@ const headerAdditions = document.querySelector(".header-additions");
 const navbar = document.querySelector(".navbar");
 const bgColor = document.querySelector(".bg-color");
 const main = document.querySelector("main");
-const modals = document.querySelector('.modals')
-const modalItems = modals.querySelectorAll('.modal-item')
-const modalClose = document.querySelector('.modal-close')
-const container = document.querySelector('.card')
-const image = document.querySelector('.card-img')
+const modals = document.querySelector(".modals");
+const modalItems = modals.querySelectorAll(".modal-item");
+const modalClose = document.querySelector(".modal-close");
+const container = document.querySelector(".card");
+const image = document.querySelector(".card-img");
+const rangeAmount = document.querySelector('.loan-amount input[type="range"]');
+const rangeTerm = document.querySelector('.loan-term input[type="range"]');
+const rangePercent = document.querySelector(
+  '.loan-percent input[type="range"]'
+);
+
+const numberAmount = document.querySelector(
+  '.loan-amount input[type="number"]'
+);
+const numberTerm = document.querySelector('.loan-term input[type="number"]');
+const numberPercent = document.querySelector(
+  '.loan-percent input[type="text"]'
+);
+const loanInputs = document.querySelectorAll(".loan-item input");
+function handleRangeInput(rangeInput) {
+  rangeInput.style.setProperty("--val", rangeInput.value);
+
+  rangeInput.previousElementSibling.previousElementSibling.value =
+    rangeInput.value;
+}
+
+function handleNumberInput(numberInput) {
+  numberInput.nextElementSibling.nextElementSibling.value = numberInput.value;
+  numberInput.nextElementSibling.nextElementSibling.style.setProperty(
+    "--val",
+    numberInput.value
+  );
+}
+
+rangeAmount.addEventListener("input", () => handleRangeInput(rangeAmount));
+rangeTerm.addEventListener("input", () => handleRangeInput(rangeTerm));
+rangePercent.addEventListener("input", () => handleRangeInput(rangePercent));
+
+numberAmount.addEventListener("input", () => handleNumberInput(numberAmount));
+numberTerm.addEventListener("input", () => handleNumberInput(numberTerm));
+numberPercent.addEventListener("input", () => handleNumberInput(numberPercent));
+
+loanInputs.forEach((input) => {
+  input.addEventListener("input", () => {
+    var percent = parseFloat(rangePercent.value);
+    var period = parseFloat(rangeTerm.value);
+    var amount = parseFloat(rangeAmount.value);
+    const monthPay = document.querySelector('.month-pay')
+    var p = percent / 12 / 100;
+    var p1 = Math.pow(1 + p, period);
+    var p2 = Math.pow(1 + p, period);
+    var monthAmount = (amount * (p * p1)) / (p2 - 1);
+    var fullAmount = monthAmount * period;
+    var arrMonthAmount = parseFloat(monthAmount).toFixed(2).split(".");
+    var arrfullAmount = parseFloat(fullAmount).toFixed(2).split(".");
+    monthPay.innerHTML = `${Math.floor(monthAmount)}<span> AZN</span>`
+    console.log(monthPay)
+  });
+});
+
+function businessLoanCalculate() {
+  var percent = parseFloat(document.querySelector("input[name=salary]").value);
+  var period = parseFloat(document.querySelector("input[name=month]").value);
+  var amount = parseFloat(document.querySelector("input[name=credit]").value);
+
+  var p = percent / 12 / 100;
+  var p1 = Math.pow(1 + p, period);
+  var p2 = Math.pow(1 + p, period);
+  var monthAmount = (amount * (p * p1)) / (p2 - 1);
+  var fullAmount = monthAmount * period;
+  var arrMonthAmount = parseFloat(monthAmount).toFixed(2).split(".");
+  var arrfullAmount = parseFloat(fullAmount).toFixed(2).split(".");
+
+  document.querySelector("input[name=pay_month_credit]").value =
+    arrMonthAmount[0];
+  document.querySelector("input[name=pay_month_percent]").value = percent;
+
+  if (document.getElementById("my_month_pay")) {
+    document.getElementById("my_month_pay").innerHTML =
+      arrMonthAmount[0] +
+      '.<span style="font-size:10px;">' +
+      arrMonthAmount[1] +
+      "</span><span> AZN</span>";
+  }
+
+  if (document.getElementById("my_year_pay")) {
+    document.getElementById("my_year_pay").innerHTML =
+      arrfullAmount[0] +
+      '.<span style="font-size:10px;">' +
+      arrfullAmount[1] +
+      "</span><span> AZN</span>";
+  }
+
+  if (document.getElementById("my_percent")) {
+    document.getElementById("my_percent").innerHTML =
+      percent + "<span> %</span>";
+  }
+}
 
 let prevScrollY = window.scrollY;
 
-window.addEventListener('resize',()=>{
-  if(window.innerWidth<992){
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 992) {
     centerImage();
-  }else{
-    image.style.left = 'auto'
-    image.style.top = '30px'
+  } else {
+    image.style.left = "auto";
+    image.style.top = "30px";
   }
 });
 
-
-
-
 function centerImage() {
   const containerWidth = container.offsetWidth;
-  const offsetX = (containerWidth - 564)/2;
-  image.style.left = offsetX + 'px';
+  const offsetX = (containerWidth - 564) / 2;
+  image.style.left = offsetX + "px";
 }
 
-modalClose.addEventListener('click', () => {
+modalClose.addEventListener("click", () => {
   modalItems.forEach((modalItem) => {
     if (modalItem.dataset.modal == "stories-modal") {
-      modalItem.classList.remove('show');
+      modalItem.classList.remove("show");
     }
   });
   setTimeout(() => {
     modalItems.forEach((modalItem) => {
-      if (!modalItem.classList.contains('show')) {
-        modals.classList.remove('active');
+      if (!modalItem.classList.contains("show")) {
+        modals.classList.remove("active");
       }
     });
   }, 200);
 });
 
-window.addEventListener('click',(e)=>{
-  if(e.target==modals||e.target.dataset.modal=="stories-modal"){
-    modalClose.click()
+window.addEventListener("click", (e) => {
+  if (e.target == modals || e.target.dataset.modal == "stories-modal") {
+    modalClose.click();
   }
-})
-
+});
 
 window.addEventListener("scroll", () => {
   let currentScrollY = window.scrollY;

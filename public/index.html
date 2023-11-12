@@ -737,8 +737,7 @@
               <div class="loan-calc">
                 <div class="loan-title">
                   <b>Kredit kalkulyatoru</b>
-                  <a href="#" class="arr-btn" >Daha ətraflı
-                  </a>
+                  <a href="#" class="arr-btn">Daha ətraflı </a>
                 </div>
                 <div class="loan-desc">
                   <div class="loan-inputs">
@@ -758,7 +757,8 @@
                         step="100"
                         value="25000"
                         class="range"
-                        style="--min: 400; --max: 50000; --val: 23700;"/>
+                        style="--min: 400; --max: 50000; --val: 25000"
+                      />
                     </div>
                     <div class="loan-item loan-term">
                       <p>Müddət</p>
@@ -777,7 +777,7 @@
                         step="1"
                         value="12"
                         class="range"
-                        style="--min: 6; --max: 59; --val: 31;"
+                        style="--min: 6; --max: 59; --val: 12"
                       />
                     </div>
                     <div class="loan-item loan-percent">
@@ -796,27 +796,205 @@
                         step="0.1"
                         value="9.9"
                         class="range"
-                        style="--min: 9.9; --max: 20; --val: 14.4;"
-                        />
+                        style="--min: 9.9; --max: 20; --val: 9.9"
+                      />
                     </div>
                   </div>
                   <div class="loan-result">
                     <div class="loan-result-inner">
                       <div class="loan-item">
                         <p>Aylıq ödəniş</p>
-                        <b id="month-pay">436<span> AZN</span></b>
+                        <b class="month-pay">2196<span> AZN</span></b>
                       </div>
-                      <div class="loan-item">
+                      <!-- <div class="loan-item">
                         <p>İllik faiz dərəcəsi</p>
-                        <b id="my_year_pay"
+                        <b id="my-year-pay"
                           >13091.<span>10</span><span> AZN</span></b
                         >
                         <b id="percent">11<span> %</span></b>
-                      </div>
+                      </div> -->
                     </div>
                     <a href="#" class="yelo-btn">Kredit sifarişi</a>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Useful for you -->
+
+      <section class="usefulForyou">
+        <div class="container">
+          <div class="section-title">
+            <b>Sizin üçün faydalı</b>
+          </div>
+          <div class="section-content row">
+            <div class="col">
+              <div class="col-content">
+                <div class="app-image">
+                  <div
+                    class="app-phone"
+                    style="background-image: url('images/app_phone.webp')"
+                  ></div>
+                  <div
+                    class="app-self"
+                    style="background-image: url('images/screen_app.webp')"
+                  ></div>
+                </div>
+                <div class="app-desc">
+                  <b>Yelo App</b>
+                  <p>
+                    Yelo-dan yeni və parlaq mobil əlavə. Hesablarını izlə,
+                    köçürmə və ödənişlərini sürətli et.
+                  </p>
+                  <div class="app-links">
+                    <ul>
+                      <li>
+                        <a
+                          href="https://apps.apple.com/az/app/yelo/id1515449668"
+                          target="_blank"
+                          class="app-link"
+                        >
+                          <div
+                            class="app apple"
+                            style="
+                              background-image: url(images/apple_black.svg);
+                            "
+                          >
+                            <span>Download on the</span>
+                            <p>App Store</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://play.google.com/store/apps/details?id=az.yelo.app&hl=ru&pli=1"
+                          target="_blank"
+                          class="app-link"
+                        >
+                          <div
+                            class="app android"
+                            style="
+                              background-image: url(images/google_play_black.svg);
+                            "
+                          >
+                            <span>Get it on</span>
+                            <p>Google Play</p>
+                          </div>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://appgallery.huawei.com/#/app/C104500649"
+                          target="_blank"
+                          class="app-link"
+                        >
+                          <div
+                            class="app huawei"
+                            style="
+                              background-image: url(images/huawei_play_black.svg);
+                            "
+                          >
+                            <span>Get it on</span>
+                            <p>AppGallery</p>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="col-inner">
+                <div class="col_title">
+                  <b>Valyuta məzənnələri</b>
+                  <div class="change_rates">
+                    <a href="javascript:void(0)" class="active_lang open_select"
+                      >Nağd</a
+                    >
+                    <div class="select_box">
+                      <div class="select_content">
+                        <ul>
+                          <li>
+                            <a data-cash="1" href="#" class="active">Nağd</a>
+                          </li>
+                          <li>
+                            <a data-cash="0" href="#" class="">Nağdsız</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="calculator">
+                  <div class="c-line">
+                    <input
+                      type="text"
+                      placeholder="Satıram"
+                      value=""
+                      class="selling-input"
+                    />
+                    <select name="from" class="s-currency">
+                      <option value="azn" selected="">AZN</option>
+                      <option value="usd">USD</option>
+                      <option value="eur">EUR</option>
+                    </select>
+                  </div>
+                  <div class="c-line">
+                    <span class="c-buying">Alıram</span>
+                    <select name="to" class="s_-urrency">
+                      <option value="azn" style="display: none">AZN</option>
+                      <option value="usd" selected="">USD</option>
+                      <option value="eur">EUR</option>
+                    </select>
+                  </div>
+                  <div class="c-result">
+                    <div class="c_item">
+                      <p>Valyuta</p>
+                      <b data-curr="usd">USD</b>
+                      <b data-curr="eur">EUR</b>
+                    </div>
+                    <div class="c-item">
+                      <p>Alış</p>
+                      <b
+                        class="cr-item-buy"
+                        data-curr="usd"
+                        data-cash="1.6900"
+                        data-nocash="1.6950"
+                        >1.6900</b
+                      >
+                      <b
+                        class="cr-item-buy"
+                        data-curr="eur"
+                        data-cash="1.7700"
+                        data-nocash="1.7700"
+                        >1.7700</b
+                      >
+                    </div>
+                    <div class="cr-item">
+                      <p>Satış</p>
+                      <b
+                        class="cr-item-sell"
+                        data-curr="usd"
+                        data-cash="1.7000"
+                        data-nocash="1.7020"
+                        >1.7000</b
+                      >
+                      <b
+                        class="cr-item-sell"
+                        data-curr="eur"
+                        data-cash="1.8600"
+                        data-nocash="1.8600"
+                        >1.8600</b
+                      >
+                    </div>
+                  </div>
+                </div>
+                <p class="info-p">Region filiallarında məzənnələr fərqli ola bilər</p>
+                <a href="exchangeRate.html" class="all-exchanges">Bütün məzənnələr</a>
               </div>
             </div>
           </div>
