@@ -76,7 +76,7 @@
   background-color: #fff;
 }
 
-.entrance .swiper .swiper-slide .slide-content .content-inner a .more-details, .modals .modals-group .modal-item .modal-content .swiper .swiper-slide .slide-content .text .action .right-side a .more-details {
+.more-details {
   margin: 20px 0;
   padding: 13px 0;
   font-family: "TT Commons Bold";
@@ -84,23 +84,23 @@
   display: flex;
   align-items: center;
 }
-.entrance .swiper .swiper-slide .slide-content .content-inner a .more-details img, .modals .modals-group .modal-item .modal-content .swiper .swiper-slide .slide-content .text .action .right-side a .more-details img {
+.more-details img {
   width: 20px;
   margin-left: 10px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 @media (min-width: 992px) {
-  .entrance .swiper .swiper-slide .slide-content .content-inner a .more-details, .modals .modals-group .modal-item .modal-content .swiper .swiper-slide .slide-content .text .action .right-side a .more-details {
+  .more-details {
     font-size: 20px;
     padding: 14px 0;
     margin: 0;
   }
-  .entrance .swiper .swiper-slide .slide-content .content-inner a .more-details img, .modals .modals-group .modal-item .modal-content .swiper .swiper-slide .slide-content .text .action .right-side a .more-details img {
+  .more-details img {
     width: 35px;
   }
 }
-.entrance .swiper .swiper-slide .slide-content .content-inner a .more-details:hover img, .modals .modals-group .modal-item .modal-content .swiper .swiper-slide .slide-content .text .action .right-side a .more-details:hover img {
+.more-details:hover img {
   margin-left: 20px;
 }
 
@@ -121,6 +121,25 @@
 .yelo-btn:hover {
   background-color: #000;
   color: #fff;
+}
+
+.arr-btn {
+  background: none;
+  padding: 5px 0px 5px 0;
+  display: inline-block;
+  font-family: "TT Commons Bold";
+  transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
+  color: #0091FE;
+}
+@media (min-width: 992px) {
+  .arr-btn {
+    background: url("../../public/images/blue_arr.svg") no-repeat right 9px;
+    padding: 5px 38px 5px 0;
+  }
+}
+.arr-btn:hover {
+  padding-right: 46px;
+  margin-right: -8px;
 }
 
 html,
@@ -1557,6 +1576,11 @@ header.fix-head .header-bottom .header-additions.show {
 .loan-calculator .col:first-child {
   margin-bottom: 15px;
 }
+.loan-calculator .col b {
+  font-family: "TT Commons Bold";
+  font-size: 20px;
+  font-weight: normal;
+}
 .loan-calculator .col .card {
   border-radius: 10px;
   border: 1px solid #ececec;
@@ -1583,12 +1607,6 @@ header.fix-head .header-bottom .header-additions.show {
 .loan-calculator .col .card .card-desc {
   padding: 240px 20px 20px;
 }
-.loan-calculator .col .card .card-desc b {
-  font-family: "TT Commons Bold";
-  display: block;
-  font-size: 20px;
-  font-weight: normal;
-}
 .loan-calculator .col .card .card-desc p {
   line-height: 20px;
   color: rgba(0, 0, 0, 0.5019607843);
@@ -1614,6 +1632,113 @@ header.fix-head .header-bottom .header-additions.show {
   height: auto;
   line-height: 25.6px;
 }
+.loan-calculator .col .loan-calc {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ececec;
+  height: 100%;
+  overflow: hidden;
+}
+.loan-calculator .col .loan-calc .loan-title {
+  display: flex;
+  justify-content: space-between;
+}
+.loan-calculator .col .loan-calc .loan-title .arr-btn {
+  display: none;
+}
+.loan-calculator .col .loan-calc .loan-desc {
+  padding-top: 10px;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs {
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item {
+  padding: 10px 10px;
+  position: relative;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item p {
+  color: rgba(0, 0, 0, 0.5019607843);
+  font-size: 15px;
+  line-height: 15px;
+  margin-bottom: 4px;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item .range-result {
+  font-size: 26px;
+  line-height: 26px;
+  width: 100%;
+  font-family: "TT Commons Medium";
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item .loan-info {
+  position: absolute;
+  font-family: "TT Commons Bold";
+  font-size: 15px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5019607843);
+  right: 17px;
+  bottom: 20px;
+  line-height: 15px;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range] {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--val) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 1.5em + var(--ratio) * (100% - 1.5em));
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+       appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #ffffff;
+  cursor: pointer;
+  background: #ffffff;
+  border: 3px solid #ffc628;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: linear-gradient(#ffc628, #ffc628) 0/var(--sx) 100% no-repeat;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range]::-webkit-slider-thumb {
+  height: 24px;
+  width: 24px;
+  -webkit-appearance: none;
+          appearance: none;
+  border-radius: 100%;
+  background: #ffffff;
+  cursor: pointer;
+  background: #ffffff;
+  border: 5px solid #ffc628;
+  margin: -10px 0 0 0;
+  box-sizing: border-box;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+}
+.loan-calculator .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  appearance: none;
+  background: #ffffff;
+  cursor: pointer;
+  background: #ffffff;
+  border: 3px solid #ffc628;
+}
 @media (min-width: 992px) {
   .loan-calculator {
     margin-bottom: 50px;
@@ -1627,7 +1752,48 @@ header.fix-head .header-bottom .header-additions.show {
     margin: 0;
     padding: 0 15px;
   }
-  .loan-calculator .row .col .card-desc b {
+  .loan-calculator .row .col b {
     font-size: 22px;
+  }
+  .loan-calculator .row .col .card .card-img {
+    width: 190px;
+    height: 300px;
+    transform: none;
+    top: 30px;
+    left: auto;
+  }
+  .loan-calculator .row .col .card .card-desc {
+    width: 50%;
+    padding: 30px 0 30px 30px;
+    height: 100%;
+  }
+  .loan-calculator .row .col .card .card-desc p {
+    font-size: 16px;
+  }
+  .loan-calculator .row .col .card .card-desc .group {
+    margin: 15px 0 25px 0;
+  }
+  .loan-calculator .row .col .card .card-desc .yelo-btn {
+    font-size: 18px;
+    width: 200px;
+    line-height: 29px;
+  }
+  .loan-calculator .row .col .loan-calc {
+    padding: 30px;
+  }
+  .loan-calculator .row .col .loan-calc .loan-title .arr-btn {
+    display: inline-block;
+  }
+  .loan-calculator .row .col .loan-calc .loan-desc {
+    padding-top: 30px;
+  }
+  .loan-calculator .row .col .loan-calc .loan-desc .loan-inputs {
+    height: 70px;
+    border-radius: 10px 10px 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .loan-calculator .row .col:first-child:hover .card .card-img {
+    transform: translateY(-10px);
   }
 }/*# sourceMappingURL=style.css.map */

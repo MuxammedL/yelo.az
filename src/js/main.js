@@ -18,11 +18,20 @@ const modalItems = modals.querySelectorAll('.modal-item')
 const modalClose = document.querySelector('.modal-close')
 const container = document.querySelector('.card')
 const image = document.querySelector('.card-img')
+
 let prevScrollY = window.scrollY;
 
-window.addEventListener('resize', centerImage);
+window.addEventListener('resize',()=>{
+  if(window.innerWidth<992){
+    centerImage();
+  }else{
+    image.style.left = 'auto'
+    image.style.top = '30px'
+  }
+});
 
-centerImage();
+
+
 
 function centerImage() {
   const containerWidth = container.offsetWidth;

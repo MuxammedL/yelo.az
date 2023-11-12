@@ -124,7 +124,6 @@
                     a {
                       display: inline-block;
                       .more-details {
-                        @extend %more-details;
                         color: #fff;
                         img {
                           filter: brightness(0) invert(1);

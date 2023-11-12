@@ -113,7 +113,12 @@ h1, h2, h3, h4 {
 .yelo-btn{
   @extend %yelo-btn;
 }
-
+.more-details{
+  @extend %more-details;
+}
+.arr-btn{
+  @extend %arr-btn;
+}
 .d-none{
   display: none;
 }

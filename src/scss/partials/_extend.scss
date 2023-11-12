@@ -81,8 +81,25 @@
   cursor: pointer;
   line-height: 34px;
   transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
-  &:hover{
+  &:hover {
     background-color: #000;
     color: #fff;
+  }
+}
+
+%arr-btn {
+  background: none;
+  padding: 5px 0px 5px 0;
+  display: inline-block;
+  font-family: "TT Commons Bold";
+  transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
+  color: $link_color;
+  @media (min-width:992px) {
+    background: url('../../public/images/blue_arr.svg') no-repeat right 9px;
+    padding: 5px 38px 5px 0;
+  }
+  &:hover{
+    padding-right: 46px;
+    margin-right: -8px;
   }
 }
