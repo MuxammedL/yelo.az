@@ -109,7 +109,7 @@ body {
 }
 .row {
   .col {
-    &:first-child {
+    &:not(:last-child) {
       margin-bottom: 15px;
     }
   }
@@ -119,7 +119,7 @@ body {
     .col {
       width: 50%;
       padding: 0 15px;
-      &:first-child {
+      &:not(:last-child){
         margin-bottom: 0px;
       }
     }

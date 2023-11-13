@@ -95,7 +95,7 @@
   transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
   color: $link_color;
   @media (min-width:992px) {
-    background: url('../../public/images/blue_arr.svg') no-repeat right 9px;
+    background: url('../../public/images/blue_arr.svg') no-repeat right 10px;
     padding: 5px 38px 5px 0;
   }
   &:hover{
