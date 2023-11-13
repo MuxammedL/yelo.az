@@ -193,15 +193,16 @@ h6 {
 }
 
 button,
-input {
+input, select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   border: none;
   background-color: transparent;
+  padding: 0;
 }
 button:focus,
-input:focus {
+input:focus, select:focus {
   outline: none;
 }
 
@@ -1509,7 +1510,7 @@ header.fix-head .header-bottom .header-additions.show {
 }
 .stroies-section .stories .swiper-wrapper .swiper-slide {
   margin-left: 15px;
-  width: 305px;
+  width: 305px !important;
   height: 140px;
   border-radius: 10px;
   overflow: hidden;
@@ -1518,7 +1519,7 @@ header.fix-head .header-bottom .header-additions.show {
 }
 @media (min-width: 992px) {
   .stroies-section .stories .swiper-wrapper .swiper-slide {
-    width: 346.5px;
+    width: 346.5px !important;
     margin-left: 20px;
   }
   .stroies-section .stories .swiper-wrapper .swiper-slide:not(:last-child) {
@@ -1771,7 +1772,8 @@ header.fix-head .header-bottom .header-additions.show {
   margin-bottom: 5px;
 }
 .loan-calculator .col .loan-calc .loan-desc .loan-result .loan-result-inner .loan-item {
-  width: 33%;
+  width: -moz-fit-content;
+  width: fit-content;
   text-align: center;
 }
 .loan-calculator .col .loan-calc .loan-desc .loan-result .loan-result-inner .loan-item p {
@@ -1835,7 +1837,7 @@ header.fix-head .header-bottom .header-additions.show {
     border-right: 1px solid #e7e7e7;
   }
   .loan-calculator .row .col .loan-calc .loan-desc .loan-inputs .loan-item input[type=range] {
-    background-color: #ffffff;
+    background-color: transparent;
   }
   .loan-calculator .row .col .loan-calc .loan-desc .loan-result {
     margin-top: 45px;
@@ -2018,6 +2020,121 @@ header.fix-head .header-bottom .header-additions.show {
     left: 45px;
   }
 }
+.usefulForYou .section-content .col-inner {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ececec;
+  height: 100%;
+  overflow: hidden;
+}
+.usefulForYou .section-content .col-inner .col-title {
+  display: flex;
+  justify-content: space-between;
+}
+.usefulForYou .section-content .col-inner .col-title b {
+  font-size: 20px;
+  font-family: "TT Commons Bold";
+  font-weight: normal;
+}
+.usefulForYou .section-content .col-inner .col-title .change-rates {
+  display: none;
+  position: relative;
+  padding: 5px 0 0 0;
+}
+.usefulForYou .section-content .col-inner .col-title .change-rates .active-rate {
+  color: rgba(0, 0, 0, 0.5019607843);
+  background: url("../../public/images/active_lang.svg") no-repeat right center;
+  padding: 5px 15px 0 0;
+}
+.usefulForYou .section-content .col-inner .col-title .change-rates .select-box {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  transform-origin: right top;
+  background: #fff;
+  box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.17);
+  z-index: 9;
+  transition: all 0.2s cubic-bezier(1, 0, 0, 1);
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 5px;
+  padding: 10px 0;
+}
+.usefulForYou .section-content .col-inner .col-title .change-rates .select-box.open-select {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.usefulForYou .section-content .col-inner .col-title .change-rates .select-box a {
+  padding: 0 20px;
+  display: block;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+.usefulForYou .section-content .col-inner .col-title .change-rates .select-box a.active {
+  color: black;
+}
+.usefulForYou .section-content .col-inner .calculator .c-line {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-bottom: 3px solid #FFC628;
+}
+.usefulForYou .section-content .col-inner .calculator .c-line input, .usefulForYou .section-content .col-inner .calculator .c-line span {
+  font-size: 25px;
+  font-family: "TT Commons Bold";
+  width: 100%;
+  height: 40px;
+}
+.usefulForYou .section-content .col-inner .calculator .c-line .s-currency {
+  font-family: "TT Commons Bold";
+  background: no-repeat right 45%;
+  padding: 0 12px 0 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+.usefulForYou .section-content .col-inner .calculator .c-result {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+.usefulForYou .section-content .col-inner .calculator .c-result .c-item {
+  width: 33.333%;
+}
+.usefulForYou .section-content .col-inner .calculator .c-result .c-item p {
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+@media (min-width: 992px) {
+  .usefulForYou .section-content .col-inner .calculator .c-result .c-item p {
+    font-size: 18px;
+  }
+}
+.usefulForYou .section-content .col-inner .calculator .c-result .c-item b {
+  display: block;
+  font-family: "TT Commons Bold";
+  font-size: 18px;
+}
+.usefulForYou .section-content .col-inner .info-p {
+  padding: 10px 0 0;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+}
+.usefulForYou .section-content .col-inner .all-exchanges {
+  border-top: 1px solid #ececec;
+  display: block;
+  margin: 15px -30px -30px;
+  margin: 25px -20px -20px;
+  padding: 17px 30px;
+  font-family: "TT Commons Bold";
+  background: url("../../public/images/blue_arr.svg") no-repeat 91% 22px;
+  transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
+  color: #0091FE;
+}
+.usefulForYou .section-content .col-inner .all-exchanges:hover {
+  color: #fff;
+  background: #0091FE url("../../public/images/white_arr.svg") no-repeat 91% 22px;
+}
 @media (min-width: 992px) {
   .usefulForYou {
     margin-bottom: 50px;
@@ -2059,7 +2176,7 @@ header.fix-head .header-bottom .header-additions.show {
     width: 250px;
     height: 375px;
     left: 95px;
-    top: 46px;
+    top: 73px;
     bottom: 0;
     margin: 0;
     background-color: #ffc629;
@@ -2076,5 +2193,17 @@ header.fix-head .header-bottom .header-additions.show {
   .usefulForYou .section-content .col .col-content .app-desc p {
     font-size: 18px;
     line-height: 26px;
+  }
+  .usefulForYou .section-content .col .col-inner {
+    padding: 30px;
+  }
+  .usefulForYou .section-content .col .col-inner .col-title b {
+    font-size: 22px;
+  }
+  .usefulForYou .section-content .col .col-inner .col-title .change-rates {
+    display: block;
+  }
+  .usefulForYou .section-content .col .col-inner .all-exchanges {
+    margin: 15px -30px -30px;
   }
 }/*# sourceMappingURL=style.css.map */

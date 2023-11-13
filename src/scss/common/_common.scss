@@ -49,10 +49,11 @@ h6 {
 }
 
 button,
-input {
+input,select {
   appearance: none;
   border: none;
   background-color: transparent;
+  padding: 0;
   &:focus {
     outline: none;
   }
