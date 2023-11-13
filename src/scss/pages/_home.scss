@@ -177,14 +177,14 @@
     .swiper-wrapper {
       .swiper-slide {
         margin-left: 15px;
-        width: 305px !important;
+        width: 305px;
         height: 140px;
         border-radius: 10px;
         overflow: hidden;
         display: block;
         position: relative;
         @media (min-width: 992px) {
-          width: 346.5px !important;
+          width: 346.5px;
           margin-left: 20px;
           &:not(:last-child) {
             margin-right: 10px;
@@ -375,7 +375,7 @@
               bottom: 20px;
               line-height: 15px;
             }
-            
+
             input[type="range"] {
               width: 100%;
               position: absolute;
@@ -436,7 +436,8 @@
               }
             }
             input[type="number"] {
-              &::-webkit-outer-spin-button,&::-webkit-inner-spin-button{
+              &::-webkit-outer-spin-button,
+              &::-webkit-inner-spin-button {
                 appearance: none;
                 margin: 0;
               }
@@ -515,8 +516,8 @@
               height: 70px;
               border-radius: 10px 10px 10px 0;
               @include Flexible($j-cont: space-between);
-              .loan-item{
-                &:not(:last-child){
+              .loan-item {
+                &:not(:last-child) {
                   border-right: 1px solid #e7e7e7;
                 }
                 input[type="range"] {
@@ -540,6 +541,235 @@
               .card-img {
                 transform: translateY(-10px);
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.usefulForYou {
+  margin-bottom: 30px;
+  .section-title {
+    @include Flexible($j-cont: space-between);
+    margin-bottom: 5px;
+    b {
+      padding: 7px 0;
+      font-size: 20px;
+      line-height: normal;
+      font-family: "TT Commons Bold";
+      display: inline-block;
+      font-weight: normal;
+    }
+  }
+  .section-content {
+    .col-content {
+      position: relative;
+      border-radius: 10px;
+      border: 1px solid #ececec;
+      height: 100%;
+      overflow: hidden;
+      .app-image {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        bottom: 0px;
+        right: 0px;
+        background: $primary_color no-repeat 17% 14px / 80%;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+        .app-phone {
+          position: relative;
+          width: 180px;
+          height: 100%;
+          top: 0px;
+          left: -22px;
+          margin: 0 auto;
+          background: no-repeat bottom right/ contain;
+          z-index: 2;
+        }
+        .app-self {
+          width: 120px;
+          height: 213px;
+          position: absolute;
+          left: 50%;
+          top: 20px;
+          background-size: cover;
+          margin: 0 0 0 -60px;
+        }
+      }
+      .app-desc {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        position: relative;
+        z-index: 2;
+        b {
+          font-family: "TT Commons Bold";
+          display: block;
+          font-size: 20px;
+          line-height: 22px;
+          margin-bottom: 5px;
+        }
+        p {
+          color: $black_50;
+          font-size: 16px;
+          line-height: 20px;
+        }
+        ul {
+          @include Flexible();
+          border-radius: 5px;
+          border: 1px solid #ececec;
+          background-color: #fff;
+          margin-top: 10px;
+          li {
+            position: relative;
+            width: 100%;
+            &:not(:first-child) {
+              &::before {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 60%;
+                position: absolute;
+                left: 0;
+                top: 20%;
+                background-color: $black_15;
+              }
+            }
+            a {
+              display: block;
+              padding: 4px;
+              white-space: nowrap;
+              color: #000;
+              .app {
+                padding: 4px 0;
+                width: fit-content;
+                margin: 0 auto;
+                @media (min-width: 375px) {
+                  background: no-repeat left 12px/15px;
+                  padding: 4px 0 4px 24px;
+                  &.apple {
+                    background-image: url("../../public/images/apple.svg");
+                  }
+                  &.android {
+                    background-image: url("../../public/images/google_play.svg");
+                    background-position-y: 15px;
+                  }
+                  &.huawei {
+                    background-image: url("../../public/images/huawei_play.svg");
+                    background-position-y: 15.5px;
+                  }
+                }
+                span {
+                  opacity: 0.5;
+                  color: #505050;
+                  font-size: 11px;
+                }
+                p {
+                  font-size: 16px;
+                  position: relative;
+                  top: -3px;
+                  color: #505050;
+                  opacity: 0.5;
+                  letter-spacing: -0.4px;
+                  line-height: 9px;
+                  font-family: "TT Commons Medium";
+                }
+              }
+            }
+          }
+          @media (min-width:992px) {
+            height: 55px;
+            position: absolute;
+            bottom: 45px;
+            left: 15px;
+            li {
+              a {
+                padding: 2px 6px 0 6px;
+                .app{
+                  background-size: auto;
+                  padding: 6px 0 6px 34px;
+                  background-position-y: 8px;
+                  &.android {
+                    background-position-y: 11px;
+                  }
+                  &.huawei {
+                    background-position-y: 13.5px;
+                    background-size: 24px;
+                  }
+                  span {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+          @media (min-width:1024px) {
+            left: 45px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    margin-bottom: 50px;
+    .section-title {
+      margin-bottom: 10px;
+      b {
+        font-size: 25px;
+        padding: 0;
+      }
+    }
+    .section-content {
+      .col {
+        &:first-child {
+          width: 66.666%;
+        }
+        &:last-child {
+          width: 33.333%;
+        }
+        .col-content {
+          background: url("../../public/images/app_block.svg") no-repeat right
+            center/contain;
+          .app-image {
+            width: 50%;
+            height: 115%;
+            position: absolute;
+            bottom: 0px;
+            right: 30px;
+            border-radius: 0;
+            background: none;
+            .app-phone {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0px;
+              left: 0px;
+              margin: 0;
+            }
+            .app-self {
+              width: 250px;
+              height: 375px;
+              left: 95px;
+              top: 46px;
+              bottom: 0;
+              margin: 0;
+              background-color: #ffc629;
+            }
+          }
+          .app-desc {
+            padding: 45px;
+            width: 50%;
+            b {
+              font-size: 34px;
+              line-height: 34px;
+              margin-bottom: 10px;
+            }
+            p {
+              font-size: 18px;
+              line-height: 26px;
             }
           }
         }
