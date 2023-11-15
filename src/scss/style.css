@@ -572,7 +572,7 @@ header .header-top .contact-nav ul li:nth-child(2) a .icon img, header .header-t
 header .header-top .contact-nav ul li:nth-child(4) a {
   width: 45px;
   height: 45px;
-  background: no-repeat 50% 44%;
+  background: no-repeat 50% 42%;
   opacity: 0.5;
 }
 header .header-top .contact-nav ul li:nth-child(5) a {
@@ -902,7 +902,6 @@ header .header-bottom .header-additions .wrapper .additions .top-additions ul li
   margin-right: 3px;
 }
 header .header-bottom .header-additions .wrapper .additions .top-additions ul li a .icon img {
-  padding-bottom: 6px;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1001,6 +1000,11 @@ header.fix-head .header-bottom .header-main .right-side a.internet-bank span {
   }
   header.fix-head .header-bottom .header-main .right-side a.internet-bank img {
     height: 18px;
+  }
+}
+@media (min-width: 992px) {
+  header.fix-head .header-bottom .header-main .right-side a.menu-toggle.open-adds .line:nth-child(3) {
+    transform: translateY(-7px) rotate(45deg);
   }
 }
 header.fix-head .header-bottom .header-additions.show {

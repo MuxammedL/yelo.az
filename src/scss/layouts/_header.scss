@@ -281,7 +281,7 @@ header {
             a {
               width: 45px;
               height: 45px;
-              background: no-repeat 50% 44%;
+              background: no-repeat 50% 42%;
               opacity: 0.5;
             }
           }
@@ -417,7 +417,7 @@ header {
           background-color: $primary_color;
           &:first-child {
             @include Flexible($a-items: center);
-            img{
+            img {
               height: 18px;
             }
             @media (min-width: 992px) {
@@ -442,7 +442,7 @@ header {
               left: 100%;
               top: 15px;
             }
-            img{
+            img {
               height: 18px;
             }
             &:hover {
@@ -604,7 +604,6 @@ header {
                     width: 16px;
                     margin-right: 3px;
                     img {
-                      padding-bottom: 6px;
                       object-fit: contain;
                     }
                   }
@@ -710,6 +709,11 @@ header {
                 img {
                   height: 18px;
                 }
+              }
+            }
+            &.menu-toggle.open-adds .line:nth-child(3) {
+              @media (min-width: 992px) {
+                transform: translateY(-7px) rotate(45deg);
               }
             }
           }
