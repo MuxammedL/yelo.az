@@ -141,6 +141,9 @@ h4 {
 .arr-btn {
   @extend %arr-btn;
 }
+.news-link{
+  @extend %news-link;
+}
 .d-none {
   display: none;
 }

@@ -1,0 +1,55 @@
+header .header-bottom .header-main .right-side .menu-toggle {
+  display: none;
+}
+
+.news {
+  padding-top: 135px;
+  .common-title {
+    margin-bottom: 20px;
+    text-align: center;
+    h1 {
+      font-size: 20px;
+      font-family: "TTFirsNeue Medium";
+    }
+  }
+  .context {
+    .news-list-total {
+      li {
+        margin-bottom: 20px;
+        .news-item {
+          @extend %news-item;
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    padding-top: 150px;
+    .common-title {
+      margin-bottom: 50px;
+      h1 {
+        font-size: 54px;
+      }
+    }
+    .context {
+      .news-list-total {
+        @include Flexible($f-wrap: wrap);
+        margin: 0 -15px;
+        li {
+          width: 33.333%;
+          margin: 0;
+          padding: 0 15px 30px;
+          .news-item{
+            a{
+                .news-desc{
+                    padding-bottom: 20px;
+                }
+            }
+          }
+        }
+      }
+      .more-details{
+        font-size: 16px;
+      }
+    }
+  }
+}
