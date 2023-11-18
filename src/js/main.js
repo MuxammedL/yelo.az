@@ -88,7 +88,4 @@ window.addEventListener("click", (e) => {
   if (e.target != selectBox && e.target != selectedLang) {
     selectBox.classList.remove("open-select");
   }
-  if (e.target != rangeRatesSelectBox && e.target != activeRate) {
-    rangeRatesSelectBox.classList.remove("open-select");
-  }
 });

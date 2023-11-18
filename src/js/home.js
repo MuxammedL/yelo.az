@@ -147,7 +147,11 @@ loanInputs.forEach((input) => {
   });
 });
 
-
+window.addEventListener("click", (e) => {
+  if (e.target != rangeRatesSelectBox && e.target != activeRate) {
+    rangeRatesSelectBox.classList.remove("open-select");
+  }
+});
 
 window.addEventListener("resize", () => {
   if (window.innerWidth < 992) {
