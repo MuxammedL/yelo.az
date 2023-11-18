@@ -16,7 +16,7 @@
     <title>Bank Xəbərləri - Son Xəbərlər</title>
   </head>
 
-  <body>
+  <body class="o-hiddene">
     <div class="mobile-top" style="background-image: url(images/modal_bg.webp)">
       <div class="mobile-top-inner">
         <div class="logo-side">
@@ -105,7 +105,31 @@
       </div>
     </div>
 
-    <div class="bg-color"></div>
+    <div class="news-modal ">
+      <div class="modal">
+        <div class="modal-inner">
+          <div class="close-news-modal">
+            <button type="button" class="close-button">
+              <img src="images/close.svg" alt="" class="close_btn" />
+            </button>
+          </div>
+          <div class="modal-content">
+            <div class="content-title">
+              <h2>Xəbər Əlavə et</h2>
+            </div>
+            <div class="content-text">
+              <form>
+                <div class="group">
+                  <label for="newsname">Xəbər başlığı</label>
+                  <textarea name="title" id="newsname" placeholder="Bir şey yazın..."></textarea>
+                </div>
+                <button class="add-button">Əlavə et</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <header>
       <div class="header-top">
@@ -404,12 +428,11 @@
         <div class="container">
           <div class="common-title">
             <h1>Xəbərlər</h1>
+            <button class="add-news">Xəbər Əlavə et</button>
           </div>
           <div class="context">
-            <ul class="news-list-total">
-              
-            </ul>
-
+            <ul class="news-list-total"></ul>
+            <div class="loader">Yüklənir<span class="ellipsis">...</span></div>
             <div class="news-link">
               <a href="javascript:void(0);" id="more-news" class="more-details"
                 >Daha çox</a

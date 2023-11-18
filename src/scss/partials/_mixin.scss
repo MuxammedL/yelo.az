@@ -6,3 +6,10 @@
     align-items: $a-items;
     align-content: $a-cont;
 }
+@mixin Position($pos:null,$top:null,$left:null,$bottom:null,$right:null){
+    position: $pos;
+    top: $top;
+    left:$left;
+    right: $right;
+    bottom: $bottom;
+}

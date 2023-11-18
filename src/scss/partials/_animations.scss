@@ -6,3 +6,21 @@
         width: 100%;
     }
 }
+@keyframes ellipsis-animation {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+  
