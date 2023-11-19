@@ -1,8 +1,8 @@
 header .header-bottom .header-main .right-side .menu-toggle {
   display: none;
 }
-body{
-  &.o-hidden{
+body {
+  &.o-hidden {
     overflow: hidden;
   }
 }
@@ -16,13 +16,13 @@ body{
       margin-left: 10px;
       font-family: "TTFirsNeue Medium";
     }
-    @media (min-width:425px) {
+    @media (min-width: 425px) {
       text-align: center;
-      h1{
+      h1 {
         margin-left: 0;
       }
     }
-    button{
+    button {
       position: absolute;
       right: 20px;
       top: 50%;
@@ -39,46 +39,45 @@ body{
       li {
         margin-bottom: 20px;
         .news-item {
-            @extend %news-item;
-            a{
+          @extend %news-item;
+          a {
             position: relative;
-            .dropdown{
+            .dropdown {
+              position: absolute;
+              top: 10px;
+              right: 0;
+              button {
+                width: 30px;
+                height: 20px;
+                background: no-repeat center;
+                cursor: pointer;
+              }
+              .menu {
                 position: absolute;
-                top: 10px;
-                right: 0;
-                button{
-                    width: 30px;
-                    height: 20px;
-                    background: no-repeat center;
-                    cursor: pointer;
-                
+                left: -155%;
+                top: 25px;
+                z-index: 2;
+                border-radius: 5px;
+                overflow: hidden;
+                background-color: rgb(219, 219, 219);
+                opacity: 0;
+                visibility: hidden;
+                &.show {
+                  opacity: 1;
+                  visibility: visible;
                 }
-                .menu{
-                    position: absolute;
-                    left: -155%;
-                    top: 25px;
-                    z-index: 2;
-                    border-radius: 5px;
-                    overflow: hidden;
-                    background-color: rgb(219, 219, 219);
-                    opacity: 0;
-                    visibility: hidden;
-                    &.show{
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                    li{
-                        width: auto;
-                        margin: 0;
-                        font-family: "TT Commons Bold";
-                        padding: 6px 6px 0 25px ;
-                        background: no-repeat 10% center / 16px;
-                        color: $black_50;
-                        &:hover{
-                            background-color: $socials_bg_color;
-                        }
-                    }
+                li {
+                  width: auto;
+                  margin: 0;
+                  font-family: "TT Commons Bold";
+                  padding: 6px 6px 0 25px;
+                  background: no-repeat 10% center / 16px;
+                  color: $black_50;
+                  &:hover {
+                    background-color: $socials_bg_color;
+                  }
                 }
+              }
             }
           }
         }
@@ -102,16 +101,16 @@ body{
           width: 33.333%;
           margin: 0;
           padding: 0 15px 30px;
-          .news-item{
-            a{
-                .news-desc{
-                    padding-bottom: 20px;
-                }
+          .news-item {
+            a {
+              .news-desc {
+                padding-bottom: 20px;
+              }
             }
           }
         }
       }
-      .more-details{
+      .more-details {
         font-size: 16px;
       }
     }
@@ -120,7 +119,7 @@ body{
 .loader {
   font-size: 20px;
   text-align: center;
-  &.hide{
+  &.hide {
     opacity: 0;
     visibility: hidden;
   }
@@ -144,53 +143,53 @@ body{
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s cubic-bezier(.52, .01, .16, 1);
+  transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
   &.show {
-      opacity: 1;
-      visibility: visible;
+    opacity: 1;
+    visibility: visible;
   }
-  .modal{
+  .modal {
     border: 8px solid $primary_color;
     background-color: $primary_color;
     border-radius: 10px;
     max-width: 600px;
     margin: 0 auto;
     margin-top: 100px;
-    .modal-inner{
+    .modal-inner {
       padding: 20px;
       border-radius: 6px;
       background-color: #fff;
       position: relative;
-      .close-news-modal{
-        button{
+      .close-news-modal {
+        button {
           position: absolute;
           right: 5px;
           top: 5px;
           width: 16px;
           cursor: pointer;
-          img{
+          img {
             filter: invert(1);
           }
         }
       }
-      .modal-content{
-        .content-title{
+      .modal-content {
+        .content-title {
           text-align: center;
-          h2{
+          h2 {
             font-family: "TT Commons Bold";
           }
         }
-        .content-text{
-          form{
-            @include Flexible($f-dir:column);
-            .group{
-              label{
+        .content-text {
+          form {
+            @include Flexible($f-dir: column);
+            .group {
+              label {
                 display: block;
                 font-family: "TT Commons Medium";
                 font-size: 18px;
                 line-height: normal;
               }
-              textarea{
+              textarea {
                 display: block;
                 width: calc(100% - 24px);
                 min-height: 40px;
@@ -201,18 +200,21 @@ body{
                 font-size: 16px;
                 font-family: "TT Commons Medium";
                 max-height: 300px;
-                &::-webkit-scrollbar{
+                &::-webkit-scrollbar {
                   width: 0;
                 }
+                &:focus {
+                  outline: none;
+                }
               }
-            } 
-            button{
+            }
+            button {
               margin-top: 12px;
               padding: 10px 12px;
               background-color: $primary_color;
               border-radius: 5px;
               cursor: pointer;
-              font-family: "TT Commons Bold";             
+              font-family: "TT Commons Bold";
               font-size: 16px;
             }
           }

@@ -2678,7 +2678,7 @@ body.o-hidden {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
+  transition: opacity 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
 }
 .news-modal.show {
   opacity: 1;
@@ -2738,6 +2738,9 @@ body.o-hidden {
 }
 .news-modal .modal .modal-inner .modal-content .content-text form .group textarea::-webkit-scrollbar {
   width: 0;
+}
+.news-modal .modal .modal-inner .modal-content .content-text form .group textarea:focus {
+  outline: none;
 }
 .news-modal .modal .modal-inner .modal-content .content-text form button {
   margin-top: 12px;
