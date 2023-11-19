@@ -11,10 +11,10 @@ let count = 15;
 let initialCount = 0,
   dataLength;
 let isUpdate = false,
-  updatedId;
+  updatedId,updateDate;
 async function getNews() {
   try {
-    const res = await fetch("http://localhost:3000/NEWS");
+    const res = await fetch("http://localhost:4000/NEWS");
     const data = await res.json();
     dataLength = data.length;
     for (let i = dataLength - initialCount - 1; i >= dataLength - count; i--) {
@@ -72,7 +72,7 @@ async function getNews() {
         event.preventDefault();
         try {
           const response = await fetch(
-            `http://localhost:3000/NEWS/${deleteBtn.dataset.id}`,
+            `http://localhost:4000/NEWS/${deleteBtn.dataset.id}`,
             {
               method: "DELETE",
             }
@@ -95,6 +95,7 @@ async function getNews() {
             .textContent;
         textArea.value = text;
         updatedId = editBtn.dataset.id;
+        updateDate = data[+updatedId - 1].date
         isUpdate = true;
       });
     });
@@ -160,10 +161,11 @@ textArea.addEventListener("input", (e) => {
 });
 
 addNews.addEventListener("click", () => {
-  textArea.value=''
+  textArea.value = "";
   newsModal.classList.add("show");
   body.classList.add("o-hidden");
   newsModal.style.top = window.scrollY + "px";
+  isUpdate=false
 });
 
 closeBtn.addEventListener("click", () => {
@@ -188,7 +190,7 @@ addNewsForm.addEventListener("submit", function (event) {
       textArea.style.borderColor = "red";
     }
     if (isNotNull) {
-      fetch("http://localhost:3000/NEWS", {
+      fetch("http://localhost:4000/NEWS", {
         method: "POST",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
@@ -203,30 +205,32 @@ addNewsForm.addEventListener("submit", function (event) {
       newsModal.style.top = "0px";
     }
   } else {
-    let data;
+    const data = {};
+    console.log(updateDate)
     if (!textArea.value == "") {
-      data ={
-        title:`${textArea.value}`
-      }
+      data.title = textArea.value
+      data.date = updateDate
+      console.log(updateDate)
       isNotNull = true;
     } else {
       textArea.style.borderColor = "red";
     }
     if (isNotNull) {
-      fetch(`http://localhost:3000/NEWS/${updatedId}`, {
-        method: "PACTH",
+      fetch(`http://localhost:4000/NEWS/${updatedId}`, {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json;charset=utf-8",
         },
         body: JSON.stringify(data),
       });
-      setInterval(() => {
-        getNews();
-      }, 1000);
+      
       addNews.classList.remove("show");
       body.classList.remove("o-hidden");
       newsModal.style.top = "0px";
+      isUpdate = false;
     }
   }
-  isUpdate = false;
 });
+
+
+
