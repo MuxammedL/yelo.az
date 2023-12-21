@@ -13,6 +13,9 @@ const headerAdditions = document.querySelector(".header-additions");
 const navbar = document.querySelector(".navbar");
 const bgColor = document.querySelector(".bg-color");
 const main = document.querySelector("main");
+const modals = document.querySelector(".modals");
+const modalItems = modals.querySelectorAll(".modal-item");
+const modalClose = document.querySelector(".modal-close");
 let prevScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
@@ -41,6 +44,7 @@ menuToggle.addEventListener("click", () => {
 searchBtn.addEventListener("click", () => {
   searchSection.classList.add("show");
 });
+
 closeSearchBtn.addEventListener("click", () => {
   searchSection.classList.remove("show");
 });
@@ -88,4 +92,23 @@ window.addEventListener("click", (e) => {
   if (e.target != selectBox && e.target != selectedLang) {
     selectBox.classList.remove("open-select");
   }
+  if (e.target == modals || e.target.dataset.modal == "stories-modal") {
+    modalClose.click();
+  }
 });
+
+modalClose &&
+  modalClose.addEventListener("click", () => {
+    modalItems.forEach((modalItem) => {
+      if (modalItem.dataset.modal == "stories-modal") {
+        modalItem.classList.remove("show");
+      }
+    });
+    setTimeout(() => {
+      modalItems.forEach((modalItem) => {
+        if (!modalItem.classList.contains("show")) {
+          modals.classList.remove("active");
+        }
+      });
+    }, 200);
+  });

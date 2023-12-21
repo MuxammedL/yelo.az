@@ -400,5 +400,44 @@
       "date": "2023-12-14T12:08:57.057Z",
       "id": 80
     }
+  ],
+  "foot_text": {
+    "text": "<div class=\"foot_txt\" style=\"color: #9d9d9d; padding: 20px 0\">\n<p>\nHəm xərclədikcə qazanmaq, həm də kartdakı pulunuza pul gəlsin\nistəyirsiniz? Hansı plastik kartı seçəcəyinizə əmin deyilsəniz,\nYelo Bank-dan Yelo Kartları qarşılayın!\n</p>\n<p>\nYelo Kartla xərclərinizə baxışınızı dəyişəcəksiniz. Yelo kartla\nrahat pul xərcləyəcəksiniz, xərclədikcə xərclərinizdən cashback\nqazanacaqsınız, kartınızın hesabını və bonuslarınızı rahatlıqla\nizləyəcəksiniz, online kart sifarişi edib, kartı əldə etdikdən\nsonra&nbsp;Yelo Karta görə partnyor mağazalarda endirim alacaqsınız.\nTəkcə kartın dizaynı çox şey deyir. Stereotipləri kartın dizaynında\nqırdıq və şaquli kart yaratdıq. Bu kartla kassada hər kəsin\ndiqqətini özünüzdə cəmləyəcəksiniz. Yelo Kart təkcə şaquli dizaynı\nilə seçilmir, həmçinin kartın kənarının da fərqli rənginə görə\npulqabınızda dərhal digər kartlardan seçiləcək! Kartın müddəti 3\nildir və kartı pulsuz əldə etmək seçiminiz də var. Kart Sifarişi\nzamanı&nbsp;üç valyutadan istənilən birini&nbsp;bilərsiniz.\n</p>\n<p>\nYelo Premium kartı isə premium üstünlüklər deməkdir. Yüksək\nimtiyazlar verən\n<a\nhref=\"#\"\n>Yelo Premium Kartla</a\n>nəinki ölkədaxili, həm də ölkəxaricində də eksklüziv imkanlara sahib\nolacaqsınız. Harda olmağınızdan asılı olmayaraq Yelo Premium kartı\nsizi xüsusi hiss etdirməklə yanaşı gəlirinizə gəlir gətirəcək! Yelo\nKartı istənilən Yelo Bank ATM-lərin komissiyasız nağdlaşdıra\nbilirsiniz. Geniş partnyor şəbəkəsindən 30%-dək cashback əldə\netməklə cibinizi sevindirəcəksiniz! Yelo kart təmassız ödəniş\nfunksionallığını dəstəkləyir. Kartla daha çox xərcləyin, daha çox\nqazanın! Online kart sifarişi xidməti ilə kartı əldə etmək imkanınız\nvar.&nbsp;\n</p>\n<p>\nYelo Bank-dan nəinki debet kart, həm də\n<a href=\"#\"\n>Yelo Kredit kart sifarisi</a\n>&nbsp;edə bilərsiniz.\n<a href=\"#\"\n>Yelo Grace Light kart</a\n>\nilə hər ay yalnız hesablanmış faizlər ödəməklə 10 000 AZN-ə dək\nkredit almaq imkanınız var.&nbsp; Üstəlik bu kartla bu gün\nxərcləyib, nə az, nə çox, 45 gün xərciniz barədə düşünməyə\nbilərsiniz. Kartla xərclənmiş vəsait üçün 45 gün güzəşt müddəti\nmövcuddur. Kartın növündən asılı olmayaraq hesabınıza 24/7 pulsuz\nYelo App-də baxa bilə və bir çox ödəniş və köçürmələrinizi həyata\nkeçirə bilərsiniz. Yelo Kart əldə etmək istəyirsiniz, lakin banka\nyaxınlaşmağa vaxtınız yoxdur? problem deyil, istənilən zaman\nistənilən yerdə onlayn kart sifarişi verə bilərsiniz! İndi siz\nharadan kart sifarişi edəcəyinizi yaxşı bilirsiniz.\n</p>\n</div>"
+  },
+  "cards": [
+    {
+      "name": "Yelo Light",
+      "description": "Yelo kart rahatlıq anlayışını dəyişəcək - rahat xərcləyəcəksən, rahat izləyəcəksən, qazanacaqsan, endirimlər alacaqsan.",
+      "period": "1 il / 3 il",
+      "currency":"AZN / USD / EUR",
+      "type":"Cashback",
+      "typeText":"30%-dək",
+      "img":"**/images/yelo.png"
+    },
+    {
+      "name": "Yelo Premium",
+      "description": "Yelo kart rahatlıq anlayışını dəyişəcək - rahat xərcləyəcəksən, rahat izləyəcəksən, qazanacaqsan, endirimlər alacaqsan.",
+      "period": "3 il",
+      "currency":"AZN / USD / EUR",
+      "type":"Cashback",
+      "typeText":"30%-dək",
+      "img":"../images/visa-platinum.svg"
+    },{
+      "name": "Yelo kredit/taksit kartı",
+      "description": "Yelo kredit kartı ilə istədiyin ödənişləri his-sə-lə!",
+      "period": "5 il",
+      "currency":"AZN",
+      "type":"Güzəşt müddəti",
+      "typeText":"70 günədək",
+      "img":"../images/yelo_light-visa.png"
+    },{
+      "name": "Yelo Digital Card",
+      "description": "Rəqəmsal bank kartına sahib ol - üstəlik tamamilə pulsuz",
+      "period": "1 il",
+      "currency":"AZN",
+      "type":"Qiyməti",
+      "typeText":"Pulsuz",
+      "img":"../images/yelo_digital-210x333.png"
+    }
   ]
 }

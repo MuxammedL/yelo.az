@@ -1,6 +1,3 @@
-const modals = document.querySelector(".modals");
-const modalItems = modals.querySelectorAll(".modal-item");
-const modalClose = document.querySelector(".modal-close");
 const container = document.querySelector(".card");
 const image = document.querySelector(".card-img");
 const rangeAmount = document.querySelector('.loan-amount input[type="range"]');
@@ -168,23 +165,3 @@ function centerImage() {
   image.style.left = offsetX + "px";
 }
 
-modalClose.addEventListener("click", () => {
-  modalItems.forEach((modalItem) => {
-    if (modalItem.dataset.modal == "stories-modal") {
-      modalItem.classList.remove("show");
-    }
-  });
-  setTimeout(() => {
-    modalItems.forEach((modalItem) => {
-      if (!modalItem.classList.contains("show")) {
-        modals.classList.remove("active");
-      }
-    });
-  }, 200);
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target == modals || e.target.dataset.modal == "stories-modal") {
-    modalClose.click();
-  }
-});
