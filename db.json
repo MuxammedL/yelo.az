@@ -399,6 +399,16 @@
       "title": "Yelo Bank BMT-nin Qadınların Səlahiyyətlərinin Genişləndirilməsi Prinsiplərinə qoşuldu",
       "date": "2023-12-14T12:08:57.057Z",
       "id": 80
+    },
+    {
+      "title": "Yelo Bank əməkdaşları üçün “Liderliyin inkişafı” proqramı keçirildi",
+      "date": "2023-12-19T12:08:57.057Z",
+      "id": 81
+    },
+    {
+      "title": "Yelo App-də parlaq yeniliklər",
+      "date": "2023-12-22T12:08:57.057Z",
+      "id": 82
     }
   ],
   "foot_text": {
@@ -409,35 +419,37 @@
       "name": "Yelo Light",
       "description": "Yelo kart rahatlıq anlayışını dəyişəcək - rahat xərcləyəcəksən, rahat izləyəcəksən, qazanacaqsan, endirimlər alacaqsan.",
       "period": "1 il / 3 il",
-      "currency":"AZN / USD / EUR",
-      "type":"Cashback",
-      "typeText":"30%-dək",
-      "img":"**/images/yelo.png"
+      "currency": "AZN / USD / EUR",
+      "type": "Cashback",
+      "typeText": "30%-dək",
+      "img": "../public/images/yelo.png"
     },
     {
       "name": "Yelo Premium",
       "description": "Yelo kart rahatlıq anlayışını dəyişəcək - rahat xərcləyəcəksən, rahat izləyəcəksən, qazanacaqsan, endirimlər alacaqsan.",
       "period": "3 il",
-      "currency":"AZN / USD / EUR",
-      "type":"Cashback",
-      "typeText":"30%-dək",
-      "img":"../images/visa-platinum.svg"
-    },{
+      "currency": "AZN / USD / EUR",
+      "type": "Cashback",
+      "typeText": "30%-dək",
+      "img": "../public/images/visa-platinum.svg"
+    },
+    {
       "name": "Yelo kredit/taksit kartı",
       "description": "Yelo kredit kartı ilə istədiyin ödənişləri his-sə-lə!",
       "period": "5 il",
-      "currency":"AZN",
-      "type":"Güzəşt müddəti",
-      "typeText":"70 günədək",
-      "img":"../images/yelo_light-visa.png"
-    },{
+      "currency": "AZN",
+      "type": "Güzəşt müddəti",
+      "typeText": "70 günədək",
+      "img": "../public/images/yelo_light-visa.png"
+    },
+    {
       "name": "Yelo Digital Card",
       "description": "Rəqəmsal bank kartına sahib ol - üstəlik tamamilə pulsuz",
       "period": "1 il",
-      "currency":"AZN",
-      "type":"Qiyməti",
-      "typeText":"Pulsuz",
-      "img":"../images/yelo_digital-210x333.png"
+      "currency": "AZN",
+      "type": "Qiyməti",
+      "typeText": "Pulsuz",
+      "img": "../public/images/yelo_digital-210x333.png"
     }
   ]
 }

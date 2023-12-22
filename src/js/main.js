@@ -14,7 +14,7 @@ const navbar = document.querySelector(".navbar");
 const bgColor = document.querySelector(".bg-color");
 const main = document.querySelector("main");
 const modals = document.querySelector(".modals");
-const modalItems = modals.querySelectorAll(".modal-item");
+const modalItems = modals&&modals.querySelectorAll(".modal-item");
 const modalClose = document.querySelector(".modal-close");
 let prevScrollY = window.scrollY;
 
@@ -99,13 +99,13 @@ window.addEventListener("click", (e) => {
 
 modalClose &&
   modalClose.addEventListener("click", () => {
-    modalItems.forEach((modalItem) => {
+    modalItems&&modalItems.forEach((modalItem) => {
       if (modalItem.dataset.modal == "stories-modal") {
         modalItem.classList.remove("show");
       }
     });
     setTimeout(() => {
-      modalItems.forEach((modalItem) => {
+      modalItems&&modalItems.forEach((modalItem) => {
         if (!modalItem.classList.contains("show")) {
           modals.classList.remove("active");
         }

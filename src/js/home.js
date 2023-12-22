@@ -21,6 +21,53 @@ const selectCurrencyFrom = document.querySelector('.s-currency[name="from"]');
 const inputCurrency = document.querySelector(".selling-input");
 const buyingPrice = document.querySelector(".c-buying");
 const currencySelects = document.querySelectorAll(".c-line select");
+const sectionConent = document.querySelector('.lastest-news .section-content')
+async function getNews() {
+  try {
+    const res = await fetch("http://localhost:4000/NEWS");
+    const data = await res.json();
+    for (let i = data.length - 1; i >= data.length-3; i--) {
+      let date = new Date(data[i].date);
+      months = [
+        "Yanvar",
+        "Fevral",
+        "Mart",
+        "Aprel",
+        "May",
+        "İyun",
+        "İyul",
+        "Avqust",
+        "Sentyabr",
+        "Oktyabr",
+        "Noyabr",
+        "Dekabr",
+      ];
+      let month = months[date.getMonth()];
+      let day = date.getDate();
+      let year = date.getFullYear();
+      let li = ` 
+            <div class="col">
+              <div class="col-content">
+                <a href="#">
+                  <div class="news-desc">
+                    <b>${data[i].title}</b>
+                    <div class="news-foot">
+                      <span class="arr-btn"> Daha ətraflı </span>
+                      <time>${day} ${month} ${year}</time>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          `;
+      sectionConent.insertAdjacentHTML("beforeend", li);
+    }
+  } catch (error) {
+    console.error("Error fetching or processing news:", error);
+  }
+}
+
+getNews();
 
 selectCurrencyFrom.addEventListener("click", () => {
   const options = selectCurrencyTo.querySelectorAll("option");
@@ -46,7 +93,7 @@ selectCurrencyFrom.addEventListener("click", () => {
 });
 
 currencySelects.forEach((select) => {
-  select.addEventListener("click",()=>{
+  select.addEventListener("click", () => {
     if (inputCurrency.value == "") {
       buyingPrice.textContent = "Alıram";
     } else {
@@ -63,7 +110,7 @@ inputCurrency.addEventListener("input", () => {
   }
 });
 
-function renderCurrency(){
+function renderCurrency() {
   fetch(
     `https://v6.exchangerate-api.com/v6/c654eaf35c8dbe28cc5de6a4/latest/${selectCurrencyFrom.value}`
   )
@@ -72,15 +119,13 @@ function renderCurrency(){
       const times = parseFloat(inputCurrency.value);
       const currency = selectCurrencyTo.value;
       const conversionRate = data.conversion_rates[currency] * times;
-      
+
       buyingPrice.textContent = `${conversionRate.toFixed(2)}`;
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
     });
 }
-
-
 
 activeRate.addEventListener("click", () => {
   rangeRatesSelectBox.classList.add("open-select");
@@ -90,16 +135,18 @@ rates.forEach((rate) => {
   rate.addEventListener("click", (e) => {
     e.preventDefault();
     rangeRatesSelectBox.querySelector("li a.active").classList.remove("active");
-    const itemsSell = document.querySelectorAll('.cr-item-sell')
-    const itemsBuy = document.querySelectorAll('.cr-item-buy')
+    const itemsSell = document.querySelectorAll(".cr-item-sell");
+    const itemsBuy = document.querySelectorAll(".cr-item-buy");
     rate.classList.add("active");
     activeRate.textContent = rate.textContent;
-    if(rangeRatesSelectBox.querySelector("li a.active").textContent == 'Nağd'){
-      itemsSell[0].textContent = '1.7000'
-      itemsBuy[0].textContent = '1.6900'
-    }else{
-      itemsSell[0].textContent = '1.7020'
-      itemsBuy[0].textContent = '1.6950'
+    if (
+      rangeRatesSelectBox.querySelector("li a.active").textContent == "Nağd"
+    ) {
+      itemsSell[0].textContent = "1.7000";
+      itemsBuy[0].textContent = "1.6900";
+    } else {
+      itemsSell[0].textContent = "1.7020";
+      itemsBuy[0].textContent = "1.6950";
     }
   });
 });
@@ -164,4 +211,3 @@ function centerImage() {
   const offsetX = (containerWidth - 564) / 2;
   image.style.left = offsetX + "px";
 }
-
