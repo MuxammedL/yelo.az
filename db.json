@@ -451,5 +451,90 @@
       "typeText": "Pulsuz",
       "img": "../public/images/yelo_digital-210x333.png"
     }
-  ]
+  ],
+  "laons":[{
+    "name": "İstehlak krediti",
+    "description": "Daha yaxşı həyat üçün",
+    "spec_title_1": "Məbləğ",
+    "spec_title_1_desc": "400 - 50 000 AZN",
+    "spec_title_2": "Müddət",
+    "spec_title_2_desc": "6 - 59 ay",
+    "spec_title_3": "İllik faiz dərəcəsi",
+    "spec_title_3_desc": "min. 9.9%",
+    "isOrder":true,
+    "isTheCard":false,
+    "img": "../public/images/consumer-loan-pic.webp"
+  },{
+    "name": "Biznes krediti",
+    "description": "",
+    "spec_title_1": "Məbləğ",
+    "spec_title_1_desc": "50 000 - 5 000 000 AZN",
+    "spec_title_2": "İllik faiz dərəcəsi",
+    "spec_title_2_desc": "AZN - min. 11% / USD min. 3%",
+    "spec_title_3": "Güzəşt müddəti",
+    "spec_title_3_desc": "18 ayadək",
+    "isOrder":true,
+    "isTheCard":false,
+    "img": "../public/images/business-loan-pic-1.webp"
+  },{
+    "name": "Onlayn kredit",
+    "description": "Banka gəlmədən, tam onlayn",
+    "spec_title_1": "İllik faiz dərəcəsi",
+    "spec_title_1_desc": "9.9%-dən başlayaraq",
+    "spec_title_2": "Məbləğ",
+    "spec_title_2_desc": "50 000 AZN-dək",
+    "spec_title_3": "Komissiya",
+    "spec_title_3_desc": "0.5 - 1.5 %",
+    "isOrder":true,
+    "isTheCard":false,
+    "img": "../public/images/onlayn_kredit-sayt-fonsuz.webp"
+  },{
+    "name": "Daşınmaz əmlak girov krediti",
+    "description": "Sərfəli şərtlər ilə istənilən daşınmaz əmlak ilə girovlu pul krediti",
+    "spec_title_1": "Məbləğ",
+    "spec_title_1_desc": "5 000 - 100 000 AZN",
+    "spec_title_2": "Müddət",
+    "spec_title_2_desc": "12 - 54 ay",
+    "spec_title_3": "İllik faiz dərəcəsi",
+    "spec_title_3_desc": "min. 14%",
+    "isOrder":true,
+    "isTheCard":false,
+    "img": "../public/images/xx-2.webp"
+  },{
+    "name": "Əmanət təminatlı kredit",
+    "description": "Əminliklə istifadən üçün",
+    "spec_title_1": "Müddət",
+    "spec_title_1_desc": "Əmanət müddətinin sonunadək",
+    "spec_title_2": "İllik faiz dərəcəsi",
+    "spec_title_2_desc": "Əmanətin faiz dərəcəsi + 3%",
+    "spec_title_3": "Komissiya",
+    "spec_title_3_desc": "Kassadan / Yelo ATM-lərindən nağdlaşdırma 1 %*",
+    "isOrder":false,
+    "isTheCard":false,
+    "img": "../public/images/emanet-girovu-kredit-pic-fin.webp"
+  },{
+    "name": "İpoteka krediti",
+    "description": "Arzuladığın ev üçün sərfəli kredit şərtləri",
+    "spec_title_1": "Məbləğ",
+    "spec_title_1_desc": "150 000 AZN-ə dək",
+    "spec_title_2": "Müddət",
+    "spec_title_2_desc": "360 aya qədər",
+    "spec_title_3": "İlkin ödəniş",
+    "spec_title_3_desc": "20%",
+    "isOrder":true,
+    "isTheCard":false,
+    "img": "../public/images/daxili-ipoteka-pic.webp"
+  },{
+    "name": "Yelo kredit/taksit kartı",
+    "description": "Yelo kredit kartı ilə istədiyin ödənişləri his-sə-lə!",
+    "spec_title_1": "Müddət",
+    "spec_title_1_desc": "5 il",
+    "spec_title_2": "Valyuta",
+    "spec_title_2_desc": "AZN",
+    "spec_title_3": "Güzəşt müddəti",
+    "spec_title_3_desc": "70 günədək",
+    "isOrder":true,
+    "isTheCard":true,
+    "img": "../public/images/yelo.png"
+  }]
 }

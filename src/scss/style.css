@@ -791,6 +791,9 @@ header .header-bottom .header-main nav {
     display: block;
     position: relative;
   }
+  header .header-bottom .header-main nav ul li a.active::after {
+    width: 100%;
+  }
   header .header-bottom .header-main nav ul li a::after {
     content: "";
     height: 3px;

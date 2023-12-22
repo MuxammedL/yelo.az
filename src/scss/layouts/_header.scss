@@ -387,6 +387,11 @@ header {
                 padding: 14px 0;
                 display: block;
                 position: relative;
+                &.active{
+                  &::after {
+                    width: 100%;
+                  }
+                }
                 &::after {
                   content: "";
                   height: 3px;
