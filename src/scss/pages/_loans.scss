@@ -1,0 +1,288 @@
+#cards {
+  .cards {
+    .card {
+      &.loan {
+        .c_about {
+          margin-top: 160px;
+        }
+        .loan_c_image {
+          width: 100%;
+          height: 170px;
+          position: absolute;
+          right: 0px;
+          bottom: auto;
+          background: no-repeat bottom right/contain;
+          top: -10px;
+        }
+        @media (min-width: 992px) {
+          .loan_c_image {
+            width: 40%;
+            height: 110%;
+            top: auto;
+            bottom: 0px;
+            background-position: bottom center;
+            border-bottom-right-radius: 10px;
+          }
+          .c_about {
+            margin: 0;
+            width: calc(100% - 350px);
+          }
+        }
+      }
+    }
+
+    .consumption {
+      .f_inner {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        .form_calc {
+          margin-bottom: 20px;
+          .lc_inputs {
+            border-radius: 10px;
+            border: 1px solid #e7e7e7;
+            .lc_item {
+              padding: 10px;
+              position: relative;
+              p {
+                color: $black_50;
+                font-size: 15px;
+                line-height: 15px;
+                margin: 0 0 4px 0;
+              }
+              .range_result {
+                font-family: "TT Commons Medium";
+                font-size: 26px;
+                line-height: 26px;
+                width: 100%;
+              }
+              .lc_c {
+                position: absolute;
+                font-family: "TT Commons Bold";
+                font-size: 15px;
+                text-transform: capitalize;
+                color: $black_50;
+                right: 17px;
+                bottom: 20px;
+                line-height: 15px;
+              }
+              input[type="range"] {
+                appearance: none;
+                width: 100%;
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                margin: 0;
+                background: rgba(0, 0, 0, 0.1);
+                @media (min-width: 992px) {
+                  background-color: transparent;
+                }
+                --range: calc(var(--max) - var(--min));
+                --ratio: calc((var(--val) - var(--min)) / var(--range));
+                --sx: calc(0.5 * 1.5em + var(--ratio) * (100% - 1.5em));
+                &::-moz-range-thumb {
+                  appearance: none;
+                  height: 20px;
+                  width: 20px;
+                  border-radius: 100%;
+                  cursor: pointer;
+                  background: #ffffff;
+                  border: 3px solid #ffc628;
+                }
+                &::-webkit-slider-runnable-track {
+                  width: 100%;
+                  height: 4px;
+                  cursor: pointer;
+                  background: linear-gradient(#ffc628, #ffc628) 0 / var(--sx)
+                    100% no-repeat;
+                }
+                &::-webkit-slider-thumb {
+                  height: 24px;
+                  width: 24px;
+                  appearance: none;
+                  border-radius: 100%;
+                  background: #ffffff;
+                  cursor: pointer;
+                  background: #ffffff;
+                  border: 5px solid #ffc628;
+                  margin: -10px 0 0 0;
+                  box-sizing: border-box;
+                }
+                &::-moz-range-track {
+                  width: 100%;
+                  height: 3px;
+                  cursor: pointer;
+                }
+                &::-ms-track {
+                  width: 100%;
+                  height: 3px;
+                  cursor: pointer;
+                }
+                &::-ms-thumb {
+                  height: 20px;
+                  width: 20px;
+                  border-radius: 100%;
+                  appearance: none;
+                  background: #ffffff;
+                  cursor: pointer;
+                  background: #ffffff;
+                  border: 3px solid #ffc628;
+                }
+              }
+              input[type="number"] {
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                  appearance: none;
+                  margin: 0;
+                }
+              }
+            }
+          }
+          .lc_self{
+            @include Flexible($j-cont:space-between);
+            padding: 20px 0 10px;
+            .lc_item{
+              width: 33.33333%;
+              padding: 0 10px;
+              &:not(:last-child){
+                border-right: 1px solid $card_border_color;
+              }
+              text-align: center;
+              p{
+                color: $black_50;
+              }
+              
+            }
+          }
+        }
+        .form_group {
+          border: 1px solid $card_border_color;
+          border-radius: 10px;
+          margin: 20px 0 15px 0;
+          .form_item {
+            &:not(:last-child) {
+              border-bottom: 1px solid $card_border_color;
+            }
+            input {
+              height: 55px;
+              font-size: 16px;
+              padding: 0 20px;
+              width: calc(100% - 40px);
+              border-radius: 10px;
+            }
+          }
+        }
+        .form_line {
+          .form_item {
+            margin-bottom: 15px;
+            input {
+              padding: 0 20px;
+              border: 1px solid $card_border_color;
+              width: calc(100% - 40px);
+              border-radius: 10px;
+              height: 55px;
+              font-size: 16px;
+            }
+            select {
+              height: 55px;
+              font-size: 16px;
+              padding: 0 10px;
+              border: 1px solid $card_border_color;
+              width: 100%;
+              border-radius: 10px;
+              background: no-repeat right center;
+            }
+          }
+        }
+        .f_bottom {
+          margin-top: 40px;
+          border-top: 1px solid #ececec;
+          padding-top: 15px;
+          .info_text {
+            padding: 10px 0;
+            p {
+              padding: 0 0 0 50px;
+              font-size: 15px;
+              color: #000;
+              text-align: left;
+              background: no-repeat center left;
+            }
+          }
+          .yelo-btn {
+            width: 100%;
+          }
+        }
+      }
+      @media (min-width: 992px) {
+        .f_inner {
+          padding: 0;
+          .form_calc {
+            .lc_inputs {
+              border-radius: 10px 10px 10px 0;
+              height: 70px;
+              @include Flexible($j-cont: space-between);
+              .lc_item {
+                width: 50%;
+                &:not(:last-child) {
+                  border-right: 1px solid #e7e7e7;
+                }
+              }
+            }
+            .lc_self{
+              padding: 30px 0;
+              .lc_item{
+                width: 33.33333%;
+                padding: 0 10px;
+                &:not(:last-child){
+                  border-right: 1px solid $card_border_color;
+                }
+                text-align: center;
+                p{
+                  color: $black_50;
+                }
+                
+              }
+            }
+          }
+          .form_group {
+            @include Flexible($j-cont: space-between);
+            margin-bottom: 20px;
+            .form_item {
+              width: 100%;
+              &:not(:last-child) {
+                border-bottom: none;
+                border-right: 1px solid #e7e7e7;
+              }
+              input {
+                height: 65px;
+                font-size: 18px;
+              }
+            }
+          }
+          .form_line {
+            @include Flexible($j-cont: space-between);
+            gap: 20px;
+            .form_item {
+              width: 100%;
+              input {
+                height: 65px;
+                font-size: 18px;
+              }
+            }
+          }
+          .f_bottom {
+            @include Flexible($j-cont: space-between);
+            padding: 30px 0;
+            .info_text {
+              max-width: 60%;
+              padding: 0;
+            }
+            .yelo-btn {
+              width: 33.3333%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

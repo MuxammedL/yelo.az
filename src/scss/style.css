@@ -2747,6 +2747,284 @@ section {
   }
 }
 
+#cards .cards .card.loan .c_about {
+  margin-top: 160px;
+}
+#cards .cards .card.loan .loan_c_image {
+  width: 100%;
+  height: 170px;
+  position: absolute;
+  right: 0px;
+  bottom: auto;
+  background: no-repeat bottom right/contain;
+  top: -10px;
+}
+@media (min-width: 992px) {
+  #cards .cards .card.loan .loan_c_image {
+    width: 40%;
+    height: 110%;
+    top: auto;
+    bottom: 0px;
+    background-position: bottom center;
+    border-bottom-right-radius: 10px;
+  }
+  #cards .cards .card.loan .c_about {
+    margin: 0;
+    width: calc(100% - 350px);
+  }
+}
+#cards .cards .consumption .f_inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+#cards .cards .consumption .f_inner .form_calc {
+  margin-bottom: 20px;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs {
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item {
+  padding: 10px;
+  position: relative;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item p {
+  color: rgba(0, 0, 0, 0.5019607843);
+  font-size: 15px;
+  line-height: 15px;
+  margin: 0 0 4px 0;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item .range_result {
+  font-family: "TT Commons Medium";
+  font-size: 26px;
+  line-height: 26px;
+  width: 100%;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item .lc_c {
+  position: absolute;
+  font-family: "TT Commons Bold";
+  font-size: 15px;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.5019607843);
+  right: 17px;
+  bottom: 20px;
+  line-height: 15px;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.1);
+  --range: calc(var(--max) - var(--min));
+  --ratio: calc((var(--val) - var(--min)) / var(--range));
+  --sx: calc(0.5 * 1.5em + var(--ratio) * (100% - 1.5em));
+}
+@media (min-width: 992px) {
+  #cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=range] {
+    background-color: transparent;
+  }
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+       appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  background: #ffffff;
+  border: 3px solid #ffc628;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: linear-gradient(#ffc628, #ffc628) 0/var(--sx) 100% no-repeat;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=range]::-webkit-slider-thumb {
+  height: 24px;
+  width: 24px;
+  -webkit-appearance: none;
+          appearance: none;
+  border-radius: 100%;
+  background: #ffffff;
+  cursor: pointer;
+  background: #ffffff;
+  border: 5px solid #ffc628;
+  margin: -10px 0 0 0;
+  box-sizing: border-box;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=range]::-ms-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=range]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  appearance: none;
+  background: #ffffff;
+  cursor: pointer;
+  background: #ffffff;
+  border: 3px solid #ffc628;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=number]::-webkit-outer-spin-button, #cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_self {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 10px;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_self .lc_item {
+  width: 33.33333%;
+  padding: 0 10px;
+  text-align: center;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_self .lc_item:not(:last-child) {
+  border-right: 1px solid #ececec;
+}
+#cards .cards .consumption .f_inner .form_calc .lc_self .lc_item p {
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+#cards .cards .consumption .f_inner .form_group {
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  margin: 20px 0 15px 0;
+}
+#cards .cards .consumption .f_inner .form_group .form_item:not(:last-child) {
+  border-bottom: 1px solid #ececec;
+}
+#cards .cards .consumption .f_inner .form_group .form_item input {
+  height: 55px;
+  font-size: 16px;
+  padding: 0 20px;
+  width: calc(100% - 40px);
+  border-radius: 10px;
+}
+#cards .cards .consumption .f_inner .form_line .form_item {
+  margin-bottom: 15px;
+}
+#cards .cards .consumption .f_inner .form_line .form_item input {
+  padding: 0 20px;
+  border: 1px solid #ececec;
+  width: calc(100% - 40px);
+  border-radius: 10px;
+  height: 55px;
+  font-size: 16px;
+}
+#cards .cards .consumption .f_inner .form_line .form_item select {
+  height: 55px;
+  font-size: 16px;
+  padding: 0 10px;
+  border: 1px solid #ececec;
+  width: 100%;
+  border-radius: 10px;
+  background: no-repeat right center;
+}
+#cards .cards .consumption .f_inner .f_bottom {
+  margin-top: 40px;
+  border-top: 1px solid #ececec;
+  padding-top: 15px;
+}
+#cards .cards .consumption .f_inner .f_bottom .info_text {
+  padding: 10px 0;
+}
+#cards .cards .consumption .f_inner .f_bottom .info_text p {
+  padding: 0 0 0 50px;
+  font-size: 15px;
+  color: #000;
+  text-align: left;
+  background: no-repeat center left;
+}
+#cards .cards .consumption .f_inner .f_bottom .yelo-btn {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  #cards .cards .consumption .f_inner {
+    padding: 0;
+  }
+  #cards .cards .consumption .f_inner .form_calc .lc_inputs {
+    border-radius: 10px 10px 10px 0;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item {
+    width: 50%;
+  }
+  #cards .cards .consumption .f_inner .form_calc .lc_inputs .lc_item:not(:last-child) {
+    border-right: 1px solid #e7e7e7;
+  }
+  #cards .cards .consumption .f_inner .form_calc .lc_self {
+    padding: 30px 0;
+  }
+  #cards .cards .consumption .f_inner .form_calc .lc_self .lc_item {
+    width: 33.33333%;
+    padding: 0 10px;
+    text-align: center;
+  }
+  #cards .cards .consumption .f_inner .form_calc .lc_self .lc_item:not(:last-child) {
+    border-right: 1px solid #ececec;
+  }
+  #cards .cards .consumption .f_inner .form_calc .lc_self .lc_item p {
+    color: rgba(0, 0, 0, 0.5019607843);
+  }
+  #cards .cards .consumption .f_inner .form_group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  #cards .cards .consumption .f_inner .form_group .form_item {
+    width: 100%;
+  }
+  #cards .cards .consumption .f_inner .form_group .form_item:not(:last-child) {
+    border-bottom: none;
+    border-right: 1px solid #e7e7e7;
+  }
+  #cards .cards .consumption .f_inner .form_group .form_item input {
+    height: 65px;
+    font-size: 18px;
+  }
+  #cards .cards .consumption .f_inner .form_line {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  #cards .cards .consumption .f_inner .form_line .form_item {
+    width: 100%;
+  }
+  #cards .cards .consumption .f_inner .form_line .form_item input {
+    height: 65px;
+    font-size: 18px;
+  }
+  #cards .cards .consumption .f_inner .f_bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+  #cards .cards .consumption .f_inner .f_bottom .info_text {
+    max-width: 60%;
+    padding: 0;
+  }
+  #cards .cards .consumption .f_inner .f_bottom .yelo-btn {
+    width: 33.3333%;
+  }
+}
+
 .news_page .header-bottom .header-main .right-side .menu-toggle {
   display: none;
 }

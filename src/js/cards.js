@@ -109,26 +109,7 @@ async function getCards() {
     console.error("Error fetching or processing news:", error);
   }
 }
-getText();
 getCards();
+getText();
 const shines = document.querySelectorAll(".shine");
 
-function handleMouseMove(event, element) {
-  const boundingRect = element.getBoundingClientRect();
-  const mouseX = event.clientX - boundingRect.left - boundingRect.width / 2;
-  const mouseY = event.clientY - boundingRect.top - boundingRect.height / 2;
-  const percentage = (mouseY + 165) / 360;
-  let oppacity = percentage * 0.5;
-  const tiltX = (30 / boundingRect.width) * mouseX;
-  const tiltY = (50 / boundingRect.height) * mouseY;
-
-  element.style.transform = `rotateX(${tiltY}deg) rotateY(${-tiltX}deg) scale3d(1.07,1.07,1.07)`;
-  const angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
-  element.lastElementChild.style.backgroundImage = `linear-gradient(${
-    angle - 90
-  }deg, rgba(255, 255, 255, ${oppacity.toFixed(
-    3
-  )}) 0%, rgba(255, 255, 255, 0) 80%)`;
-}
-
-window.addEventListener("load", () => {});
