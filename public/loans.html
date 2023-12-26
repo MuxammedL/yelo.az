@@ -568,262 +568,158 @@
       <section id="cards">
         <div class="container">
           <div class="cards">
-            <form id="get_loan_form" class="consumption">
-              <div class="f_inner">
-                <div class="form_calc">
-                  <div class="lc_inputs">
-                    <div class="lc_salary lc_item">
-                      <p>Aylıq əməkhaqqı</p>
-                      <input
-                        name="salary"
-                        type="number"
-                        value="2500"
-                        class="ajax_check range_result"
-                      />
-                      <div class="lc_c">AZN</div>
-                      <input
-                        type="range"
-                        min="350"
-                        max="5000"
-                        step="50"
-                        value="2500"
-                        style="--min: 350; --max: 5000; --val: 2500"
-                        class="range"
-                      />
-                    </div>
-                    <div class="lc_amount lc_item">
-                      <p>Kredit məbləği</p>
-                      <input
-                        name="credit"
-                        type="number"
-                        value="15000"
-                        class="ajax_check range_result"
-                      />
-                      <div class="lc_c">AZN</div>
-                      <input
-                        type="range"
-                        min="400"
-                        max="50100"
-                        step="100"
-                        value="10000"
-                        style="--min: 400; --max: 50100; --val: 10000"
-                        class="range range_smart"
-                      />
-                      <span
-                        class="smart_plus"
-                        style="
-                          position: absolute;
-                          left: 85px;
-                          font-family: 'm';
-                          font-size: 26px;
-                          line-height: 26px;
-                          display: none;
-                        "
-                        >+</span
+            <!-- <form id="get_loan_form" class="consumption mortgage_form">
+                <div class="f_inner">
+                  <div class="form_line">
+                    <div class="form_item">
+                      <select
+                        name="mortgage_type"
+                        style="background-image: url(../public/images/select.svg)"
+                        class="mortgage_type"
                       >
+                        <option value="standart">Adi</option>
+                        <option value="pro">Güzəştli</option>
+                      </select>
+                    </div>
+                    <div class="form_item">
+                      <select
+                        name="specify"
+                        style="background-image: url(../public/images/select.svg)"
+                        class="loan_type"
+                      >
+                        <option value="standart">Zəmanətsiz</option>
+                        <option value="pro">Zəmanətli</option>
+                      </select>
                     </div>
                   </div>
-                </div>
-                <div class="form_group">
-                  <div class="form_item">
-                    <input
-                      name="name"
-                      type="text"
-                      class="mask_letter_az ajax_check"
-                      placeholder="Ad"
-                    />
+                  <div class="form_calc">
+                    <div class="lc_inputs">
+                      <div class="lc_salary lc_item">
+                        <p>Mənzilin dəyəri</p>
+                        <input
+                          name="home_price"
+                          type="number"
+                          value="250000"
+                          class="range_result"
+                        />
+                        <div class="lc_c">AZN</div>
+                        <input
+                          type="range"
+                          min="10000"
+                          max="500000"
+                          step="50"
+                          value="250000"
+                          style="--min: 10000; --max: 500000; --val: 250000"
+                          class="range rangeAmount"
+                        />
+                      </div>
+                      <div class="lc_amount lc_item">
+                        <p>İlkin ödəniş</p>
+                        <input
+                          name="first_price"
+                          type="number"
+                          data-percent="15"
+                          value="37500"
+                          class="range_result numberFirstPay"
+                        />
+                        <div class="lc_c">AZN</div>
+                        <input
+                          type="range"
+                          min="25000"
+                          max="250000"
+                          step="50"
+                          value="37500"
+                          style="--min: 25000; --max: 250000; --val: 37500"
+                          class="range rangeFirstPay"
+                        />
+                      </div>
+                      <div class="lc_term lc_item">
+                        <p>Müddət</p>
+                        <input
+                          name="month"
+                          type="number"
+                          data-max="300"
+                          value="150"
+                          class="range_result"
+                        />
+                        <div class="lc_c">Ay</div>
+                        <input
+                          type="range"
+                          min="6"
+                          max="300"
+                          step="1"
+                          value="150"
+                          style="--min: 6; --max: 300; --val: 150"
+                          class="range rangeTerm"
+                        />
+                      </div>
+                    </div>
+  
+                    <div class="lc_self">
+                      <div class="lc_item">
+                        <p>Yekun məbləğ</p>
+                        <b id="my_year_pay">115 </b>
+                      </div>
+                      <div class="lc_item">
+                        <p>Aylıq ödəniş</p>
+                        <b id="my_month_pay">522 </b>
+                      </div>
+                      <div class="lc_item">
+                        <p>Illik Faiz</p>
+                        <b id="my_percent">8% </b>
+                      </div>
+                    </div>
                   </div>
-                  <div class="form_item">
-                    <input
-                      name="surname"
-                      type="text"
-                      class="mask_letter_az ajax_check"
-                      placeholder="Soyad"
-                    />
+  
+                  <div class="form_group">
+                    <div class="form_item">
+                      <input type="text" class="check_name check_i" placeholder="Ad" />
+                      <div class="form_error">Doldurulması vacibdir</div>
+                    </div>
+                    <div class="form_item">
+                      <input type="text" class="check_name check_i" placeholder="Soyad" />
+                      <div class="form_error">Doldurulması vacibdir</div>
+                    </div>
                   </div>
-                </div>
-
-                <div class="form_line">
-                  <div class="form_item">
-                    <input
-                      name="work"
-                      type="text"
-                      class="ajax_check"
-                      placeholder="İş yeri"
-                    />
-                  </div>
-                  <div class="form_item">
-                    <div class="phone_inputs">
+                  <div class="form_line">
+                    <div class="form_item">
                       <input
                         type="text"
-                        name="phone"
-                        placeholder="Mobil nömrə"
-                        class="ajax_check mask_phone"
+                        placeholder="İş yeri"
+                        name="workPlace"
+                        class="check_i"
                       />
+                      <div class="form_error">Doldurulması vacibdir</div>
+                    </div>
+                    <div class="form_item">
+                      <div>
+                        <input
+                          type="text"
+                          name="phone"
+                          placeholder="Mobil nömrə"
+                          class="check_phone check_i"
+                        />
+                        <div class="form_error">Doldurulması vacibdir</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="f_bottom">
-                  <div class="info_text">
-                    <p
-                      style="
-                        background-image: url(../public/images/shield_gray_icon.svg);
-                      "
-                    >
-                      “Sifariş et” basmaqla Azərbaycan Kredit Bürosundan kredit
-                      tarixçəsi və Asan finansdan fərdi məlumatların alınmasına
-                      razılıq verirəm.
-                    </p>
+                  <div class="f_bottom">
+                    <div class="info_text">
+                      <p
+                        style="
+                          background-image: url(../public/images/shield_gray_icon.svg);
+                        "
+                      >
+                        Biz məlumatlarınızın təhlükəsizliyinə və təhlükəsizliyinə
+                        zəmanət veririk
+                      </p>
+                    </div>
+                    <button class="yelo-btn" type="submit">Next step</button>
                   </div>
-                  <button class="yelo-btn" type="submit">Sifariş et</button>
                 </div>
-              </div>
-            </form>
+              </form> -->
 
-            <form class="consumption">
-              <div class="f_inner">
-                <div class="form_line">
-                  <div class="form_item">
-                    <select name="simple" style="background-image: url(../public/images/select.svg);">
-                      <option value="standart">Adi</option>
-                      <option value="pro">Güzəştli</option>
-                    </select>
-                  </div>
-                  <div class="form_item">
-                    <select name="specify" style="background-image: url(../public/images/select.svg);">
-                      <option value="standart">Zəmanətsiz</option>
-                      <option value="pro">Zəmanətli</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form_calc">
-                  <div class="lc_inputs">
-                    <div class="lc_salary lc_item">
-                      <p>Mənzilin dəyəri</p>
-                      <input
-                        name="home_price"
-                        type="number"
-                        value="250000"
-                        class="range_result"
-                      />
-                      <div class="lc_c">AZN</div>
-                      <input
-                        type="range"
-                        min="10000"
-                        max="500000"
-                        step="50"
-                        value="250000"
-                        style="--min: 10000; --max: 500000; --val: 250000"
-                        class="range"
-                      />
-                    </div>
-                    <div class="lc_amount lc_item">
-                      <p>İlkin ödəniş</p>
-                      <input
-                        name="first_price"
-                        type="number"
-                        data-percent="15"
-                        value="37500"
-                        class="range_result"
-                      />
-                      <div class="lc_c">AZN</div>
-                      <input
-                        type="range"
-                        min="10000"
-                        max="500000"
-                        step="50"
-                        value="37500"
-                        style="--min: 10000; --max: 500000; --val: 37500"
-                        class="range"
-                      />
-                    </div>
-                    <div class="lc_term lc_item">
-                      <p>Müddət</p>
-                      <input
-                        name="month"
-                        type="number"
-                        data-max="300"
-                        value="150"
-                        class="range_result"
-                      />
-                      <div class="lc_c">Ay</div>
-                      <input
-                        type="range"
-                        min="6"
-                        max="300"
-                        step="1"
-                        value="150"
-                        style="--min: 6; --max: 300; --val: 150"
-                        class="range"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="lc_self">
-                    <div class="lc_item">
-                      <p>Yekun məbləğ</p>
-                      <b id="my_year_pay">115 </b>
-                    </div>
-                    <div class="lc_item">
-                      <p>Aylıq ödəniş</p>
-                      <b id="my_month_pay">522 </b>
-                    </div>
-                    <div class="lc_item">
-                      <p>Faiz</p>
-                      <b id="my_percent">15% </b>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form_group">
-                  <div class="form_item">
-                    <input type="text" class="i_name" placeholder="Ad" />
-                  </div>
-                  <div class="form_item">
-                    <input type="text" class="i_surname" placeholder="Soyad" />
-                  </div>
-                </div>
-                <div class="form_line">
-                  <div class="form_item">
-                    <input
-                      type="text"
-                      placeholder="İş yeri"
-                      name="workPlace"
-                      class="i_work"
-                    />
-                  </div>
-                  <div class="form_item">
-                    <div>
-                      <input
-                        type="text"
-                        name="phone"
-                        placeholder="Mobil nömrə"
-                        class="i_phone"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="f_bottom">
-                  <div class="info_text">
-                    <p
-                      style="
-                        background-image: url(../public/images/shield_gray_icon.svg);
-                      "
-                    >
-                      Biz məlumatlarınızın təhlükəsizliyinə və təhlükəsizliyinə
-                      zəmanət veririk
-                    </p>
-                  </div>
-                  <!-- <div class="lds-ring" v-if="preload">
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                      <div></div>
-                    </div> -->
-                  <button class="yelo-btn" type="submit">Next step</button>
-                </div>
-              </div>
-            </form>
+            
           </div>
         </div>
       </section>

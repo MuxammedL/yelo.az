@@ -464,8 +464,9 @@
       "spec_title_3_desc": "min. 9.9%",
       "isOrder": true,
       "hasAForm":true, 
+      "form_class":"call_short_form",
       "isTheCard": false,
-      "url":"#",
+      "url":"javascript:void(0)",
       "img": "../public/images/consumer-loan-pic.webp"
     },
     {
@@ -479,6 +480,7 @@
       "spec_title_3_desc": "18 ayadək",
       "isOrder": true,
       "hasAForm":false,
+      "form_class":"",
       "isTheCard": false,
       "url":"#",
       "img": "../public/images/business-loan-pic-1.webp"
@@ -494,8 +496,9 @@
       "spec_title_3_desc": "0.5 - 1.5 %",
       "isOrder": true,
       "hasAForm":true,
+      "form_class":"call_short_form",
       "isTheCard": false,
-      "url":"#",
+      "url":"javascript:void(0)",
       "img": "../public/images/onlayn_kredit-sayt-fonsuz.webp"
     },
     {
@@ -509,6 +512,7 @@
       "spec_title_3_desc": "min. 14%",
       "isOrder": true,
       "hasAForm":false,
+      "form_class":"",
       "isTheCard": false,
       "url":"#",
       "img": "../public/images/xx-2.webp"
@@ -524,6 +528,7 @@
       "spec_title_3_desc": "Kassadan / Yelo ATM-lərindən nağdlaşdırma 1 %*",
       "isOrder": false,
       "hasAForm":false,
+      "form_class":"",
       "isTheCard": false,
       "url":"#",
       "img": "../public/images/emanet-girovu-kredit-pic-fin.webp"
@@ -539,8 +544,9 @@
       "spec_title_3_desc": "20%",
       "isOrder": true,
       "hasAForm":true,
+      "form_class":"call_long_form",
       "isTheCard": false,
-      "url":"#",
+      "url":"javascript:void(0)",
       "img": "../public/images/daxili-ipoteka-pic.webp"
     },
     {
@@ -554,6 +560,7 @@
       "spec_title_3_desc": "70 günədək",
       "isOrder": true,
       "hasAForm":false,
+      "form_class":"",
       "isTheCard": true,
       "url":"../cardOrder.html",
       "img": "../public/images/yelo.png"
