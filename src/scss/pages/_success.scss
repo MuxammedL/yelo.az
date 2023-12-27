@@ -1,0 +1,180 @@
+.success {
+  margin-top: 140px;
+  .success_message {
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 55px;
+    h2 {
+      padding: 0 0 10px;
+      font-size: 27px;
+      line-height: 1.2;
+      font-weight: 600;
+    }
+    p {
+      font-size: 18px;
+    }
+    .icon {
+      margin: 30px auto 0;
+      width: 64px;
+    }
+  }
+  .get_app {
+    .download_app {
+      max-width: 420px;
+      margin: 0 auto;
+      h2 {
+        text-align: center;
+        padding: 0 0 16px;
+        font-size: 32px;
+        line-height: 1.4;
+        font-family: "TT Commons Medium";
+      }
+      .app-links {
+        ul {
+          @include Flexible();
+          border-radius: 5px;
+          border: 1px solid #ececec;
+          background-color: #fff;
+          margin-top: 10px;
+          li {
+            position: relative;
+            width: 100%;
+            &:not(:first-child) {
+              &::before {
+                content: "";
+                display: block;
+                width: 1px;
+                height: 50%;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: $black_15;
+              }
+            }
+            a {
+              display: block;
+              padding: 4px;
+              white-space: nowrap;
+              color: #000;
+              .app {
+                padding: 4px 0;
+                width: fit-content;
+                margin: 0 auto;
+                @media (min-width: 375px) {
+                  background: no-repeat left 12px/15px;
+                  padding: 4px 0 4px 24px;
+                  &.apple {
+                    background-image: url("../../public/images/apple_black.svg");
+                  }
+                  &.android {
+                    background-image: url("../../public/images/google_play_black.svg");
+                    background-position-y: 15px;
+                  }
+                  &.huawei {
+                    background-image: url("../../public/images/huawei_play_black.svg");
+                    background-position-y: 15.5px;
+                  }
+                }
+                span {
+                  color: #000000;
+                  font-size: 11px;
+                }
+                p {
+                  font-size: 16px;
+                  position: relative;
+                  top: -3px;
+                  color: #000000;
+                  letter-spacing: -0.4px;
+                  line-height: 9px;
+                  font-family: "TT Commons Medium";
+                }
+              }
+            }
+          }
+          @media (min-width: 992px) {
+            height: 55px;
+            li {
+              a {
+                padding: 2px 6px 0 6px;
+                .app {
+                  background-size: auto;
+                  padding: 6px 0 6px 34px;
+                  background-position-y: 8px;
+                  &.android {
+                    background-position-y: 11px;
+                  }
+                  &.huawei {
+                    background-position-y: 13.5px;
+                    background-size: 24px;
+                  }
+                  span {
+                    font-size: 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .app_qr_code {
+      margin: 50px auto;
+      width: fit-content;
+      padding: 8px;
+      background-color: #fff;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      span {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 0;
+        width: fit-content;
+        background-color: #ffc72c;
+        border-radius: 24px;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 32px 32px 0 32px;
+          border-color: #ffc72c transparent transparent transparent;
+          position: absolute;
+          left: calc(50% - 32px);
+          top: 99%;
+        }
+        img {
+          max-width: 80%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    .success_message {
+      h2 {
+        padding: 0 0 30px;
+        font-size: 36px;
+        line-height: 57.6px;
+      }
+    }
+    .get_app {
+      @include Flexible($j-cont: space-between, $a-items: center);
+      .download_app {
+        margin: 0;
+        h2 {
+          padding: 0 0 32px;
+          font-size: 40px;
+        }
+      }
+      .app_qr_code {
+        margin: 0;
+      }
+    }
+  }
+}

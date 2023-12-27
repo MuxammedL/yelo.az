@@ -425,8 +425,8 @@ async function getLoans() {
 
           range.previousElementSibling.previousElementSibling.value =
             range.value;
-        
-            mortgageForm&&clacMortgage();
+
+          mortgageForm && clacMortgage();
         });
       });
       numberTerms.forEach((term) => {
@@ -436,7 +436,7 @@ async function getLoans() {
             "--val",
             term.value
           );
-          mortgageForm&&clacMortgage();
+          mortgageForm && clacMortgage();
         });
       });
       const mortgageForm = document.querySelector(".mortgage_form");
@@ -496,6 +496,7 @@ async function getLoans() {
         }
         clacMortgage();
       }
+
       submitForm &&
         submitForm.addEventListener("submit", (e) => {
           e.preventDefault();
@@ -511,6 +512,16 @@ async function getLoans() {
                 input.nextElementSibling.classList.remove("show");
               }
             });
+          let isValid = true;
+          checkInputs.forEach((input) => {
+            if (input.nextElementSibling.classList.contains("show")) {
+              isValid = false;
+              return;
+            } 
+          });
+          if(isValid){
+            window.location.href = "success.html";;
+          }
         });
       function validatePhoneNumber(inputValue) {
         const phoneRegex = /^\+994\d{2} \d{3} \d{2} \d{2}$/;
