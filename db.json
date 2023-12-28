@@ -409,9 +409,14 @@
       "title": "Yelo App-də parlaq yeniliklər",
       "date": "2023-12-22T12:08:57.057Z",
       "id": 82
+    },
+    {
+      "title": "Cəmi 9.9% ilə kredit kampaniyası üçün son bir həftə!",
+      "date": "2023-12-25T16:22:25.248Z",
+      "id": 83
     }
   ],
-  "foot_text": {
+  "cards_text": {
     "text": "<div class=\"foot_txt\" style=\"color: #9d9d9d; padding: 20px 0\">\n<p>\nHəm xərclədikcə qazanmaq, həm də kartdakı pulunuza pul gəlsin\nistəyirsiniz? Hansı plastik kartı seçəcəyinizə əmin deyilsəniz,\nYelo Bank-dan Yelo Kartları qarşılayın!\n</p>\n<p>\nYelo Kartla xərclərinizə baxışınızı dəyişəcəksiniz. Yelo kartla\nrahat pul xərcləyəcəksiniz, xərclədikcə xərclərinizdən cashback\nqazanacaqsınız, kartınızın hesabını və bonuslarınızı rahatlıqla\nizləyəcəksiniz, online kart sifarişi edib, kartı əldə etdikdən\nsonra&nbsp;Yelo Karta görə partnyor mağazalarda endirim alacaqsınız.\nTəkcə kartın dizaynı çox şey deyir. Stereotipləri kartın dizaynında\nqırdıq və şaquli kart yaratdıq. Bu kartla kassada hər kəsin\ndiqqətini özünüzdə cəmləyəcəksiniz. Yelo Kart təkcə şaquli dizaynı\nilə seçilmir, həmçinin kartın kənarının da fərqli rənginə görə\npulqabınızda dərhal digər kartlardan seçiləcək! Kartın müddəti 3\nildir və kartı pulsuz əldə etmək seçiminiz də var. Kart Sifarişi\nzamanı&nbsp;üç valyutadan istənilən birini&nbsp;bilərsiniz.\n</p>\n<p>\nYelo Premium kartı isə premium üstünlüklər deməkdir. Yüksək\nimtiyazlar verən\n<a\nhref=\"#\"\n>Yelo Premium Kartla</a\n>nəinki ölkədaxili, həm də ölkəxaricində də eksklüziv imkanlara sahib\nolacaqsınız. Harda olmağınızdan asılı olmayaraq Yelo Premium kartı\nsizi xüsusi hiss etdirməklə yanaşı gəlirinizə gəlir gətirəcək! Yelo\nKartı istənilən Yelo Bank ATM-lərin komissiyasız nağdlaşdıra\nbilirsiniz. Geniş partnyor şəbəkəsindən 30%-dək cashback əldə\netməklə cibinizi sevindirəcəksiniz! Yelo kart təmassız ödəniş\nfunksionallığını dəstəkləyir. Kartla daha çox xərcləyin, daha çox\nqazanın! Online kart sifarişi xidməti ilə kartı əldə etmək imkanınız\nvar.&nbsp;\n</p>\n<p>\nYelo Bank-dan nəinki debet kart, həm də\n<a href=\"#\"\n>Yelo Kredit kart sifarisi</a\n>&nbsp;edə bilərsiniz.\n<a href=\"#\"\n>Yelo Grace Light kart</a\n>\nilə hər ay yalnız hesablanmış faizlər ödəməklə 10 000 AZN-ə dək\nkredit almaq imkanınız var.&nbsp; Üstəlik bu kartla bu gün\nxərcləyib, nə az, nə çox, 45 gün xərciniz barədə düşünməyə\nbilərsiniz. Kartla xərclənmiş vəsait üçün 45 gün güzəşt müddəti\nmövcuddur. Kartın növündən asılı olmayaraq hesabınıza 24/7 pulsuz\nYelo App-də baxa bilə və bir çox ödəniş və köçürmələrinizi həyata\nkeçirə bilərsiniz. Yelo Kart əldə etmək istəyirsiniz, lakin banka\nyaxınlaşmağa vaxtınız yoxdur? problem deyil, istənilən zaman\nistənilən yerdə onlayn kart sifarişi verə bilərsiniz! İndi siz\nharadan kart sifarişi edəcəyinizi yaxşı bilirsiniz.\n</p>\n</div>"
   },
   "cards": [
@@ -463,10 +468,10 @@
       "spec_title_3": "İllik faiz dərəcəsi",
       "spec_title_3_desc": "min. 9.9%",
       "isOrder": true,
-      "hasAForm":true, 
-      "form_class":"call_short_form",
+      "hasAForm": true,
+      "form_class": "call_short_form",
       "isTheCard": false,
-      "url":"javascript:void(0)",
+      "url": "javascript:void(0)",
       "img": "../public/images/consumer-loan-pic.webp"
     },
     {
@@ -479,10 +484,10 @@
       "spec_title_3": "Güzəşt müddəti",
       "spec_title_3_desc": "18 ayadək",
       "isOrder": true,
-      "hasAForm":false,
-      "form_class":"",
+      "hasAForm": false,
+      "form_class": "",
       "isTheCard": false,
-      "url":"#",
+      "url": "#",
       "img": "../public/images/business-loan-pic-1.webp"
     },
     {
@@ -495,10 +500,10 @@
       "spec_title_3": "Komissiya",
       "spec_title_3_desc": "0.5 - 1.5 %",
       "isOrder": true,
-      "hasAForm":true,
-      "form_class":"call_short_form",
+      "hasAForm": true,
+      "form_class": "call_short_form",
       "isTheCard": false,
-      "url":"javascript:void(0)",
+      "url": "javascript:void(0)",
       "img": "../public/images/onlayn_kredit-sayt-fonsuz.webp"
     },
     {
@@ -511,10 +516,10 @@
       "spec_title_3": "İllik faiz dərəcəsi",
       "spec_title_3_desc": "min. 14%",
       "isOrder": true,
-      "hasAForm":false,
-      "form_class":"",
+      "hasAForm": false,
+      "form_class": "",
       "isTheCard": false,
-      "url":"#",
+      "url": "#",
       "img": "../public/images/xx-2.webp"
     },
     {
@@ -527,10 +532,10 @@
       "spec_title_3": "Komissiya",
       "spec_title_3_desc": "Kassadan / Yelo ATM-lərindən nağdlaşdırma 1 %*",
       "isOrder": false,
-      "hasAForm":false,
-      "form_class":"",
+      "hasAForm": false,
+      "form_class": "",
       "isTheCard": false,
-      "url":"#",
+      "url": "#",
       "img": "../public/images/emanet-girovu-kredit-pic-fin.webp"
     },
     {
@@ -543,10 +548,10 @@
       "spec_title_3": "İlkin ödəniş",
       "spec_title_3_desc": "20%",
       "isOrder": true,
-      "hasAForm":true,
-      "form_class":"call_long_form",
+      "hasAForm": true,
+      "form_class": "call_long_form",
       "isTheCard": false,
-      "url":"javascript:void(0)",
+      "url": "javascript:void(0)",
       "img": "../public/images/daxili-ipoteka-pic.webp"
     },
     {
@@ -559,13 +564,42 @@
       "spec_title_3": "Güzəşt müddəti",
       "spec_title_3_desc": "70 günədək",
       "isOrder": true,
-      "hasAForm":false,
-      "form_class":"",
+      "hasAForm": false,
+      "form_class": "",
       "isTheCard": true,
-      "url":"../cardOrder.html",
+      "url": "../cardOrder.html",
       "img": "../public/images/yelo.png"
     }
   ],
+  "deposits": [
+    {
+      "name": "Yelo Sabit",
+      "description": "Pulunuz sizin üçün işləsin",
+      "spec_title_1": "Məbləğ",
+      "spec_title_1_desc": "min. 100 AZN/USD",
+      "spec_title_2": "Müddət",
+      "spec_title_2_desc": "12 / 18 / 24 ay",
+      "spec_title_3": "Faizlərin ödənişi",
+      "spec_title_3_desc": "aylıq və ya müddətin sonunda",
+      "url": "javascript:void(0)",
+      "img": "../public/images/lean_on_pillow.webp"
+    },
+    {
+      "name": "Yelo Yığım",
+      "description": "Pulunuz sizin üçün işləsin",
+      "spec_title_1": "Məbləğ",
+      "spec_title_1_desc": "100 AZN/USD",
+      "spec_title_2": "Müddət",
+      "spec_title_2_desc": "12 ay",
+      "spec_title_3": "Faizlərin ödənişi",
+      "spec_title_3_desc": "aylıq və ya müddətin sonunda",
+      "url": "javascript:void(0)",
+      "img": "../public/images/depositnew-pic.webp"
+    }
+  ],
+  "deposits_text": {
+    "text": "<div class=\"foot_txt\" style=\"color:#9d9d9d;padding:20px 0;\"><h3>Depozit nedir?</h3><p>Heç kəs əlavə qazanca, gəlirinin üstünə gəlir gəlməsinə etiraz etməz, elə deyil? Pulunuzun çoxalması üçün ən sərfəli və düzgün yol banka depozit qoymaqdır. Depozit nedir? Depozit - əmanətçi ilə bank arasında razılaşmaya əsasən müəyyən müddətə və faiz dərəcələri müqabilində hüquqi və ya fiziki şəxslərin bankda yerləşdirmiş olduqları sərbəst pul vəsaitidir. Yəni bu vəsaiti banka həvalə edirsiniz, bank isə sizin timsalınızda digər depozit müştərilərindən toplanmış vəsait hesabına kredit ayırır, siz isə pulunuzu depozit şəklində banka əmanət etdiyiniz üçün ondan illik faiz gəliri qazanırsınız. Depozitin ölkəmizdə ən geniş yayılmış növü müddətli depozitdir. Siz məbləğinizi müəyyənləşdirilmiş müddətə banka depozit kimi yerləşdirirsiniz, həmin müddət ərzində isə pulunuza faiz dərəcələri hesablanır. Əgər depozit vəsaitini müddət yekunlaşmamış bankdan geri çəksəniz vəsaitin daha az faiz gəliri qazana bilərsiniz.</p><h3>Depozit kalkulyatoru</h3><p>Müddətli depozit əmanəti yerləşdirmək üçün bank axtarışındasınızsa, çox düşünmədən Yelo Bank-ı seçin! Pulunuz yastıq altında, şüşə qabda, kitab arasında artan deyil, lakin Yelo Bank kimi daha etibarlı və yüksək faizli bankda saxlamaqla pulunuzu çoxalda bilərsiniz. Yelo Bank depozit yerləşdirmək istəyən müştərilərin rahatlığını təmin etmək üçün onlayn depozit kalkulyatoru xidmətini aktiv edib. Saat və olduğunuz məkandan asılı olmayaraq internet şəbəkəsi mövcud olan istənilən şəraitdə Bankın rəsmi veb-saytında depozit kalkulyatoru ilə pulunuzun nə qədər gəlir gətirəcəyini hesablaya bilərsiniz. Gəlirinizi hesablamaq üçün depozit üzrə kalkulyatorda depozit məbləği, müddəti və valyuta kimi detalları daxil edirsiniz. Çevin əmanət kalkulyatoru depozit gəlirinizi anındaca hesablayaraq nəticə ilə sizi tanış edəcək.</p><h3>Depozit faizleri</h3><p>Pulunuzu gəlir qazandırmaq üçün ən etibarlı üsul depozit faizleri əldə etməkdir. Bankda depozit hesabı açmaqla bir növ banka pulunuzu kredit şəklində verirsiniz, bank isə bunun müqabilində sizə depozit faizleri ödəyir, nəticədə siz qazanclı olursunuz. Hal-hazırda ən sərfəli depozit faizleri təqdim edən banklar arasında Yelo Bank ən populyarıdır. Təsadüfi deyil ki, ötən il depozit portfelinin artımına görə ən yüksək dinamika, təxminən 50% Yelo Bankın payına düşür. Müştərilər pullarınızı depozit şəklində Yelo Bankda əmanət etməklə məbləğlərindən parlaq depozit faizleri qazanırlar. Depozit hesabını vaxt itirmədən bankın veb saytında aça bilərsiniz. Gəlirinizə və əmanət yerləşdirmək istədiyiniz müddətə hansı depozit faizleri qazanacağınızı hesablamaq üçün vebsaytda avtomatlaşdırılmış əmanət kalkulyatoru da mövcuddur.</p><h3>Depozit hesablari</h3><p>Bankda depozit hesablari açmaq nə üçün sərfəlidir? Bir çoxunuz bankda hesab açmaq haqda eşitmisiniz, əgər siz külli miqdarda vəsaitə sahibsinizsə, onu depozit şəklində banka əmanət etməklə pulunuzu artırmaq yolunda ən optimal addımı atmış olarsınız. Bank və müştəri arasında hüquqi olaraq qarşılıqlı münasibətlər depozit hesablari açılması ilə başlanılır. Bank sizin vəsaiti qorumaq və müəyyənləşdirilmiş müddət sonunda qabaqcadan təklif etdiyi depozit faizini sizə təqdim etmək öhdəliyini götürür. Yüksək faizli depozit hesablari təklif edən banklar arasında ən favorit seçim Yelo Bank-dır. Keçən ilin depozit artım dinamikasında birinci yeri Yelo Bank bölüşür, əbəs yerə deyil, çünki 11%-dək yüksək faizli depozit hesablari açan müştərilər Yelo-ya etibar edir.</p><h3>Depozit</h3><p>Qısa zaman ərzində gəlir əldə etmək kim istəməz ki? İllərdir yığa bilmədiyiniz pulu Yelo Bank-da depozit kimi yerləşdirməklə siz əziyyətsiz pulunu artıra bilərsiniz. Bunun üçün depozit yerləşdirirsiniz vəssalam, zaman və pulunuz sizin lehinizə işləyir. Pulunuzu depozit şəklində Yelo Bank-a yatırmaqla 11%-dək əlavə qazanc əldə edə bilərsiniz. Yelo Bank depozit şəklində həm pulunuzu etibarlı ünvanda qorumaq, həm də pulunuzu çoxaltmaq imkanı təqdim edir. Xərclədikdən sonra gec ola bilər, odur ki pul vəsaitinizi xərcləməmiş Yelo Bank-da depozit şəklində yerləşdirin və zamanın axınına buraxın. Statistika da göstərir ki, depozit hesabı açmaq üçün ən etibarlı bank dedikdə, müştərilər Yelo Bankı seçir. Siz də Yelo Bank-ı seçin və seçilin, burada depozit hesabı açan müştərilərə başqa loyallıq imtiyazları da təqdim edilir.</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>"
+  },
   "valute": [
     {
       "Nominal": 1,

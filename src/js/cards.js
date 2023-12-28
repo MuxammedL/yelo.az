@@ -3,7 +3,7 @@ const cards = document.querySelector(".cards");
 
 async function getText() {
   try {
-    const res = await fetch("http://localhost:4000/foot_text");
+    const res = await fetch("http://localhost:4000/cards_text");
     const data = await res.json();
     let isClicked = false;
     const text = data.text.slice(0, 768);
@@ -111,5 +111,5 @@ async function getCards() {
 }
 getCards();
 getText();
-const shines = document.querySelectorAll(".shine");
+
 
