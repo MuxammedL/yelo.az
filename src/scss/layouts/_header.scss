@@ -387,7 +387,7 @@ header {
                 padding: 14px 0;
                 display: block;
                 position: relative;
-                &.active{
+                &.active {
                   &::after {
                     width: 100%;
                   }
@@ -690,6 +690,9 @@ header {
   }
   &.add-bg {
     background-color: #fff;
+    .header-bottom {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
   }
   &.fix-head {
     .header-top {
@@ -697,7 +700,6 @@ header {
       overflow: hidden;
     }
     .header-bottom {
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
       .header-main {
         .right-side {
           a {
