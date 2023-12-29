@@ -2606,6 +2606,266 @@ section {
   }
 }
 
+.about_card {
+  margin: 110px 0 0;
+  padding: 48px 0;
+  font-family: "TTFirsNeue Medium";
+  background-color: #f9f9f9;
+}
+.about_card .sides .card_image {
+  width: 70%;
+  margin: 0 auto;
+}
+.about_card .sides .card_image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about_card .sides .card_desc h2 {
+  font-size: 24px;
+  line-height: 1.2;
+  color: black;
+  padding-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .about_card .sides .card_desc h2 {
+    font-size: 32px;
+  }
+}
+.about_card .sides .card_desc .advantages {
+  padding-bottom: 64px;
+}
+.about_card .sides .card_desc .advantages ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+.about_card .sides .card_desc .advantages ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about_card .sides .card_desc .advantages ul li .icon {
+  width: 56px;
+  height: 56px;
+}
+.about_card .sides .card_desc .advantages ul li h3 {
+  width: calc(100% - 80px);
+  color: black;
+  font-size: 17px;
+  line-height: 1.78;
+}
+.about_card .sides .card_desc .buttons {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.about_card .sides .card_desc .buttons a {
+  display: block;
+  height: 56px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 56px;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.about_card .sides .card_desc .buttons a.yellow {
+  background-color: #FFC628;
+}
+.about_card .sides .card_desc .buttons a.white {
+  box-shadow: inset 0 0 0 1px #000;
+}
+.about_card .sides .card_desc .buttons a.white::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../../public/images/right_black_arrow_thin.svg) no-repeat 50%;
+  vertical-align: text-bottom;
+  margin: 0 0 0 8px;
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.about_card .sides .card_desc .buttons a.white:hover {
+  background-color: black;
+  color: #fff;
+}
+.about_card .sides .card_desc .buttons a.white:hover:after {
+  filter: invert(100%) sepia(1%) saturate(7489%) hue-rotate(211deg) brightness(112%) contrast(89%);
+}
+@media (min-width: 576px) {
+  .about_card .sides .card_desc .advantages ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px 32px;
+  }
+  .about_card .sides .card_desc .buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .about_card {
+    margin: 140px 0 0;
+    padding: 100px 0 90px;
+  }
+  .about_card .sides {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .about_card .sides .card_image {
+    width: calc(40% - 24px);
+    margin: 0;
+  }
+  .about_card .sides .card_desc {
+    width: calc(60% - 24px);
+  }
+  .about_card .sides .card_desc h2 {
+    font-size: 40px;
+  }
+}
+
+.cashback_block {
+  font-family: "TTFirsNeue Medium";
+  padding-top: 48px;
+}
+.cashback_block .cashback_head {
+  padding-bottom: 60px;
+  text-align: center;
+}
+.cashback_block .cashback_head h2 {
+  font-size: 24px;
+  padding-bottom: 16px;
+  line-height: 1.4;
+  color: #000;
+}
+.cashback_block .cashback_head p {
+  line-height: 1.33;
+  color: #939393;
+}
+.cashback_block .cashback_cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.cashback_block .cashback_cards .cashback_card {
+  padding: 48px 32px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 0 2px #6cc24a;
+  text-align: center;
+}
+.cashback_block .cashback_cards .cashback_card:nth-child(2) {
+  box-shadow: inset 0 0 0 2px #7879f1;
+}
+.cashback_block .cashback_cards .cashback_card:nth-child(2) {
+  box-shadow: inset 0 0 0 2px #0072ce;
+}
+.cashback_block .cashback_cards .cashback_card:last-child {
+  box-shadow: inset 0 0 0 2px #ff9e1f;
+}
+.cashback_block .cashback_cards .cashback_card .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 24px;
+}
+.cashback_block .cashback_cards .cashback_card .icon img {
+  display: inline-block;
+  width: 70px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.cashback_block .cashback_cards .cashback_card .icon span {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border: 4px solid #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 56px;
+  color: #000;
+  background-color: #FFC628;
+  border-radius: 50%;
+  margin: 0 0 0 -12px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+}
+.cashback_block .cashback_cards .cashback_card h3 {
+  padding: 0 0 16px;
+  font-size: 17px;
+  line-height: 1.33;
+  letter-spacing: -0.408px;
+  color: #000;
+}
+.cashback_block .cashback_cards .cashback_card p {
+  font-size: 13px;
+  line-height: 1.33;
+  letter-spacing: -0.078px;
+  color: #939393;
+}
+.cashback_block .cashback_inner {
+  padding-top: 64px;
+}
+.cashback_block .cashback_inner h2 {
+  text-align: center;
+  padding-bottom: 16px;
+  font-size: 24px;
+  line-height: 1.4;
+}
+.cashback_block .cashback_inner .cashback_info {
+  padding: 40px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+}
+.cashback_block .cashback_inner .cashback_info h3 {
+  padding-bottom: 16px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: -0.408px;
+  color: #000;
+}
+.cashback_block .cashback_inner .cashback_info p {
+  font-size: 14px;
+  line-height: 1.33;
+  letter-spacing: -0.078px;
+  color: #939393;
+}
+@media (min-width: 660px) {
+  .cashback_block .cashback_head h2 {
+    font-size: 40px;
+  }
+  .cashback_block .cashback_head p {
+    font-size: 24px;
+  }
+  .cashback_block .cashback_cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .cashback_block .cashback_inner h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .cashback_block {
+    padding-top: 110px;
+  }
+  .cashback_block .cashback_head h2 {
+    padding-bottom: 20px;
+  }
+  .cashback_block .cashback_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 50px;
+  }
+  .cashback_block .cashback_inner h2 {
+    padding-bottom: 20px;
+  }
+}
+
 #cards .cards .card {
   border: 1px solid #ececec;
   border-radius: 10px;

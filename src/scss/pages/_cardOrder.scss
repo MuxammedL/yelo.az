@@ -1,0 +1,251 @@
+.about_card {
+  margin: 110px 0 0;
+  padding: 48px 0;
+  font-family: "TTFirsNeue Medium";
+  background-color: #f9f9f9;
+  .sides {
+    .card_image {
+      width: 70%;
+      margin: 0 auto;
+      img {
+        object-fit: contain;
+      }
+    }
+    .card_desc {
+      h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        color: black;
+        padding-bottom: 24px;
+        @media (min-width: 768px) {
+          font-size: 32px;
+        }
+      }
+      .advantages {
+        padding-bottom: 64px;
+        ul {
+          @include Gridable($gap: 32px, $columns: 1fr);
+          li {
+            @include Flexible($a-items: center, $j-cont: space-between);
+            .icon {
+              width: 56px;
+              height: 56px;
+            }
+            h3 {
+              width: calc(100% - 80px);
+              color: black;
+              font-size: 17px;
+              line-height: 1.78;
+            }
+          }
+        }
+      }
+      .buttons {
+        @include Gridable($gap: 10px, $columns: 1fr);
+        a {
+          display: block;
+          height: 56px;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 56px;
+          color: #000;
+          text-decoration: none;
+          text-align: center;
+          border-radius: 8px;
+          transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+          &.yellow {
+            background-color: $primary_color;
+          }
+          &.white {
+            box-shadow: inset 0 0 0 1px #000;
+
+            &::after {
+              content: "";
+              display: inline-block;
+              width: 24px;
+              height: 24px;
+              background: url(../../public/images/right_black_arrow_thin.svg)
+                no-repeat 50%;
+              vertical-align: text-bottom;
+              margin: 0 0 0 8px;
+              transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+            }
+            &:hover {
+              background-color: black;
+              color: #fff;
+              &:after {
+                filter: invert(100%) sepia(1%) saturate(7489%)
+                  hue-rotate(211deg) brightness(112%) contrast(89%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) {
+    .sides {
+      .card_desc {
+        .advantages {
+          ul {
+            @include Gridable($gap: 64px 32px, $columns: 1fr 1fr);
+          }
+        }
+        .buttons {
+          @include Gridable($gap: 40px, $columns: 1fr 1fr);
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    margin: 140px 0 0;
+    padding: 100px 0 90px;
+    .sides {
+      @include Flexible($j-cont: space-between, $a-items: flex-start);
+      .card_image {
+        width: calc(40% - 24px);
+        margin: 0;
+      }
+      .card_desc {
+        width: calc(60% - 24px);
+        h2 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+.cashback_block {
+  font-family: "TTFirsNeue Medium";
+  padding-top: 48px;
+  .cashback_head {
+    padding-bottom: 60px;
+    text-align: center;
+    h2 {
+      font-size: 24px;
+      padding-bottom: 16px;
+      line-height: 1.4;
+      color: #000;
+    }
+    p {
+      line-height: 1.33;
+      color: #939393;
+    }
+  }
+  .cashback_cards {
+    @include Gridable($columns: 1fr, $gap: 20px);
+    .cashback_card {
+      padding: 48px 32px;
+      border-radius: 8px;
+      box-shadow: inset 0 0 0 2px #6cc24a;
+      text-align: center;
+      &:nth-child(2) {
+        box-shadow: inset 0 0 0 2px #7879f1;
+      }
+      &:nth-child(2) {
+        box-shadow: inset 0 0 0 2px #0072ce;
+      }
+      &:last-child {
+        box-shadow: inset 0 0 0 2px #ff9e1f;
+      }
+      .icon {
+        @include Flexible($j-cont: center, $a-items: center);
+        padding-bottom: 24px;
+        img {
+          display: inline-block;
+          width: 70px;
+          object-fit: contain;
+        }
+        span {
+          display: inline-block;
+          width: 64px;
+          height: 64px;
+          border: 4px solid #fff;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 56px;
+          color: #000;
+          background-color: $primary_color;
+          border-radius: 50%;
+          margin: 0 0 0 -12px;
+          box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);
+        }
+      }
+      h3 {
+        padding: 0 0 16px;
+        font-size: 17px;
+        line-height: 1.33;
+        letter-spacing: -0.408px;
+        color: #000;
+      }
+      p {
+        font-size: 13px;
+        line-height: 1.33;
+        letter-spacing: -0.078px;
+        color: #939393;
+      }
+    }
+  }
+  .cashback_inner {
+    padding-top: 64px;
+    h2 {
+      text-align: center;
+      padding-bottom: 16px;
+      font-size: 24px;
+      line-height: 1.4;
+    }
+    .cashback_info {
+      padding: 40px;
+      border: 1px solid #e2e2e2;
+      border-radius: 8px;
+      h3 {
+        padding-bottom: 16px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: -0.408px;
+        color: #000;
+      }
+      p {
+        font-size: 14px;
+        line-height: 1.33;
+        letter-spacing: -0.078px;
+        color: #939393;
+      }
+    }
+  }
+  @media (min-width: 660px) {
+    .cashback_head {
+      h2 {
+        font-size: 40px;
+      }
+      p {
+        font-size: 24px;
+      }
+    }
+    .cashback_cards {
+      @include Gridable($columns: repeat(2, 1fr), $gap: 30px);
+    }
+    .cashback_inner {
+      h2 {
+        font-size: 40px;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    padding-top: 110px;
+    .cashback_head {
+      h2 {
+        padding-bottom: 20px;
+      }
+    }
+    .cashback_cards {
+      @include Gridable($columns: repeat(4, 1fr), $gap:0 50px);
+    }
+    .cashback_inner {
+      h2 {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

@@ -52,10 +52,10 @@ async function getCards() {
           </div>
           <ul>
             <li>
-              <a href="#" class="curved-btn"><span>Sifariş et</span></a>
+              <a href="${card.url}" class="curved-btn"><span>Sifariş et</span></a>
             </li>
             <li>
-              <a href="#" class="more-details">
+              <a href="${card.url}" class="more-details">
                 <span>Daha ətraflı</span>
                 <img src="../public/images/bl_arr_bttn.svg" alt="bl_arr_bttn" />
               </a>
