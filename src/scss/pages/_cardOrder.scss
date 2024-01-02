@@ -388,37 +388,28 @@
     }
     .section_body {
       padding: 0 20px;
-      .hidden {
-        opacity: 0;
-        visibility: hidden;
-        height: 0;
-        &.show {
-          opacity: 1;
-          visibility: visible;
-          height: auto;
-        }
-        .payment_method_text {
-          padding: 12px 12px 8px 64px;
-          font-size: 13px;
-          line-height: 1.38;
-          letter-spacing: -0.078px;
-          color: #303030;
-          background-color: rgba(217, 217, 214, 0.1);
-          box-shadow: inset 0 0 0 1px rgba(150, 150, 150, 1);
-          border-radius: 12px;
-          position: relative;
-          margin-bottom: 24px;
-          &::before {
-            content: "";
-            background: url(../../public/images/fin_info.svg) no-repeat 50%;
-            display: block;
-            width: 24px;
-            height: 24px;
-            position: absolute;
-            left: 22px;
-            top: calc(50% - 12px);
-            opacity: 0.99;
-          }
+
+      .payment_method_text {
+        padding: 12px 12px 8px 64px;
+        font-size: 13px;
+        line-height: 1.38;
+        letter-spacing: -0.078px;
+        color: #303030;
+        background-color: rgba(217, 217, 214, 0.1);
+        box-shadow: inset 0 0 0 1px rgba(150, 150, 150, 1);
+        border-radius: 12px;
+        position: relative;
+        margin-bottom: 24px;
+        &::before {
+          content: "";
+          background: url(../../public/images/fin_info.svg) no-repeat 50%;
+          display: block;
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          left: 22px;
+          top: calc(50% - 12px);
+          opacity: 0.99;
         }
       }
       .hint {
@@ -471,13 +462,6 @@
           }
         }
       }
-      .delivery,
-      .branch {
-        display: none;
-        &.show {
-          display: block;
-        }
-      }
       @media (min-width: 992px) {
         padding: 0;
         .inputs {
@@ -515,6 +499,47 @@
       line-height: 1.33;
       color: #939393;
     }
+    .form_items {
+      padding-bottom: 24px;
+      .form_item {
+        &:first-child {
+          padding-bottom: 10px;
+        }
+        label {
+          display: block;
+          position: relative;
+          cursor: pointer;
+          font-size: 0;
+          input {
+            cursor: pointer;
+            height: 55px;
+            font-size: 16px;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            background-color: #fff;
+            padding: 0 20px;
+            width: 100%;
+            margin: 0;
+            &:checked {
+              border-color: #6cc24a;
+              background-color: rgba(108, 194, 74, 0.1);
+            }
+          }
+          span {
+            display: inline-block;
+            font-size: 18px;
+            position: absolute;
+            line-height: normal;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+      @media (min-width: 992px) {
+        @include Gridable($columns: 1fr 1fr, $gap: 24px);
+      }
+    }
     .one_check {
       padding-bottom: 16px;
       label {
@@ -545,6 +570,9 @@
           font-size: 14px;
           line-height: 1.33;
           color: #939393;
+          &.invalid {
+            color: #f00;
+          }
         }
       }
     }

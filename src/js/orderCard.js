@@ -1,5 +1,5 @@
-const selects = document.querySelectorAll(".input label select");
-const inputs = document.querySelectorAll(".input label input");
+let selects = document.querySelectorAll(".input label select");
+let inputs = document.querySelectorAll(".input label input");
 const checkPhone = document.querySelector(".mask_phone");
 const checkNames = document.querySelectorAll(".mask_letter");
 const notSymbols = document.querySelector(".not_symbols");
@@ -9,49 +9,179 @@ const closeBtn = document.querySelector(".close");
 const openFinModalBtn = document.querySelector(".hint");
 const finModal = document.querySelector(".fin_modal");
 const darkness = document.querySelector(".darkness");
-const acquisition_form = document.querySelector(".acquisition_form");
+const acquisition_method = document.querySelector(".acquisition_method");
 const deliveryInputs = document.querySelectorAll(".delivery");
 const branchInputs = document.querySelectorAll(".branch");
+const cardOrderForm = document.querySelector("#cardOrderForm");
+const oneCheck = document.querySelector(".one_check input");
 
-acquisition_form.addEventListener("change", () => {
-  function addClass(elements) {
-    elements.forEach((input) => {
-      input.classList.add("show");
-    });
-  }
-  function removeClass(elements) {
-    elements.forEach((input) => {
-      input.classList.remove("show");
-    });
-  }
-  if (acquisition_form.value == "delivery") {
-    addClass(deliveryInputs);
-    removeClass(branchInputs);
-  } else if (acquisition_form.value == "branch") {
-    removeClass(deliveryInputs);
-    addClass(branchInputs);
+cardOrderForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let isValid = true;
+  selects.forEach((select) => {
+    if (select.value == "") {
+      select.classList.add("alert");
+      isValid = false;
+    } else {
+      select.classList.remove("alert");
+    }
+  });
+  inputs.forEach((input) => {
+    if (input.value == "") {
+      input.classList.add("alert");
+      isValid = false;
+    } else {
+      input.classList.remove("alert");
+    }
+  });
+
+  if (!oneCheck.checked) {
+    oneCheck.nextElementSibling.nextElementSibling.classList.add("invalid");
+    isValid = false;
   } else {
-    removeClass(deliveryInputs);
-    removeClass(branchInputs);
+    oneCheck.nextElementSibling.nextElementSibling.classList.remove("invalid");
   }
+
+  if (isValid) {
+    const formData = {};
+    for (const input of cardOrderForm.elements) {
+      if (
+        (input.tagName === "INPUT" || input.tagName === "SELECT") &&
+        input.type !== "submit" &&
+        input.type !== "checkbox"
+      ) {
+        formData[input.name] = input.value;
+      }
+    }
+    fetch("http://localhost:4000/cardOrderers", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(formData),
+    });
+    console.log("Done");
+  }
+});
+
+acquisition_method.addEventListener("change", () => {
+  const branch = `<div class="input">
+    <label
+      ><select name="branch">
+        <option
+          value=""
+          disabled="disabled"
+          selected="selected"
+        ></option>
+        <option value="34">Masallı filialı</option>
+        <option value="33">Tovuz filialı</option>
+        <option value="3">28 may filialı</option>
+        <option value="32">Xaçmaz filialı</option>
+        <option value="36">Qəbələ filialı</option>
+        <option value="4">Sumqayıt filialı</option>
+        <option value="6">Baş ofis</option>
+        <option value="10">Gəncə filialı</option>
+        <option value="11">Xalqlar Dostluğu</option>
+        <option value="12">Bərdə filialı</option>
+        <option value="13">Lənkəran filialı</option>
+        <option value="15">Sahil filialı</option>
+        <option value="20">Mərkəz filialı</option>
+        <option value="22">Nərimanov filialı</option>
+        <option value="23">Elmlər Akademiyası filialı</option>
+        <option value="28">Sədərək TM filialı</option>
+        <option value="29">Mərdəkan filialı</option>
+        <option value="30">Salyan filialı</option>
+        <option value="31">Ağcabədi filialı</option>
+      </select>
+      <span>Filial</span></label
+    >
+  </div>`;
+  const delivery = `<div class="input">
+  <label
+    ><select name="city">
+      <option
+        value=""
+        disabled="disabled"
+        selected="selected"
+      ></option>
+      <option value="1">Bakı</option>
+    </select>
+    <span>Şəhəri seçin</span></label
+  >
+</div>
+<div class="input">
+  <label
+    ><input type="text" class="" name="delivery_address" />
+    <span>Çatdırılma ünvanı</span></label
+  >
+</div>`;
+  const conditionalInputs = document.querySelector(".conditional_inputs_second");
+  function addInputs(element) {
+    conditionalInputs.innerHTML = element;
+  }
+  function removeInputs() {
+    conditionalInputs.innerHTML = null;
+  }
+  if (acquisition_method.value == "delivery") {
+    removeInputs();
+    addInputs(delivery);
+  } else {
+    removeInputs();
+    addInputs(branch);
+  }
+  selects = document.querySelectorAll(".input label select");
+  inputs = document.querySelectorAll(".input label input");
+  checkValid();
 });
 
 openFinModalBtn.addEventListener("click", () => {
   finModal.classList.add("show");
   darkness.classList.add("show");
+  document.querySelector("body").classList.add("o-hidden");
 });
 
 closeBtn.addEventListener("click", () => {
   finModal.classList.remove("show");
   darkness.classList.remove("show");
+  document.querySelector("body").classList.remove("o-hidden");
 });
 
 paymentMethod.addEventListener("change", () => {
-  const element = document.querySelector(".payment_method_text").parentElement;
+  const radioBtns = `<div class="form_items">
+  <div class="form_item">
+    <label class="radio_new"
+      ><input type="radio" name="duration" checked value="1 illik / 10₼" />
+      <span>1 illik / 10₼</span></label
+    >
+  </div>
+  <div class="form_item">
+    <label class="radio_new"
+      ><input type="radio" name="duration" value="3 illik / 15₼" />
+      <span>3 illik / 15₼</span></label
+    >
+  </div>
+</div>`;
+  const payment_method_text = `<div class="payment_method_text">
+<p>
+  300 AZN mədaxil edildikdə 3 illik kartı pulsuz təqdim
+  edirik. Kartı əldə etdikdən sonra vəsaiti dərhal istifadə
+  etmək mümkündür.
+</p>
+</div>`;
+const conditionalInputs = document.querySelector(".conditional_inputs_first");
+  function addInputs(element) {
+    conditionalInputs.innerHTML = element;
+  }
+  function removeInputs() {
+    conditionalInputs.innerHTML = null;
+  }
+ 
   if (paymentMethod.value == "postpayment") {
-    element.classList.add("show");
+    removeInputs();
+    addInputs(payment_method_text);
   } else {
-    element.classList.remove("show");
+    removeInputs();
+    addInputs(radioBtns);
   }
 });
 
@@ -106,10 +236,8 @@ checkPhone.addEventListener("input", function (event) {
     const isValid = validatePhoneNumber(input.value);
     if (!isValid) {
       checkPhone.classList.add("alert");
-      checkPhone.nextElementSibling.classList.add("show");
     } else {
       checkPhone.classList.remove("alert");
-      checkPhone.nextElementSibling.classList.remove("show");
     }
   }
 });
@@ -120,6 +248,7 @@ checkNames.forEach((checkName) => {
   });
 });
 
+checkValid();
 inputs.forEach((input) => {
   input.addEventListener("focus", () => {
     input.classList.add("valid");
@@ -141,3 +270,26 @@ selects.forEach((select) => {
     }
   });
 });
+function checkValid() {
+  inputs.forEach((input) => {
+    input.addEventListener("focus", () => {
+      input.classList.add("valid");
+    });
+    input.addEventListener("blur", () => {
+      if (input.value == "") {
+        input.classList.remove("valid");
+      }
+    });
+  });
+
+  selects.forEach((select) => {
+    select.addEventListener("focus", () => {
+      select.classList.add("valid");
+    });
+    select.addEventListener("blur", () => {
+      if (select.value == "") {
+        select.classList.remove("valid");
+      }
+    });
+  });
+}

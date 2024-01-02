@@ -606,7 +606,7 @@
                 </div>
                 <div class="input">
                   <label
-                    ><select>
+                    ><select name="valute">
                       <option
                         value=""
                         disabled="disabled"
@@ -623,13 +623,13 @@
               <div class="inputs">
                 <div class="input">
                   <label
-                    ><input type="text" class="mask_letter" />
+                    ><input name="name" type="text" class="mask_letter" />
                     <span>Ad</span></label
                   >
                 </div>
                 <div class="input">
                   <label
-                    ><input type="text" class="mask_letter" />
+                    ><input name="surname" type="text" class="mask_letter" />
                     <span>Soyad</span></label
                   >
                 </div>
@@ -652,7 +652,8 @@
                       type="text"
                       placeholder=""
                       maxlength="7"
-                      class="fin_input" />
+                      class="fin_input"
+                      name="fin_number" />
                     <span>FİN</span>
                     <div
                       class="hint"
@@ -666,7 +667,7 @@
               <div class="inputs">
                 <div class="input">
                   <label
-                    ><select class="payment_method">
+                    ><select class="payment_method" name="payment_method">
                       <option
                         value=""
                         disabled="disabled"
@@ -682,24 +683,24 @@
                 </div>
                 <div class="input">
                   <label
-                    ><input type="text" maxlength="7" class="not_symbols" />
+                    ><input
+                      type="text"
+                      maxlength="7"
+                      class="not_symbols"
+                      name="secret_word"
+                    />
                     <span>Məxfi söz</span></label
                   >
                 </div>
               </div>
-              <div class="hidden">
-                <div class="payment_method_text">
-                  <p>
-                    300 AZN mədaxil edildikdə 3 illik kartı pulsuz təqdim
-                    edirik. Kartı əldə etdikdən sonra vəsaiti dərhal istifadə
-                    etmək mümkündür.
-                  </p>
-                </div>
+              
+              <div class="conditional_inputs_first">
+                
               </div>
               <h3 class="divider_h3"><span>Təhvil və Ödəniş</span></h3>
               <div class="input">
                 <label
-                  ><select class="acquisition_form">
+                  ><select class="acquisition_method" name="acquisition_method">
                     <option
                       value=""
                       disabled="disabled"
@@ -711,60 +712,11 @@
                   <span>Əldə etmə üsulu</span></label
                 >
               </div>
-              <div class="input branch">
-                <label
-                  ><select class="">
-                    <option
-                      value=""
-                      disabled="disabled"
-                      selected="selected"
-                    ></option>
-                    <option value="34">Masallı filialı</option>
-                    <option value="33">Tovuz filialı</option>
-                    <option value="3">28 may filialı</option>
-                    <option value="32">Xaçmaz filialı</option>
-                    <option value="36">Qəbələ filialı</option>
-                    <option value="4">Sumqayıt filialı</option>
-                    <option value="6">Baş ofis</option>
-                    <option value="10">Gəncə filialı</option>
-                    <option value="11">Xalqlar Dostluğu</option>
-                    <option value="12">Bərdə filialı</option>
-                    <option value="13">Lənkəran filialı</option>
-                    <option value="15">Sahil filialı</option>
-                    <option value="20">Mərkəz filialı</option>
-                    <option value="22">Nərimanov filialı</option>
-                    <option value="23">Elmlər Akademiyası filialı</option>
-                    <option value="28">Sədərək TM filialı</option>
-                    <option value="29">Mərdəkan filialı</option>
-                    <option value="30">Salyan filialı</option>
-                    <option value="31">Ağcabədi filialı</option>
-                  </select>
-                  <span>Filial</span></label
-                >
-              </div>
-              <div class="input delivery">
-                <label
-                  ><select>
-                    <option
-                      value=""
-                      disabled="disabled"
-                      selected="selected"
-                    ></option>
-                    <option value="1">Bakı</option>
-                  </select>
-                  <span>Şəhəri seçin</span></label
-                >
-              </div>
-              <div class="input delivery">
-                <label
-                  ><input type="text" class="" />
-                  <span>Çatdırılma ünvanı</span></label
-                >
-              </div>
+              <div class="conditional_inputs_second"></div>
               <h4>Ödənişi necə etmək istəyirsən?</h4>
               <div class="input">
                 <label
-                  ><select>
+                  ><select name="means_of_payment">
                     <option
                       value=""
                       disabled="disabled"

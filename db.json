@@ -657,5 +657,22 @@
   },
   "valute_text": {
     "text": "<div class=\"foot_txt\" style=\"color:#9d9d9d;padding: 0 0 20px;\"><div><h3>Valyuta məzənnəsi nədir?</h3><p> Valyuta məzənnəsi, bir ölkənin pul vahidi ilə digər ölkənin və ya iqtisadi bölgənin valyutasına qarşı dəyəridir.&nbsp;Beynəlxalq valyuta məzənnəsi iki valyutanın dəyişdirilə biləcəyi məzənnədir. Daha aydın dillə izah etsək, beynəlxalq valyuta məzənnələri bir valyutanın bir vahidinin digər valyutaya nə qədər dəyişdirilə biləcəyini göstərir. Bu cür hesablar üzrə əməliyyatların aparılması, xarici valyutata hesabların açılması sərbəst bazar təklifi, yaxud dövlətin əsas maliyyə orqanının (Azərbaycanda: Məzkəzi Bank) ciddi nəzarəti əsasında formalaşa bilər.Valyutaların alışı və ya satışı əmtəələrdəki kimidir. Gözünüz hər gün yenilənən valyuta məzənnəsində olsun.</p><p>Yelo Bank gündəlik valyuta məzənnəsini Azərbaycan Respublikası Mərkəzi Bankının həmin günə olan məzənnəsinə əsasən təqdim edir. Burada siz valyuta mübadiləsi, valyuta üzrə alqı-satqı əməliyyatları şərtləri ilə tanış ola bilərsiniz. Dünyanın aparıcı xarici valyutalarının manata qarşı olan məzənnələrinin gündəlik cədvəlindən xəbərdar ola bilərsiniz. Valyuta məzənnəsi hesablamaları üçün elektron kalkulyator köməyinizə çatacaq. Nağdsız əməliyyatlar üzrə valyuta məzənnəsi ilə yanaşı, həmçinin, nağd əməliyyatlar üçün də valyuta məzənnəsi cədvəli mövcuddur. Yelo Bank-ın rəsmi veb-saytında hər gün cari valyuta məzənnələri ilə bağlı ən son məlumatları əldə edə bilərsiniz. Valyuta konverterinin köməyi ilə siyahıdakı ixtiyari məzənnə üzrə bankın həm alış, həm də satış qiymətlərini hesablaya bilərsiniz. İstifadəçi yönümlü müasir dizayn günün 24 saatı ərzində valyuta mübadiləsi üzrə onlayn əməliyyatların aparılmasını təmin edir. Valyuta məzənnəsi səhifəsində AZN, USD, EUR, RUR, GBP valyutalarının qəbulu, eyni zamanda bunun müqabilində isə GBP, USD, EUR, RUB valyutasında əskinasların alışı üzrə hesablamalar mümkündür.&nbsp;Bu günə olan online valyuta məzənnəsi - Daha uyğun pul məzənnələri üçün. Rus pulunun kursu, Rubulun kursu, Valyuta konvertoru ilə məzənnələri müqayisə edə bilərsiniz.</p></div></?div>"
-  }
+  },
+  "cardOrderers": [
+    {
+      "card": "visa",
+      "valute": "AZN",
+      "name": "Muxammed",
+      "surname": "Layicov",
+      "phone": "+99455 555 55 55",
+      "fin_number": "ssafsds",
+      "payment_method": "prepayment",
+      "secret_word": "safdsfs",
+      "acquisition_method": "delivery",
+      "city": "1",
+      "delivery_address": "Evim",
+      "means_of_payment": "terminal",
+      "id": 1
+    }
+  ]
 }

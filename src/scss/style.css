@@ -390,6 +390,10 @@ h4 {
   margin-top: 50px;
 }
 
+.alert {
+  box-shadow: inset 0 0 0 1px #f00;
+}
+
 .s_title {
   margin-top: 135px;
 }
@@ -600,6 +604,7 @@ h4 {
   display: block;
   background: no-repeat center #ffffff;
   background-size: 20px;
+  cursor: pointer;
 }
 
 header {
@@ -3013,17 +3018,7 @@ section {
 .card_order_form .form_container .section_body {
   padding: 0 20px;
 }
-.card_order_form .form_container .section_body .hidden {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-}
-.card_order_form .form_container .section_body .hidden.show {
-  opacity: 1;
-  visibility: visible;
-  height: auto;
-}
-.card_order_form .form_container .section_body .hidden .payment_method_text {
+.card_order_form .form_container .section_body .payment_method_text {
   padding: 12px 12px 8px 64px;
   font-size: 13px;
   line-height: 1.38;
@@ -3035,7 +3030,7 @@ section {
   position: relative;
   margin-bottom: 24px;
 }
-.card_order_form .form_container .section_body .hidden .payment_method_text::before {
+.card_order_form .form_container .section_body .payment_method_text::before {
   content: "";
   background: url(../../public/images/fin_info.svg) no-repeat 50%;
   display: block;
@@ -3096,14 +3091,6 @@ section {
 .card_order_form .form_container .section_body .input label select {
   background: url(../../public/images/down_angle.svg) #fff no-repeat calc(100% - 16px) 50%;
 }
-.card_order_form .form_container .section_body .delivery,
-.card_order_form .form_container .section_body .branch {
-  display: none;
-}
-.card_order_form .form_container .section_body .delivery.show,
-.card_order_form .form_container .section_body .branch.show {
-  display: block;
-}
 @media (min-width: 992px) {
   .card_order_form .form_container .section_body {
     padding: 0;
@@ -3144,6 +3131,49 @@ section {
   line-height: 1.33;
   color: #939393;
 }
+.card_order_form .form_container .form_items {
+  padding-bottom: 24px;
+}
+.card_order_form .form_container .form_items .form_item:first-child {
+  padding-bottom: 10px;
+}
+.card_order_form .form_container .form_items .form_item label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 0;
+}
+.card_order_form .form_container .form_items .form_item label input {
+  cursor: pointer;
+  height: 55px;
+  font-size: 16px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0;
+}
+.card_order_form .form_container .form_items .form_item label input:checked {
+  border-color: #6cc24a;
+  background-color: rgba(108, 194, 74, 0.1);
+}
+.card_order_form .form_container .form_items .form_item label span {
+  display: inline-block;
+  font-size: 18px;
+  position: absolute;
+  line-height: normal;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 992px) {
+  .card_order_form .form_container .form_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
 .card_order_form .form_container .one_check {
   padding-bottom: 16px;
 }
@@ -3176,6 +3206,9 @@ section {
   font-size: 14px;
   line-height: 1.33;
   color: #939393;
+}
+.card_order_form .form_container .one_check label span.invalid {
+  color: #f00;
 }
 .card_order_form .form_container .yelo-btn {
   width: 100%;
