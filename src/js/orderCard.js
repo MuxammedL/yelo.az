@@ -14,6 +14,26 @@ const deliveryInputs = document.querySelectorAll(".delivery");
 const branchInputs = document.querySelectorAll(".branch");
 const cardOrderForm = document.querySelector("#cardOrderForm");
 const oneCheck = document.querySelector(".one_check input");
+const faqList = document.querySelectorAll(".faq_list article");
+
+faqList.forEach((item) => {
+    item.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+  
+      if (document.querySelector(".faq_list article.active")) {
+        document.querySelector("article.active .list_item_inner").style.height =
+          "0px";
+        document.querySelector(".faq_list article.active").classList.remove("active");
+      }
+  
+      if (!isActive) {
+        item.classList.add("active");
+        item.querySelector(".list_item_inner").style.height = `${
+          item.querySelector(".list_item_inner").scrollHeight + 20
+        }px`;
+      }
+    });
+  });
 
 cardOrderForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -50,7 +70,13 @@ cardOrderForm.addEventListener("submit", (e) => {
         input.type !== "submit" &&
         input.type !== "checkbox"
       ) {
-        formData[input.name] = input.value;
+        if (input.type == "radio") {
+          if (input.checked) {
+            formData[input.name] = input.value;
+          }
+        } else {
+          formData[input.name] = input.value;
+        }
       }
     }
     fetch("http://localhost:4000/cardOrderers", {
@@ -104,7 +130,7 @@ acquisition_method.addEventListener("change", () => {
         disabled="disabled"
         selected="selected"
       ></option>
-      <option value="1">Bakı</option>
+      <option value="Baki">Bakı</option>
     </select>
     <span>Şəhəri seçin</span></label
   >
@@ -115,7 +141,9 @@ acquisition_method.addEventListener("change", () => {
     <span>Çatdırılma ünvanı</span></label
   >
 </div>`;
-  const conditionalInputs = document.querySelector(".conditional_inputs_second");
+  const conditionalInputs = document.querySelector(
+    ".conditional_inputs_second"
+  );
   function addInputs(element) {
     conditionalInputs.innerHTML = element;
   }
@@ -149,16 +177,16 @@ closeBtn.addEventListener("click", () => {
 paymentMethod.addEventListener("change", () => {
   const radioBtns = `<div class="form_items">
   <div class="form_item">
-    <label class="radio_new"
-      ><input type="radio" name="duration" checked value="1 illik / 10₼" />
-      <span>1 illik / 10₼</span></label
-    >
+    <label class="radio_new">
+      <input type="radio" name="duration" checked value="1 illik / 10₼" />
+      <span>1 illik / 10₼</span>
+    </label>
   </div>
   <div class="form_item">
-    <label class="radio_new"
-      ><input type="radio" name="duration" value="3 illik / 15₼" />
-      <span>3 illik / 15₼</span></label
-    >
+    <label class="radio_new">
+      <input type="radio" name="duration" value="3 illik / 15₼" />
+      <span>3 illik / 15₼</span>
+    </label>
   </div>
 </div>`;
   const payment_method_text = `<div class="payment_method_text">
@@ -168,14 +196,14 @@ paymentMethod.addEventListener("change", () => {
   etmək mümkündür.
 </p>
 </div>`;
-const conditionalInputs = document.querySelector(".conditional_inputs_first");
+  const conditionalInputs = document.querySelector(".conditional_inputs_first");
   function addInputs(element) {
     conditionalInputs.innerHTML = element;
   }
   function removeInputs() {
     conditionalInputs.innerHTML = null;
   }
- 
+
   if (paymentMethod.value == "postpayment") {
     removeInputs();
     addInputs(payment_method_text);
@@ -209,6 +237,7 @@ checkPhone.addEventListener("focus", () => {
     checkPhone.value = "+994";
   }
 });
+
 checkPhone.addEventListener("input", function (event) {
   let input = event.target;
   let inputValue = input.value;
@@ -249,6 +278,7 @@ checkNames.forEach((checkName) => {
 });
 
 checkValid();
+
 inputs.forEach((input) => {
   input.addEventListener("focus", () => {
     input.classList.add("valid");
@@ -270,6 +300,7 @@ selects.forEach((select) => {
     }
   });
 });
+
 function checkValid() {
   inputs.forEach((input) => {
     input.addEventListener("focus", () => {

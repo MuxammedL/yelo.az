@@ -662,17 +662,32 @@
     {
       "card": "visa",
       "valute": "AZN",
-      "name": "Muxammed",
-      "surname": "Layicov",
+      "name": "FirstUser",
+      "surname": "Surname",
       "phone": "+99455 555 55 55",
-      "fin_number": "ssafsds",
+      "fin_number": "7SA1LVE",
       "payment_method": "prepayment",
-      "secret_word": "safdsfs",
+      "secret_word": "SALAM",
+      "duration": "3 illik / 15₼",
       "acquisition_method": "delivery",
-      "city": "1",
-      "delivery_address": "Evim",
+      "city": "Baki",
+      "delivery_address": "20 Yanvar",
       "means_of_payment": "terminal",
       "id": 1
+    },
+    {
+      "card": "mastercard",
+      "valute": "USD",
+      "name": "Jony",
+      "surname": "Dark",
+      "phone": "+99499 499 49 94",
+      "fin_number": "SLLWSS5",
+      "payment_method": "postpayment",
+      "secret_word": "yeloAZ",
+      "acquisition_method": "branch",
+      "branch": "22",
+      "means_of_payment": "terminal",
+      "id": 2
     }
   ]
 }

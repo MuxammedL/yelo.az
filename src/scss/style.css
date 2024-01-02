@@ -3214,6 +3214,121 @@ section {
   width: 100%;
 }
 
+.faq {
+  padding-top: 40px;
+}
+.faq .faq_container {
+  padding: 0 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.faq .faq_container h2 {
+  padding: 0 0 40px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.75;
+  color: #000;
+  text-align: center;
+}
+.faq .faq_container .faq_list article {
+  background: #fff;
+  box-shadow: 0px 2px 10px rgba(122, 122, 122, 0.12), 2px 0px 10px rgba(216, 216, 216, 0.08);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.faq .faq_container .faq_list article:not(:last-child) {
+  margin: 0 0 16px;
+}
+.faq .faq_container .faq_list article:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: #ffc72c;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.faq .faq_container .faq_list article h3 a {
+  display: block;
+  padding: 12px 64px 12px 24px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000;
+  position: relative;
+}
+.faq .faq_container .faq_list article h3 em {
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.faq .faq_container .faq_list article h3 em::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.faq .faq_container .faq_list article h3 em::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 1px);
+  transform: rotate(90deg);
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.faq .faq_container .faq_list article .list_item_inner {
+  font-size: 18px;
+  line-height: 1.61;
+  letter-spacing: -0.408px;
+  color: #939393;
+  padding: 0 24px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.faq .faq_container .faq_list article .list_item_inner p {
+  padding-bottom: 8px;
+}
+.faq .faq_container .faq_list article .list_item_inner ul li {
+  padding-left: 16px;
+  position: relative;
+}
+.faq .faq_container .faq_list article .list_item_inner ul li::before {
+  content: "";
+  display: block;
+  width: 3px;
+  height: 3px;
+  background-color: currentColor;
+  position: absolute;
+  left: 4px;
+  top: 12px;
+  border-radius: 50%;
+}
+.faq .faq_container .faq_list article.active::before {
+  width: 10px;
+}
+.faq .faq_container .faq_list article.active h3 em::after {
+  transform: rotate(0deg);
+}
+
 #cards .cards .card {
   border: 1px solid #ececec;
   border-radius: 10px;
