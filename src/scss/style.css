@@ -2866,6 +2866,321 @@ section {
   }
 }
 
+.fin_modal {
+  box-sizing: border-box;
+  width: 800px;
+  max-width: calc(100vw - 20px);
+  height: auto;
+  padding: 24px;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 10px));
+  z-index: 91;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition-delay: 0.15s;
+}
+.fin_modal.show {
+  transform: translate(-50%, calc(-50% + 0px));
+  opacity: 1;
+  visibility: visible;
+}
+.fin_modal .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 16px;
+}
+.fin_modal .header h2 {
+  line-height: 1.33;
+  color: #000;
+  font-size: 27px;
+}
+.fin_modal .header a {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: no-repeat 50%;
+  opacity: 0.2;
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.fin_modal .fin_images {
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+.fin_modal .fin_images .fin_image:first-child {
+  margin-bottom: 10px;
+}
+.fin_modal .fin_images .fin_image img {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.fin_modal .fin_images .fin_image span {
+  display: block;
+  padding: 16px 0 0;
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.078px;
+  color: #000;
+}
+@media (min-width: 576px) {
+  .fin_modal {
+    padding-bottom: 24px;
+  }
+  .fin_modal .header h2 {
+    font-size: 32px;
+  }
+  .fin_modal .fin_images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+  .fin_modal .fin_images .fin_image {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .fin_modal .fin_images .fin_image:first-child {
+    margin: 0;
+  }
+}
+
+.darkness {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 91;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.45s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.darkness.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.card_order_form {
+  padding: 110px 0 60px;
+  background-color: #f9f9f9;
+}
+.card_order_form .form_container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.card_order_form .form_container .section_head {
+  text-align: center;
+}
+.card_order_form .form_container .section_head h2 {
+  padding: 0 0 36px;
+  font-size: 32px;
+  line-height: 1.75;
+  color: #000;
+}
+.card_order_form .form_container .section_head .card_image {
+  margin-bottom: 36px;
+  position: relative;
+}
+.card_order_form .form_container .section_head .card_image:before {
+  content: "";
+  background-color: #ccc;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.card_order_form .form_container .section_head .card_image span {
+  display: inline-block;
+  padding: 0 36px;
+  background-color: #f9f9f9;
+  position: relative;
+}
+.card_order_form .form_container .section_head .card_image span img {
+  display: block;
+  width: 67px;
+}
+.card_order_form .form_container .section_body {
+  padding: 0 20px;
+}
+.card_order_form .form_container .section_body .hidden {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+.card_order_form .form_container .section_body .hidden.show {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+.card_order_form .form_container .section_body .hidden .payment_method_text {
+  padding: 12px 12px 8px 64px;
+  font-size: 13px;
+  line-height: 1.38;
+  letter-spacing: -0.078px;
+  color: #303030;
+  background-color: rgba(217, 217, 214, 0.1);
+  box-shadow: inset 0 0 0 1px rgb(150, 150, 150);
+  border-radius: 12px;
+  position: relative;
+  margin-bottom: 24px;
+}
+.card_order_form .form_container .section_body .hidden .payment_method_text::before {
+  content: "";
+  background: url(../../public/images/fin_info.svg) no-repeat 50%;
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 22px;
+  top: calc(50% - 12px);
+  opacity: 0.99;
+}
+.card_order_form .form_container .section_body .hint {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 18px;
+  cursor: pointer;
+}
+.card_order_form .form_container .section_body .input {
+  padding-bottom: 24px;
+}
+.card_order_form .form_container .section_body .input label {
+  position: relative;
+}
+.card_order_form .form_container .section_body .input label select,
+.card_order_form .form_container .section_body .input label input {
+  display: block;
+  width: 100%;
+  height: 64px;
+  padding: 0 16px;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  font-size: 17px;
+  color: #000;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.card_order_form .form_container .section_body .input label select.valid + span,
+.card_order_form .form_container .section_body .input label input.valid + span {
+  font-size: 12px;
+  top: 12px;
+}
+.card_order_form .form_container .section_body .input label select.valid,
+.card_order_form .form_container .section_body .input label input.valid {
+  padding: 10px 16px 0 16px;
+}
+.card_order_form .form_container .section_body .input label > span {
+  letter-spacing: -0.408px;
+  font-size: 17px;
+  color: #ccc;
+  pointer-events: none;
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.card_order_form .form_container .section_body .input label select {
+  background: url(../../public/images/down_angle.svg) #fff no-repeat calc(100% - 16px) 50%;
+}
+.card_order_form .form_container .section_body .delivery,
+.card_order_form .form_container .section_body .branch {
+  display: none;
+}
+.card_order_form .form_container .section_body .delivery.show,
+.card_order_form .form_container .section_body .branch.show {
+  display: block;
+}
+@media (min-width: 992px) {
+  .card_order_form .form_container .section_body {
+    padding: 0;
+  }
+  .card_order_form .form_container .section_body .inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+.card_order_form .form_container .divider_h3 {
+  margin: 0 0 24px;
+  text-align: center;
+  position: relative;
+}
+.card_order_form .form_container .divider_h3::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.card_order_form .form_container .divider_h3 span {
+  display: inline-block;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 1.33;
+  color: #939393;
+  background-color: #f9f9f9;
+  position: relative;
+}
+.card_order_form .form_container h4 {
+  padding: 0 0 8px;
+  font-size: 14px;
+  line-height: 1.33;
+  color: #939393;
+}
+.card_order_form .form_container .one_check {
+  padding-bottom: 16px;
+}
+.card_order_form .form_container .one_check label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.card_order_form .form_container .one_check label input {
+  display: none;
+}
+.card_order_form .form_container .one_check label input:checked + em {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
+  background-image: url(../../public/images/done_mark.svg);
+}
+.card_order_form .form_container .one_check label em {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: no-repeat 50%;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 12px);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.card_order_form .form_container .one_check label span {
+  font-size: 14px;
+  line-height: 1.33;
+  color: #939393;
+}
+.card_order_form .form_container .yelo-btn {
+  width: 100%;
+}
+
 #cards .cards .card {
   border: 1px solid #ececec;
   border-radius: 10px;

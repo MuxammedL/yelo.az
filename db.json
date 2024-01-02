@@ -414,6 +414,11 @@
       "title": "Cəmi 9.9% ilə kredit kampaniyası üçün son bir həftə!",
       "date": "2023-12-25T16:22:25.248Z",
       "id": 83
+    },
+    {
+      "title": "Xeyriyyə və yardım ödənişləri Yelo App-də",
+      "date": "2023-12-30T18:08:41.202Z",
+      "id": 84
     }
   ],
   "cards_text": {
@@ -427,7 +432,7 @@
       "currency": "AZN / USD / EUR",
       "type": "Cashback",
       "typeText": "30%-dək",
-      "url":"../public/cardOrder.html",
+      "url": "../public/cardOrder.html",
       "img": "../public/images/yelo.png"
     },
     {
@@ -437,7 +442,7 @@
       "currency": "AZN / USD / EUR",
       "type": "Cashback",
       "typeText": "30%-dək",
-      "url":"../public/cardOrder.html",
+      "url": "../public/cardOrder.html",
       "img": "../public/images/visa-platinum.svg"
     },
     {
@@ -447,7 +452,7 @@
       "currency": "AZN",
       "type": "Güzəşt müddəti",
       "typeText": "70 günədək",
-      "url":"../public/cardOrder.html",
+      "url": "../public/cardOrder.html",
       "img": "../public/images/yelo_light-visa.png"
     },
     {
@@ -457,7 +462,7 @@
       "currency": "AZN",
       "type": "Qiyməti",
       "typeText": "Pulsuz",
-      "url":"../public/cardOrder.html",
+      "url": "../public/cardOrder.html",
       "img": "../public/images/yelo_digital-210x333.png"
     }
   ],

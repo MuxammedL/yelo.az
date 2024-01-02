@@ -106,6 +106,27 @@
         </div>
       </div>
     </div>
+    <div class="darkness"></div>
+    <div class="fin_modal">
+      <div class="header">
+        <h2>FİN Kod nədir?</h2>
+        <a
+          href="javascript:void(0);"
+          class="close"
+          style="background-image: url(../public/images/x_mark.svg)"
+        ></a>
+      </div>
+      <div class="fin_images">
+        <div class="fin_image">
+          <img src="../public/images/fin_1.webp" alt="fin_1" />
+          <span>Köhnə nəsil Ş/V</span>
+        </div>
+        <div class="fin_image">
+          <img src="../public/images/fin_2.webp" alt="fin_2" />
+          <span>Yeni nəsil Ş/V</span>
+        </div>
+      </div>
+    </div>
 
     <div class="bg-color"></div>
 
@@ -484,6 +505,9 @@
           </div>
         </div>
       </section>
+
+      <!-- Cashback Block -->
+
       <section class="cashback_block">
         <div class="container">
           <div class="cashback_head">
@@ -550,6 +574,228 @@
           </div>
         </div>
       </section>
+
+      <!-- Card Order Form -->
+
+      <section class="card_order_form">
+        <div class="form_container">
+          <div class="section_head">
+            <h2>Yelo Light</h2>
+            <div class="card_image">
+              <span>
+                <img src="../public/images/yelo.png" alt="yelo_card" />
+              </span>
+            </div>
+          </div>
+          <div class="section_body">
+            <form id="cardOrderForm">
+              <div class="inputs">
+                <div class="input">
+                  <label>
+                    <select name="card">
+                      <option
+                        value=""
+                        disabled="disabled"
+                        selected="selected"
+                      ></option>
+                      <option value="visa">VISA</option>
+                      <option value="mastercard">Mastercard</option>
+                    </select>
+                    <span>Kart növü</span>
+                  </label>
+                </div>
+                <div class="input">
+                  <label
+                    ><select>
+                      <option
+                        value=""
+                        disabled="disabled"
+                        selected="selected"
+                      ></option>
+                      <option value="AZN">AZN</option>
+                      <option value="USD">USD</option>
+                      <option value="EUR">EUR</option>
+                    </select>
+                    <span>Valyuta</span></label
+                  >
+                </div>
+              </div>
+              <div class="inputs">
+                <div class="input">
+                  <label
+                    ><input type="text" class="mask_letter" />
+                    <span>Ad</span></label
+                  >
+                </div>
+                <div class="input">
+                  <label
+                    ><input type="text" class="mask_letter" />
+                    <span>Soyad</span></label
+                  >
+                </div>
+              </div>
+              <div class="inputs">
+                <div class="input">
+                  <label
+                    ><input
+                      type="text"
+                      name="phone"
+                      placeholder=""
+                      class="mask_phone"
+                    />
+                    <span>Mobil nömrə </span></label
+                  >
+                </div>
+                <div class="input">
+                  <label
+                    ><input
+                      type="text"
+                      placeholder=""
+                      maxlength="7"
+                      class="fin_input" />
+                    <span>FİN</span>
+                    <div
+                      class="hint"
+                      style="
+                        background-image: url(../public/images/fin_info.svg);
+                      "
+                    ></div
+                  ></label>
+                </div>
+              </div>
+              <div class="inputs">
+                <div class="input">
+                  <label
+                    ><select class="payment_method">
+                      <option
+                        value=""
+                        disabled="disabled"
+                        selected="selected"
+                      ></option>
+                      <option value="prepayment">
+                        Kartın qiymətini ödəməklə
+                      </option>
+                      <option value="postpayment">İlkin mədaxil ilə</option>
+                    </select>
+                    <span>Ödəniş üsulu</span></label
+                  >
+                </div>
+                <div class="input">
+                  <label
+                    ><input type="text" maxlength="7" class="not_symbols" />
+                    <span>Məxfi söz</span></label
+                  >
+                </div>
+              </div>
+              <div class="hidden">
+                <div class="payment_method_text">
+                  <p>
+                    300 AZN mədaxil edildikdə 3 illik kartı pulsuz təqdim
+                    edirik. Kartı əldə etdikdən sonra vəsaiti dərhal istifadə
+                    etmək mümkündür.
+                  </p>
+                </div>
+              </div>
+              <h3 class="divider_h3"><span>Təhvil və Ödəniş</span></h3>
+              <div class="input">
+                <label
+                  ><select class="acquisition_form">
+                    <option
+                      value=""
+                      disabled="disabled"
+                      selected="selected"
+                    ></option>
+                    <option value="delivery">Çatdırılma ilə - Pulsuz</option>
+                    <option value="branch">Bankın filialından</option>
+                  </select>
+                  <span>Əldə etmə üsulu</span></label
+                >
+              </div>
+              <div class="input branch">
+                <label
+                  ><select class="">
+                    <option
+                      value=""
+                      disabled="disabled"
+                      selected="selected"
+                    ></option>
+                    <option value="34">Masallı filialı</option>
+                    <option value="33">Tovuz filialı</option>
+                    <option value="3">28 may filialı</option>
+                    <option value="32">Xaçmaz filialı</option>
+                    <option value="36">Qəbələ filialı</option>
+                    <option value="4">Sumqayıt filialı</option>
+                    <option value="6">Baş ofis</option>
+                    <option value="10">Gəncə filialı</option>
+                    <option value="11">Xalqlar Dostluğu</option>
+                    <option value="12">Bərdə filialı</option>
+                    <option value="13">Lənkəran filialı</option>
+                    <option value="15">Sahil filialı</option>
+                    <option value="20">Mərkəz filialı</option>
+                    <option value="22">Nərimanov filialı</option>
+                    <option value="23">Elmlər Akademiyası filialı</option>
+                    <option value="28">Sədərək TM filialı</option>
+                    <option value="29">Mərdəkan filialı</option>
+                    <option value="30">Salyan filialı</option>
+                    <option value="31">Ağcabədi filialı</option>
+                  </select>
+                  <span>Filial</span></label
+                >
+              </div>
+              <div class="input delivery">
+                <label
+                  ><select>
+                    <option
+                      value=""
+                      disabled="disabled"
+                      selected="selected"
+                    ></option>
+                    <option value="1">Bakı</option>
+                  </select>
+                  <span>Şəhəri seçin</span></label
+                >
+              </div>
+              <div class="input delivery">
+                <label
+                  ><input type="text" class="" />
+                  <span>Çatdırılma ünvanı</span></label
+                >
+              </div>
+              <h4>Ödənişi necə etmək istəyirsən?</h4>
+              <div class="input">
+                <label
+                  ><select>
+                    <option
+                      value=""
+                      disabled="disabled"
+                      selected="selected"
+                    ></option>
+                    <option value="terminal">Terminaldan</option>
+                  </select>
+                  <span>Ödəniş vasitəsi</span></label
+                >
+              </div>
+
+              <br />
+              <div class="one_check">
+                <label
+                  ><input type="checkbox" />
+                  <em></em>
+                  <span class=""
+                    >“Davam et” basmaqla Asan finansdan fərdi məlumatların
+                    alınmasına razılıq verirəm</span
+                  ></label
+                >
+              </div>
+              <span style="color: red"></span>
+              <div class="form_inner">
+                <button type="submit" class="yelo-btn">Davam et</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
       <!-- Cards -->
     </main>
 
@@ -767,5 +1013,6 @@
     </footer>
 
     <script src="../src/js/main.js"></script>
+    <script src="../src/js/orderCard.js"></script>
   </body>
 </html>
