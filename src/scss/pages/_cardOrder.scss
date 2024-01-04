@@ -615,7 +615,7 @@
           background-color: #ffc72c;
           position: absolute;
           left: 0;
-          top: 0; 
+          top: 0;
           transition: 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
         }
         h3 {
@@ -701,6 +701,112 @@
               &::after {
                 transform: rotate(0deg);
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.card_services {
+  margin-bottom: 30px;
+  .card_services_heading {
+    h4 {
+      font-family: "TT Commons Bold";
+      display: inline-block;
+      font-size: 20px;
+      line-height: normal;
+      padding: 7px 0;
+    }
+    .pagination_btns {
+      display: none;
+    }
+  }
+  .services_slider {
+    position: relative;
+    .services {
+      overflow: hidden;
+      @include Gridable();
+      grid-auto-flow: column;
+      user-select: none;
+      .service {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 15px;
+        width: 320px;
+        &:first-child {
+          width: calc(((100vw - 1146px) / 2));
+          padding: 0;
+        }
+        .service_inner {
+          background: #f3f1f7;
+          height: 295px;
+          width: 100%;
+          border-radius: 10px;
+          @include Flexible($j-cont: space-between);
+          .ser_desc {
+            box-sizing: border-box;
+            padding: 30px 0 30px 30px;
+            width: calc(100% - 130px);
+            @include Flexible($j-cont: space-between, $f-dir: column);
+            .ser_desc_inner {
+              b {
+                font-family: "TT Commons Bold";
+                font-size: 22px;
+                color: black;
+                line-height: 24px;
+                display: block;
+                margin: 0 0 10px 0;
+              }
+              p {
+                font-size: 16px;
+                line-height: 20px;
+                color: $black_50;
+              }
+            }
+          }
+          .ser_image {
+            width: 140px;
+            background: no-repeat bottom center/contain;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    margin-bottom: 50px;
+    .card_services_heading {
+      @include Flexible($j-cont: space-between);
+      h4 {
+        padding: 0;
+        font-size: 25px;
+      }
+      .pagination_btns {
+        display: block;
+        user-select: none;
+        div {
+          cursor: pointer;
+          width: 28px;
+          height: 28px;
+          border: 1px solid #ececec;
+          box-sizing: border-box;
+          background: no-repeat center;
+          border-radius: 100%;
+          display: inline-block;
+          margin: 0 0 0 3px;
+        }
+      }
+    }
+    .services_slider {
+      .services {
+        .service {
+          width: 376.5px;
+          &:first-child {
+            padding: 0 15px;
+          }
+          .service_inner {
+            .ser_image {
+              width: 230px;
             }
           }
         }

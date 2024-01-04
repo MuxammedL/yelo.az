@@ -15,25 +15,95 @@ const branchInputs = document.querySelectorAll(".branch");
 const cardOrderForm = document.querySelector("#cardOrderForm");
 const oneCheck = document.querySelector(".one_check input");
 const faqList = document.querySelectorAll(".faq_list article");
+const slideButtons = document.querySelectorAll(".pagination_btns div");
+const slider = document.querySelector(".services");
+
+slideButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const first_one = document.querySelector(".first_one");
+    const direction = button.dataset.direction === "prev" ? -1 : 1;
+    const scrollAmount =
+      (first_one.clientWidth < 300
+        ? first_one.clientWidth + 15
+        : first_one.clientWidth) * direction;
+    slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    console.log(slider.scrollLeft);
+  });
+});
+
+slider.addEventListener("scroll", () => {
+  const first_one = document.querySelector(".first_one");
+  if (slider.scrollLeft > 100) {
+    first_one.classList.remove("first_one");
+    slider.lastElementChild.classList.add("first_one");
+  } else {
+    first_one.classList.remove("first_one");
+    slider.firstElementChild.classList.add("first_one");
+  }
+  let maxScrollLeft = slider.scrollWidth - slider.clientWidth - 10;
+  slideButtons[0].style.opacity = slider.scrollLeft <= 0 ? "0" : "1";
+  slideButtons[0].style.visibility =
+    slider.scrollLeft <= 0 ? "hidden" : "visible";
+  slideButtons[1].style.visibility =
+    slider.scrollLeft >= maxScrollLeft ? "hidden" : "visible";
+  slideButtons[1].style.opacity =
+    slider.scrollLeft >= maxScrollLeft ? "0" : "1";
+});
+
+let isDraging = false,
+  startX,
+  startScrollLeft;
+
+const dragStrat = (e) => {
+  isDraging = true;
+  startX = e.pageX;
+  startScrollLeft = slider.scrollLeft;
+};
+
+const draging = (e) => {
+  const width = slider.lastElementChild.clientWidth;
+  const first_one = document.querySelector(".first_one");
+  if (!isDraging) {
+    return;
+  }
+  let left = startScrollLeft - (e.pageX - startX);
+  let direction = e.pageX - startX > 0 ? -1 : 1;
+  console.log(left, slider.scrollLeft, slider.scrollLeft);
+  slider.scrollBy({
+    left:
+      first_one.clientWidth < 300
+        ? direction * (width * Math.ceil(e.pageX / width / 3) + 242)
+        : direction * width * Math.ceil(e.pageX / width / 3),
+    behavior: "smooth",
+  });
+};
+const dragEnd = () => {
+  isDraging = false;
+};
+slider.addEventListener("mousedown", dragStrat);
+slider.addEventListener("mousemove", draging);
+slider.addEventListener("mouseup", dragEnd);
 
 faqList.forEach((item) => {
-    item.addEventListener("click", () => {
-      const isActive = item.classList.contains("active");
-  
-      if (document.querySelector(".faq_list article.active")) {
-        document.querySelector("article.active .list_item_inner").style.height =
-          "0px";
-        document.querySelector(".faq_list article.active").classList.remove("active");
-      }
-  
-      if (!isActive) {
-        item.classList.add("active");
-        item.querySelector(".list_item_inner").style.height = `${
-          item.querySelector(".list_item_inner").scrollHeight + 20
-        }px`;
-      }
-    });
+  item.addEventListener("click", () => {
+    const isActive = item.classList.contains("active");
+
+    if (document.querySelector(".faq_list article.active")) {
+      document.querySelector("article.active .list_item_inner").style.height =
+        "0px";
+      document
+        .querySelector(".faq_list article.active")
+        .classList.remove("active");
+    }
+
+    if (!isActive) {
+      item.classList.add("active");
+      item.querySelector(".list_item_inner").style.height = `${
+        item.querySelector(".list_item_inner").scrollHeight + 20
+      }px`;
+    }
   });
+});
 
 cardOrderForm.addEventListener("submit", (e) => {
   e.preventDefault();
