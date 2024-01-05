@@ -27,7 +27,6 @@ slideButtons.forEach((button) => {
         ? first_one.clientWidth + 15
         : first_one.clientWidth) * direction;
     slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    console.log(slider.scrollLeft);
   });
 });
 
@@ -68,7 +67,6 @@ const draging = (e) => {
   }
   let left = startScrollLeft - (e.pageX - startX);
   let direction = e.pageX - startX > 0 ? -1 : 1;
-  console.log(left, slider.scrollLeft, slider.scrollLeft);
   slider.scrollBy({
     left:
       first_one.clientWidth < 300
