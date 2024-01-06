@@ -2611,6 +2611,192 @@ section {
   }
 }
 
+.services_modal {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0 15px;
+  transition: all 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
+}
+.services_modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services_modal.show {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+}
+.services_modal .s_modal_content {
+  max-width: 760px;
+  position: relative;
+  z-index: 4;
+}
+.services_modal .s_modal_content .modal_nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.services_modal .s_modal_content .modal_nav .close_m {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  background: no-repeat center;
+  display: block;
+  z-index: 4;
+}
+.services_modal .s_modal_content .c_wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  background: white;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.services_modal .s_modal_content .c_wrap .c_right {
+  display: none;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item {
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  display: none;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item::-webkit-scrollbar {
+  width: 5px;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item::-webkit-scrollbar-thumb {
+  background-color: #cccdcc;
+  border-radius: 6px;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item.active {
+  display: block;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_cover {
+  background-color: #f3f1f7;
+  position: relative;
+  min-height: 200px;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_cover .c_m_left {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0 20px;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_cover .c_m_left .c_m_desc p {
+  font-family: "TT Commons Medium";
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5019607843);
+  margin: 0 0 5px 0;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_cover .c_m_left .c_m_desc b {
+  font-family: "TTFirsNeue Medium";
+  font-size: 27px;
+  line-height: 35px;
+  font-weight: normal;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_cover .c_m_image {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: no-repeat 50%/90%;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_text {
+  padding: 20px;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_text p {
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5019607843);
+  margin: 0 0 15px 0;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_text p a {
+  color: #0091fe;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_text ul li {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5019607843);
+  margin: 0 0 15px 0;
+  padding: 0 0 0 40px;
+  position: relative;
+}
+.services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_text ul li:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: #ffc628;
+  border-radius: 100%;
+  position: absolute;
+  top: 3px;
+  left: 0px;
+}
+@media (min-width: 992px) {
+  .services_modal {
+    padding: 0;
+  }
+  .services_modal .s_modal_content .modal_nav .close_m {
+    width: 70px;
+    height: 70px;
+    right: -70px;
+    background: url(../../public/images/close.svg) no-repeat center !important;
+  }
+  .services_modal .s_modal_content .c_wrap .c_left {
+    width: calc(100% - 220px);
+  }
+  .services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_cover .c_m_left {
+    padding-left: 50px;
+  }
+  .services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_cover .c_m_left .c_m_desc b {
+    font-size: 30px;
+  }
+  .services_modal .s_modal_content .c_wrap .c_left .service_modal_item .c_m_text {
+    padding: 30px 50px;
+  }
+  .services_modal .s_modal_content .c_wrap .c_right {
+    display: block;
+    width: 220px;
+    border-left: 1px solid #ececec;
+    padding: 20px 0;
+    font-family: "TT Commons Medium";
+  }
+  .services_modal .s_modal_content .c_wrap .c_right .cr_title {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5019607843);
+    line-height: 24px;
+    padding: 0 30px;
+    margin: 0 0 10px 0;
+  }
+  .services_modal .s_modal_content .c_wrap .c_right ul li a {
+    font-size: 15px;
+    color: #000000;
+    padding: 10px 30px;
+    display: block;
+    background: transparent;
+    transition: all 0.2s ease-out;
+  }
+  .services_modal .s_modal_content .c_wrap .c_right ul li a.active {
+    background-color: #FFC628;
+  }
+}
+
 .about_card {
   margin: 110px 0 0;
   padding: 48px 0;
@@ -3332,6 +3518,10 @@ section {
 .card_services {
   margin-bottom: 30px;
 }
+.card_services .card_services_heading {
+  display: flex;
+  justify-content: space-between;
+}
 .card_services .card_services_heading h4 {
   font-family: "TT Commons Bold";
   display: inline-block;
@@ -3340,7 +3530,20 @@ section {
   padding: 7px 0;
 }
 .card_services .card_services_heading .pagination_btns {
-  display: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.card_services .card_services_heading .pagination_btns div {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  background: no-repeat center;
+  border-radius: 100%;
+  display: inline-block;
+  margin: 0 0 0 3px;
 }
 .card_services .services_slider {
   position: relative;
@@ -3362,6 +3565,11 @@ section {
 .card_services .services_slider .services .service:first-child {
   width: calc((100vw - 1146px) / 2);
   padding: 0;
+}
+@media (min-width: 1200px) {
+  .card_services .services_slider .services .service:first-child {
+    padding: 0 15px;
+  }
 }
 .card_services .services_slider .services .service .service_inner {
   background: #f3f1f7;
@@ -3408,28 +3616,8 @@ section {
     padding: 0;
     font-size: 25px;
   }
-  .card_services .card_services_heading .pagination_btns {
-    display: block;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
-  .card_services .card_services_heading .pagination_btns div {
-    cursor: pointer;
-    width: 28px;
-    height: 28px;
-    border: 1px solid #ececec;
-    box-sizing: border-box;
-    background: no-repeat center;
-    border-radius: 100%;
-    display: inline-block;
-    margin: 0 0 0 3px;
-  }
   .card_services .services_slider .services .service {
     width: 376.5px;
-  }
-  .card_services .services_slider .services .service:first-child {
-    padding: 0 15px;
   }
   .card_services .services_slider .services .service .service_inner .ser_image {
     width: 230px;

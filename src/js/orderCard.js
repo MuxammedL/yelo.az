@@ -17,13 +17,86 @@ const oneCheck = document.querySelector(".one_check input");
 const faqList = document.querySelectorAll(".faq_list article");
 const slideButtons = document.querySelectorAll(".pagination_btns div");
 const slider = document.querySelector(".services");
+const servicesModal = document.querySelector(".services_modal");
+const serviceModalItems = document.querySelectorAll(".service_modal_item");
+const services = document.querySelectorAll(".services .service");
+const serviceModalPaginations = document.querySelectorAll(".c_right ul li a");
+const serviceModalCloseBtn = document.querySelector(".close_m");
+const toFormBtn = document.querySelector(".to_form");
+
+
+toFormBtn.addEventListener("click", () => {
+  const element = document.querySelector(".form_container");
+  const elementPosition = element.getBoundingClientRect().top + window.scrollY - 100;
+  console.log(elementPosition)
+  window.scrollTo({
+    top: elementPosition,
+    behavior: "smooth",
+  });
+});
+
+serviceModalCloseBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    servicesModal.classList.remove("active");
+  }, 100);
+  servicesModal.classList.remove("show");
+  darkness.classList.remove("show");
+  document.querySelector("body").classList.remove("o-hidden");
+});
+
+services.forEach((service) => {
+  service.addEventListener("click", (e) => {
+    e.stopPropagation();
+    servicesModal.classList.add("active");
+    document.querySelector("body").classList.add("o-hidden");
+    setTimeout(() => {
+      servicesModal.classList.add("show");
+      darkness.classList.add("show");
+    }, 100);
+    serviceModalItems.forEach((item) => {
+      if (item.dataset.serviceId == service.dataset.serviceId) {
+        document
+          .querySelector(".service_modal_item.active")
+          .classList.remove("active");
+        item.classList.add("active");
+      }
+    });
+    serviceModalPaginations.forEach((pagination) => {
+      if (service.dataset.serviceId == pagination.dataset.serviceId) {
+        document
+          .querySelector(".c_right ul li a.active")
+          .classList.remove("active");
+        pagination.classList.add("active");
+      }
+    });
+  });
+});
+
+serviceModalPaginations.forEach((pagination) => {
+  pagination.addEventListener("click", () => {
+    document
+      .querySelector(".c_right ul li a.active")
+      .classList.remove("active");
+    pagination.classList.add("active");
+    serviceModalItems.forEach((item) => {
+      if (item.dataset.serviceId == pagination.dataset.serviceId) {
+        document
+          .querySelector(".service_modal_item.active")
+          .classList.remove("active");
+        item.classList.add("active");
+      }
+    });
+  });
+});
 
 slideButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const first_one = document.querySelector(".first_one");
     const direction = button.dataset.direction === "prev" ? -1 : 1;
     const scrollAmount =
-      (first_one.clientWidth < 300
+      (first_one.clientWidth == 0
+        ? 15
+        : first_one.clientWidth < 300
         ? first_one.clientWidth + 15
         : first_one.clientWidth) * direction;
     slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
@@ -32,7 +105,7 @@ slideButtons.forEach((button) => {
 
 slider.addEventListener("scroll", () => {
   const first_one = document.querySelector(".first_one");
-  if (slider.scrollLeft > 100) {
+  if (slider.scrollLeft > 0) {
     first_one.classList.remove("first_one");
     slider.lastElementChild.classList.add("first_one");
   } else {

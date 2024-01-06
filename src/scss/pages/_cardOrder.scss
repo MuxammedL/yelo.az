@@ -1,3 +1,205 @@
+.services_modal {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0 15px;
+  transition: all 0.3s cubic-bezier(0.52, 0.01, 0.16, 1);
+  &.active {
+    @include Flexible($j-cont: center, $a-items: center);
+  }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+  .s_modal_content {
+    max-width: 760px;
+    position: relative;
+    z-index: 4;
+    .modal_nav {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      .close_m {
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        background: no-repeat center;
+        display: block;
+        z-index: 4;
+      }
+    }
+    .c_wrap {
+      position: relative;
+      z-index: 2;
+      @include Flexible($j-cont: center);
+      background: white;
+      overflow: hidden;
+      border-radius: 20px;
+      .c_right {
+        display: none;
+      }
+      .c_left {
+        .service_modal_item {
+          height: calc(100vh - 80px);
+          overflow-y: auto;
+          display: none;
+          &::-webkit-scrollbar {
+            width: 5px;
+            &-thumb {
+              background-color: #cccdcc;
+              border-radius: 6px;
+            }
+          }
+          &.active {
+            display: block;
+          }
+          .c_m_cover {
+            background-color: #f3f1f7;
+            position: relative;
+            min-height: 200px;
+            .c_m_left {
+              width: 60%;
+              height: 100%;
+              @include Flexible($a-items: center);
+              position: absolute;
+              top: 0px;
+              left: 0px;
+              padding: 0 20px;
+              .c_m_desc {
+                p {
+                  font-family: "TT Commons Medium";
+                  font-size: 18px;
+                  color: $black_50;
+                  margin: 0 0 5px 0;
+                }
+                b {
+                  font-family: "TTFirsNeue Medium";
+                  font-size: 27px;
+                  line-height: 35px;
+                  font-weight: normal;
+                }
+              }
+            }
+            .c_m_image {
+              width: 50%;
+              height: 100%;
+              position: absolute;
+              top: 0px;
+              right: 0px;
+              background: no-repeat 50%/90%;
+            }
+          }
+          .c_m_text {
+            padding: 20px;
+            p {
+              font-size: 18px;
+              letter-spacing: 0;
+              line-height: 24px;
+              color: $black_50;
+              margin: 0 0 15px 0;
+              a {
+                color: #0091fe;
+              }
+            }
+            ul {
+              li {
+                font-size: 18px;
+                color: $black_50;
+                margin: 0 0 15px 0;
+                padding: 0 0 0 40px;
+                position: relative;
+                &:after {
+                  content: "";
+                  display: block;
+                  width: 20px;
+                  height: 20px;
+                  background: #ffc628;
+                  border-radius: 100%;
+                  position: absolute;
+                  top: 3px;
+                  left: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    padding: 0;
+    .s_modal_content {
+      .modal_nav {
+        .close_m {
+          width: 70px;
+          height: 70px;
+          right: -70px;
+          background: url(../../public/images/close.svg) no-repeat center !important;
+        }
+      }
+      .c_wrap {
+        .c_left {
+          width: calc(100% - 220px);
+          .service_modal_item {
+            .c_m_cover {
+              .c_m_left {
+                padding-left: 50px;
+                .c_m_desc {
+                  b {
+                    font-size: 30px;
+                  }
+                }
+              }
+            }
+            .c_m_text {
+              padding: 30px 50px;
+            }
+          }
+        }
+        .c_right {
+          display: block;
+          width: 220px;
+          border-left: 1px solid #ececec;
+          padding: 20px 0;
+          font-family: "TT Commons Medium";
+          .cr_title {
+            font-size: 18px;
+            color: $black_50;
+            line-height: 24px;
+            padding: 0 30px;
+            margin: 0 0 10px 0;
+          }
+          ul {
+            li {
+              a {
+                font-size: 15px;
+                color: #000000;
+                padding: 10px 30px;
+                display: block;
+                background: transparent;
+                transition: all 0.2s ease-out;
+                &.active {
+                  background-color: $primary_color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .about_card {
   margin: 110px 0 0;
   padding: 48px 0;
@@ -711,6 +913,7 @@
 .card_services {
   margin-bottom: 30px;
   .card_services_heading {
+    @include Flexible($j-cont: space-between);
     h4 {
       font-family: "TT Commons Bold";
       display: inline-block;
@@ -719,7 +922,18 @@
       padding: 7px 0;
     }
     .pagination_btns {
-      display: none;
+      user-select: none;
+      div {
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        border: 1px solid #ececec;
+        box-sizing: border-box;
+        background: no-repeat center;
+        border-radius: 100%;
+        display: inline-block;
+        margin: 0 0 0 3px;
+      }
     }
   }
   .services_slider {
@@ -737,6 +951,9 @@
         &:first-child {
           width: calc(((100vw - 1146px) / 2));
           padding: 0;
+          @media (min-width: 1200px) {
+            padding: 0 15px;
+          }
         }
         .service_inner {
           background: #f3f1f7;
@@ -781,29 +998,11 @@
         padding: 0;
         font-size: 25px;
       }
-      .pagination_btns {
-        display: block;
-        user-select: none;
-        div {
-          cursor: pointer;
-          width: 28px;
-          height: 28px;
-          border: 1px solid #ececec;
-          box-sizing: border-box;
-          background: no-repeat center;
-          border-radius: 100%;
-          display: inline-block;
-          margin: 0 0 0 3px;
-        }
-      }
     }
     .services_slider {
       .services {
         .service {
           width: 376.5px;
-          &:first-child {
-            padding: 0 15px;
-          }
           .service_inner {
             .ser_image {
               width: 230px;
