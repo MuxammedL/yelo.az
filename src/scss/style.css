@@ -2857,7 +2857,6 @@ section {
   font-size: 17px;
   line-height: 56px;
   color: #000;
-  text-decoration: none;
   text-align: center;
   border-radius: 8px;
   transition: 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
@@ -3163,6 +3162,20 @@ section {
 .card_order_form {
   padding: 110px 0 60px;
   background-color: #f9f9f9;
+  position: relative;
+}
+.card_order_form .yellow {
+  font-family: "TTFirsNeue Medium";
+  display: inline-block;
+  font-weight: 500;
+  font-size: 17px;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #FFC628;
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 .card_order_form .form_container {
   max-width: 600px;
@@ -3778,6 +3791,15 @@ section {
   #cards .cards .card .c_about ul li .more-details {
     width: 200px;
     justify-content: flex-start;
+  }
+}
+
+.cashback .swiper {
+  height: auto;
+}
+@media (min-width: 992px) {
+  .cashback .swiper {
+    height: 505px;
   }
 }
 
@@ -4678,4 +4700,61 @@ body.o-hidden {
   .success .get_app .app_qr_code {
     margin: 0;
   }
+}
+
+.orderersTable .context {
+  font-family: "TT Commons Medium";
+  padding: 0 15px;
+  overflow-x: auto;
+}
+.orderersTable .context::-webkit-scrollbar {
+  height: 5px;
+}
+.orderersTable .context::-webkit-scrollbar-thumb {
+  background-color: #cccdcc;
+  border-radius: 6px;
+}
+.orderersTable .context table {
+  min-width: 1200px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #ececec;
+  margin: 10px 0;
+  width: 100%;
+  overflow: hidden;
+}
+.orderersTable .context table thead tr {
+  background-color: rgba(255, 198, 40, 0.8078431373);
+}
+@media (min-width: 1200px) {
+  .orderersTable .context table thead tr {
+    font-size: 18px;
+  }
+}
+.orderersTable .context table tr {
+  text-align: left;
+}
+.orderersTable .context table tr:not(:first-child) {
+  border-top: 1px solid #ececec;
+}
+.orderersTable .context table tr th,
+.orderersTable .context table tr td {
+  padding: 6px 10px;
+  line-height: normal;
+  height: 48px;
+  box-sizing: border-box;
+}
+.orderersTable .context table tr th {
+  border-bottom: 1px solid #ececec;
+  font-weight: normal;
+}
+.orderersTable .context table tr th:not(:last-child) {
+  border-right: 1px solid #ececec;
+}
+.orderersTable .context table tr td {
+  padding: 6px 10px;
+  line-height: normal;
+}
+.orderersTable .context table tr td:not(:last-child) {
+  border-right: 1px solid #ececec;
 }/*# sourceMappingURL=style.css.map */

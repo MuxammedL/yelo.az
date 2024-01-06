@@ -1,0 +1,58 @@
+.orderersTable {
+  .context {
+    font-family: "TT Commons Medium";
+    padding: 0 15px;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      height: 5px;
+      &-thumb {
+        background-color: #cccdcc;
+        border-radius: 6px;
+      }
+    }
+    table {
+      min-width: 1200px;
+      border-collapse: collapse;
+      border-radius: 10px;
+      box-shadow: 0 0 0 1px $card_border_color;
+      margin: 10px 0;
+      width: 100%;
+      overflow: hidden;
+      thead {
+        tr {
+          background-color: #ffc628ce;
+          @media (min-width: 1200px) {
+            font-size: 18px;
+          }
+        }
+      }
+      tr {
+        text-align: left;
+        &:not(:first-child) {
+          border-top: 1px solid $card_border_color;
+        }
+        th,
+        td {
+          padding: 6px 10px;
+          line-height: normal;
+          height: 48px;
+          box-sizing: border-box;
+        }
+        th {
+          border-bottom: 1px solid $card_border_color;
+          font-weight: normal;
+          &:not(:last-child) {
+            border-right: 1px solid $card_border_color;
+          }
+        }
+        td {
+          padding: 6px 10px;
+          line-height: normal;
+          &:not(:last-child) {
+            border-right: 1px solid $card_border_color;
+          }
+        }
+      }
+    }
+  }
+}

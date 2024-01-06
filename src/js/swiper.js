@@ -63,7 +63,6 @@ function fillBars() {
   }
 }
 var swiper = new Swiper(".storiesSwiper", {
-  loop:true,
   cssMode: true,
   autoplay: {
     delay: 10000,

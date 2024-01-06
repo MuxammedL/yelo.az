@@ -688,6 +688,21 @@
       "branch": "22",
       "means_of_payment": "terminal",
       "id": 2
+    },
+    {
+      "card": "visa",
+      "valute": "EUR",
+      "name": "Canan",
+      "surname": "Aksoy",
+      "phone": "+99470 351 42 86",
+      "fin_number": "1E2VF3Y",
+      "payment_method": "prepayment",
+      "secret_word": "euro",
+      "duration": "1 illik / 10₼",
+      "acquisition_method": "branch",
+      "branch": "6",
+      "means_of_payment": "terminal",
+      "id": 3
     }
   ]
 }
