@@ -704,5 +704,1190 @@
       "means_of_payment": "terminal",
       "id": 3
     }
+  ],
+  "cashback": [
+    {
+      "id": 1,
+      "name": "Pizza Hut",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/24.webp"
+    },
+    {
+      "id": 2,
+      "name": "\"Ləziz Dad\" Şirniyyat evi",
+      "category": "Şirniyyat",
+      "discount": 5,
+      "img": "../public/images/l_ziz_dad_logo.wepb"
+    },
+    {
+      "id": 3,
+      "name": "Ad və Dad",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/whatsapp_image_2023-10-31_at_11_57_55.webp"
+    },
+    {
+      "id": 4,
+      "name": "Aden Restaurant ",
+      "category": "Şirniyyat",
+      "discount": 2,
+      "img": "../public/images/aden_logo_123.webp"
+    },
+    {
+      "id": 5,
+      "name": "Al Chicken",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/al_chicken.wepb"
+    },
+    {
+      "id": 6,
+      "name": "Alneo",
+      "category": "Məişət texnikası və komputerlər",
+      "discount": 3,
+      "img": "../public/images/alnoe_logo.wepb"
+    },
+    {
+      "id": 7,
+      "name": "Amburan kids",
+      "category": "Uşaq aləmi",
+      "discount": 4,
+      "img": "../public/images/amburan_kids_logo.wepb"
+    },
+    {
+      "id": 8,
+      "name": "Anadolu Restaurants & Catering",
+      "category": "Restoranlar və kafelər",
+      "discount": 10,
+      "img": "../public/images/anadolu_logo.wepb"
+    },
+    {
+      "id": 9,
+      "name": "Antaris",
+      "category": "Məktəb və ofis ləvazimatları",
+      "discount": 4,
+      "img": "../public/images/antaris_logo.wepb"
+    },
+    {
+      "id": 10,
+      "name": "Apartment 9",
+      "category": "Restoranlar və kafelər",
+      "discount": 10,
+      "img": "../public/images/9_apartment_9-1.wepb"
+    },
+    {
+      "id": 11,
+      "name": "Artvarium.az",
+      "category": "Digәr mağazalar və xidmətləri",
+      "discount": 5,
+      "img": "../public/images/197462116_156739516471770_7056062675657482087_n.wepb"
+    },
+    {
+      "id": 12,
+      "name": "AZ MEAT CO",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/whatsapp_image_2023-08-31_at_15_02_27.wepb"
+    },
+    {
+      "id": 13,
+      "name": "Babat All Mood",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/logo_babat.wepb"
+    },
+    {
+      "id": 14,
+      "name": "Bal kimi",
+      "category": "Şirniyyat",
+      "discount": 7,
+      "img": "../public/images/bal_kimi_logo.wepb"
+    },
+    {
+      "id": 15,
+      "name": "BaristasCoffee",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/baristascoffee_logo.wepb"
+    },
+    {
+      "id": 16,
+      "name": "Baristica Coffee Shop",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/baristicashop-01_sayt_template.wepb"
+    },
+    {
+      "id": 17,
+      "name": "Berlin MP",
+      "category": "Parfumeriya və kosmetika",
+      "discount": 2,
+      "img": "../public/images/berlin_mp.wepb"
+    },
+    {
+      "id": 18,
+      "name": "Bioloji Təbabət Klinikası",
+      "category": "Gözəllik və sağlamlıq",
+      "discount": 2,
+      "img": "../public/images/bioloji_t_bab_t_klinikasi_logo.wepb"
+    },
+    {
+      "id": 19,
+      "name": "Body & Soul Spa Beauty",
+      "category": "Gözəllik və sağlamlıq",
+      "discount": 3,
+      "img": "../public/images/body_soul.wepb"
+    },
+    {
+      "id": 20,
+      "name": "Body Factory",
+      "category": "İdman və fitnes mərkəzləri",
+      "discount": 5,
+      "img": "../public/images/body-factory_tcui.wepb"
+    },
+    {
+      "id": 21,
+      "name": "Bona Vet Clinic",
+      "category": "Baytarlıq klinikaları və heyvanlar üçün məhsullar",
+      "discount": 3,
+      "img": "../public/images/bona_vet_clinic_logo.wepb"
+    },
+    {
+      "id": 22,
+      "name": "Boss Pub & Restaurant",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/289582358_113197334756808_6784218355039021105_n.wepb"
+    },
+    {
+      "id": 23,
+      "name": "Boy cut",
+      "category": "Gözəllik və sağlamlıq",
+      "discount": 5,
+      "img": "../public/images/boy_cut_logo.wepb"
+    },
+    {
+      "id": 24,
+      "name": "Bubee Bubble Tea",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/bubee_logo.wepb"
+    },
+    {
+      "id": 25,
+      "name": "Buket.az",
+      "category": "Gül salonları",
+      "discount": 5,
+      "img": "../public/images/buket_az.wepb"
+    },
+    {
+      "id": 26,
+      "name": "BÜYÜKFIRAT",
+      "category": "Restoranlar və kafelər",
+      "discount": 7,
+      "img": "../public/images/buyukfirat_web.wepb"
+    },
+    {
+      "id": 27,
+      "name": "By Amina Collection ",
+      "category": "Geyim mağazaları",
+      "discount": 3,
+      "img": "../public/images/amina_logo.wepb"
+    },
+    {
+      "id": 28,
+      "name": "Cafe Falafel",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/300163178_109697468520934_4721581621404463984_n.wepb"
+    },
+    {
+      "id": 29,
+      "name": "Caffe Giusto",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/caffe_giusto.wepb"
+    },
+    {
+      "id": 30,
+      "name": "Çarıq Shoes",
+      "category": "Ayaqqabı mağazaları",
+      "discount": 3,
+      "img": "../public/images/309428944_481287014038939_3099937921195242337_n.wepb"
+    },
+    {
+      "id": 31,
+      "name": "Carpisa",
+      "category": "Geyim mağazaları",
+      "discount": 1,
+      "img": "../public/images/carpisa.wepb"
+    },
+    {
+      "id": 32,
+      "name": "Chef style",
+      "category": "Şirniyyat",
+      "discount": 7,
+      "img": "../public/images/chef_style_1.wepb"
+    },
+    {
+      "id": 33,
+      "name": "Chelebi",
+      "category": "Ev və məişət əşyaları",
+      "discount": 5,
+      "img": "../public/images/chelebi-1.wepb"
+    },
+    {
+      "id": 34,
+      "name": "Coccodrillo",
+      "category": "Geyim mağazaları",
+      "discount": 3,
+      "img": "../public/images/coccodrillo_logo.wepb"
+    },
+    {
+      "id": 35,
+      "name": "Coffee La Ros's",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/coffee_la_ross.wepb"
+    },
+    {
+      "id": 36,
+      "name": "Coffee Mia",
+      "category": "Restoranlar və kafelər",
+      "discount": 10,
+      "img": "../public/images/coffee_mia_logo.wepb"
+    },
+    {
+      "id": 37,
+      "name": "CoffeeBear",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/coffeebear.wepb"
+    },
+    {
+      "id": 38,
+      "name": "Coffeemania ",
+      "category": "Restoranlar və kafelər",
+      "discount": 10,
+      "img": "../public/images/coffeemania_jpg.wepb"
+    },
+    {
+      "id": 39,
+      "name": "Coffeemania Next",
+      "category": "Restoranlar və kafelər",
+      "discount": 10,
+      "img": "../public/images/coffeemanianext_jpg.wepb"
+    },
+    {
+      "id": 40,
+      "name": "Cotton",
+      "category": "Geyim mağazaları",
+      "discount": 3,
+      "img": "../public/images/cotton_1.wepb"
+    },
+    {
+      "id": 41,
+      "name": "D'Olivo Pizza & Pasta",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/dolivo_logo.wepb"
+    },
+    {
+      "id": 42,
+      "name": "Dad Restaurant ",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/dad_rest.wepb"
+    },
+    {
+      "id": 43,
+      "name": "Dadım",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/dadim_2.wepb"
+    },
+    {
+      "id": 44,
+      "name": "Dalğa Market",
+      "category": "Supermarketlər",
+      "discount": 1,
+      "img": "../public/images/dalga_market-1.wepb"
+    },
+    {
+      "id": 45,
+      "name": "Darayi Accessories",
+      "category": "Aksesuarlar / Suvenirlər / Zinyət əşyaları",
+      "discount": 5,
+      "img": "../public/images/darayi_logo.wepb"
+    },
+    {
+      "id": 46,
+      "name": "Div Academy",
+      "category": "Digәr mağazalar və xidmətləri",
+      "discount": 1,
+      "img": "../public/images/358139312_282375324308271_8548973322925731791_n.wepb"
+    },
+    {
+      "id": 47,
+      "name": "Doggie Couture By Nelya",
+      "category": "Baytarlıq klinikaları və heyvanlar üçün məhsullar",
+      "discount": 3,
+      "img": "../public/images/doggi.wepb"
+    },
+    {
+      "id": 48,
+      "name": "Dr. Che ",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/dr_che_logo.wepb"
+    },
+    {
+      "id": 49,
+      "name": "Dr.Kong",
+      "category": "Ayaqqabı mağazaları",
+      "discount": 5,
+      "img": "../public/images/dr-kong.wepb"
+    },
+    {
+      "id": 50,
+      "name": "Dünyagöz",
+      "category": "Tibb mərkəzləri",
+      "discount": 5,
+      "img": "../public/images/dunya_goz_logo.wepb"
+    },
+    {
+      "id": 51,
+      "name": "Ekzo Butik",
+      "category": "Digәr mağazalar və xidmətləri",
+      "discount": 5,
+      "img": "../public/images/ekzo_butik.wepb"
+    },
+    {
+      "id": 52,
+      "name": "EL Resort Hotel",
+      "category": "Hotellər",
+      "discount": 2,
+      "img": "../public/images/el-resort.wepb"
+    },
+    {
+      "id": 53,
+      "name": "Engineering For Kids",
+      "category": "Uşaq aləmi",
+      "discount": 5,
+      "img": "../public/images/enginering_logo.wepb"
+    },
+    {
+      "id": 54,
+      "name": "Euro Oil",
+      "category": "Avtoservis xidmətləri və ehtiyat hissələri",
+      "discount": 3,
+      "img": "../public/images/euro_oilimage.wepb"
+    },
+    {
+      "id": 55,
+      "name": "EuroClima İmmergas İstilik, kombi və havalandırma sistemləri",
+      "category": "Məişət texnikası və komputerlər",
+      "discount": 2,
+      "img": "../public/images/euro_clima.wepb"
+    },
+    {
+      "id": 56,
+      "name": "Farm Store",
+      "category": "Apteklər və optika",
+      "discount": 5,
+      "img": "../public/images/farm.wepb"
+    },
+    {
+      "id": 57,
+      "name": "Finnegans Pub",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/finnegans.wepb"
+    },
+    {
+      "id": 58,
+      "name": "Flash Kart ",
+      "category": "Uşaq aləmi",
+      "discount": 4,
+      "img": "../public/images/logo_jpeg.wepb"
+    },
+    {
+      "id": 59,
+      "name": "Frango Baku",
+      "category": "Restoranlar və kafelər",
+      "discount": 2,
+      "img": "../public/images/frango_baku_logo.wepb"
+    },
+    {
+      "id": 60,
+      "name": "Fransella Perfumery",
+      "category": "Parfumeriya və kosmetika",
+      "discount": 5,
+      "img": "../public/images/fransella_1.wepb"
+    },
+    {
+      "id": 61,
+      "name": "French Dog",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/frenchdog_logo.wepb"
+    },
+    {
+      "id": 62,
+      "name": "Fresh Cleaning",
+      "category": "Kimyəvi təmizləmə",
+      "discount": 10,
+      "img": "../public/images/fresh_cleaning.wepb"
+    },
+    {
+      "id": 63,
+      "name": "Freya Coffee Shop",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/freya_logo.wepb"
+    },
+    {
+      "id": 64,
+      "name": "Glamour Dental Clinik",
+      "category": "Stomatoloji klinikalar",
+      "discount": 10,
+      "img": "../public/images/glamour_dent_logo.wepb"
+    },
+    {
+      "id": 65,
+      "name": "Green Wood",
+      "category": "Ev və məişət əşyaları",
+      "discount": 3,
+      "img": "../public/images/green_wood.wepb"
+    },
+    {
+      "id": 66,
+      "name": "Greencoffee",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/green-coffee-logo-f_page-0001.wepb"
+    },
+    {
+      "id": 67,
+      "name": "Harem Pərdə",
+      "category": "Digәr mağazalar və xidmətləri",
+      "discount": 3,
+      "img": "../public/images/harem_perde_pic.wepb"
+    },
+    {
+      "id": 68,
+      "name": "İpekyol",
+      "category": "Geyim mağazaları",
+      "discount": 1,
+      "img": "../public/images/ipekyol-1.wepb"
+    },
+    {
+      "id": 69,
+      "name": "irşad",
+      "category": "Məişət texnikası və komputerlər",
+      "discount": 2,
+      "img": "../public/images/rshad_logo.wepb"
+    },
+    {
+      "id": 70,
+      "name": "ISERVICE",
+      "category": "Mobil telefonlar",
+      "discount": 2,
+      "img": "../public/images/iservice_az_logo.wepb"
+    },
+    {
+      "id": 71,
+      "name": "Joypolic",
+      "category": "Uşaq aləmi",
+      "discount": 5,
+      "img": "../public/images/joypolic.wepb"
+    },
+    {
+      "id": 72,
+      "name": "Jumanji Baku",
+      "category": "Gözəllik və sağlamlıq",
+      "discount": 3,
+      "img": "../public/images/jumanji_baku.wepb"
+    },
+    {
+      "id": 73,
+      "name": "Kabab Bistro",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/kebab_bistro_logo.wepb"
+    },
+    {
+      "id": 74,
+      "name": "Karavan Rent A Car",
+      "category": "Avtoservis xidmətləri və ehtiyat hissələri",
+      "discount": 3,
+      "img": "../public/images/karavan.wepb"
+    },
+    {
+      "id": 75,
+      "name": "KENQURU",
+      "category": "Geyim mağazaları",
+      "discount": 5,
+      "img": "../public/images/kenquru-cashback-.wepb"
+    },
+    {
+      "id": 76,
+      "name": "KFC",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/19_kfc_logo_svg.wepb"
+    },
+    {
+      "id": 77,
+      "name": "Kinderland",
+      "category": "Uşaq aləmi",
+      "discount": 4,
+      "img": "../public/images/kinderland_logo-06.wepb"
+    },
+    {
+      "id": 78,
+      "name": "Kingvape",
+      "category": "Digәr mağazalar və xidmətləri",
+      "discount": 5,
+      "img": "../public/images/king_vape.wepb"
+    },
+    {
+      "id": 79,
+      "name": "Köfteci Ramiz Azerbaijan",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/kofteci_ramiz_logo.wepb"
+    },
+    {
+      "id": 80,
+      "name": "Laser Tag",
+      "category": "Uşaq aləmi",
+      "discount": 4,
+      "img": "../public/images/laser_tag_logo.wepb"
+    },
+    {
+      "id": 81,
+      "name": "Lekal",
+      "category": "Məktəb və ofis ləvazimatları",
+      "discount": 2,
+      "img": "../public/images/lekal.wepb"
+    },
+    {
+      "id": 82,
+      "name": "LIBRAFF",
+      "category": "Məktəb və ofis ləvazimatları",
+      "discount": 2,
+      "img": "../public/images/libraff.wepb"
+    },
+    {
+      "id": 83,
+      "name": "LinEx.az",
+      "category": "Çatdırılma xidmətləri",
+      "discount": 7,
+      "img": "../public/images/linex-template.wepb"
+    },
+    {
+      "id": 84,
+      "name": "Login",
+      "category": "Məktəb və ofis ləvazimatları",
+      "discount": 5,
+      "img": "../public/images/login.wepb"
+    },
+    {
+      "id": 85,
+      "name": "Lora Dent Clinik",
+      "category": "Stomatoloji klinikalar",
+      "discount": 10,
+      "img": "../public/images/loradent_logo.wepb"
+    },
+    {
+      "id": 86,
+      "name": "Lully’s Kids Zone",
+      "category": "Uşaq aləmi",
+      "discount": 2,
+      "img": "../public/images/kids_zone.wepb"
+    },
+    {
+      "id": 87,
+      "name": "Lunico baku",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/lunico_logo.wepb"
+    },
+    {
+      "id": 88,
+      "name": "Macəra Adası ",
+      "category": "Uşaq aləmi",
+      "discount": 4,
+      "img": "../public/images/logo.wepb"
+    },
+    {
+      "id": 89,
+      "name": "Maharani",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/maharrani.wepb"
+    },
+    {
+      "id": 90,
+      "name": "Makhara by hopelake ",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/makhara_restoran_logo_3.wepb"
+    },
+    {
+      "id": 91,
+      "name": "Mamma Cake & Eclair House",
+      "category": "Şirniyyat",
+      "discount": 5,
+      "img": "../public/images/mamma_cake_logo.wepb"
+    },
+    {
+      "id": 92,
+      "name": "Marani",
+      "category": "Restoranlar və kafelər",
+      "discount": 2,
+      "img": "../public/images/marani.wepb"
+    },
+    {
+      "id": 93,
+      "name": "Maxi.az",
+      "category": "Məişət texnikası və komputerlər",
+      "discount": 2,
+      "img": "../public/images/maxi_az_logo.wepb"
+    },
+    {
+      "id": 94,
+      "name": "MEDSERVİS",
+      "category": "Tibb mərkəzləri",
+      "discount": 5,
+      "img": "../public/images/medservis_1.wepb"
+    },
+    {
+      "id": 95,
+      "name": "Mobitek",
+      "category": "Mobil telefonlar",
+      "discount": 10,
+      "img": "../public/images/1557992049868.wepb"
+    },
+    {
+      "id": 96,
+      "name": "Moskva Məhsulları",
+      "category": "Supermarketlər",
+      "discount": 3,
+      "img": "../public/images/moskva.wepb"
+    },
+    {
+      "id": 97,
+      "name": "Mustafa Tayat",
+      "category": "Geyim mağazaları",
+      "discount": 3,
+      "img": "../public/images/mustafa-1.wepb"
+    },
+    {
+      "id": 98,
+      "name": "MY AUTO",
+      "category": "Avtoservis xidmətləri və ehtiyat hissələri",
+      "discount": 3,
+      "img": "../public/images/myauto.wepb"
+    },
+    {
+      "id": 99,
+      "name": "My Shops",
+      "category": "Məişət texnikası və komputerlər",
+      "discount": 3,
+      "img": "../public/images/my_shops.wepb"
+    },
+    {
+      "id": 100,
+      "name": "My wheels",
+      "category": "Avtoservis xidmətləri və ehtiyat hissələri",
+      "discount": 5,
+      "img": "../public/images/my.wepb"
+    },
+    {
+      "id": 101,
+      "name": "Myparfum.az",
+      "category": "Parfumeriya və kosmetika",
+      "discount": 10,
+      "img": "../public/images/myparfum_az.wepb"
+    },
+    {
+      "id": 102,
+      "name": "Myzoo",
+      "category": "Baytarlıq klinikaları və heyvanlar üçün məhsullar",
+      "discount": 5,
+      "img": "../public/images/myzoo.wepb"
+    },
+    {
+      "id": 103,
+      "name": "Mziuri Georgian Restaurant",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/mziuri.wepb"
+    },
+    {
+      "id": 104,
+      "name": "Neptun Market",
+      "category": "Supermarketlər",
+      "discount": 1,
+      "img": "../public/images/neptun_logo.wepb"
+    },
+    {
+      "id": 105,
+      "name": "NEWCOND",
+      "category": "Məişət texnikası və komputerlər",
+      "discount": 2,
+      "img": "../public/images/newcond.wepb"
+    },
+    {
+      "id": 106,
+      "name": "Növbahar",
+      "category": "Restoranlar və kafelər",
+      "discount": 2,
+      "img": "../public/images/novbahar-template.wepb"
+    },
+    {
+      "id": 107,
+      "name": "Oligarch",
+      "category": "Geyim mağazaları",
+      "discount": 5,
+      "img": "../public/images/oligarch-1.wepb"
+    },
+    {
+      "id": 108,
+      "name": "Oops beauty",
+      "category": "Gözəllik və sağlamlıq",
+      "discount": 5,
+      "img": "../public/images/oops_beauty.wepb"
+    },
+    {
+      "id": 109,
+      "name": "Our Kebab Shop ",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/ourkababshop_jpq.wepb"
+    },
+    {
+      "id": 110,
+      "name": "Öz Kardeşler",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/oz_kardesler_-_template.wepb"
+    },
+    {
+      "id": 111,
+      "name": "Ozon optik",
+      "category": "Apteklər və optika",
+      "discount": 5,
+      "img": "../public/images/ozonoptic.wepb"
+    },
+    {
+      "id": 112,
+      "name": "Pak Dad",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/logo.wepb"
+    },
+    {
+      "id": 113,
+      "name": "Palato cafe",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/palatocafe-1.wepb"
+    },
+    {
+      "id": 114,
+      "name": "Panda Bubble Tea",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/panda_buble_tea_logo.wepb"
+    },
+    {
+      "id": 115,
+      "name": "Patchi",
+      "category": "Şirniyyat",
+      "discount": 3,
+      "img": "../public/images/patchi-template_2.wepb"
+    },
+    {
+      "id": 116,
+      "name": "Pizza By Ruslan",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/pizza-by-ruslan-logo.wepb"
+    },
+    {
+      "id": 117,
+      "name": "Pizza HAT",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/pizza.wepb"
+    },
+    {
+      "id": 118,
+      "name": "Qarabağ Klinik",
+      "category": "Tibb mərkəzləri",
+      "discount": 10,
+      "img": "../public/images/qarabag-klinik-loqo.wepb"
+    },
+    {
+      "id": 119,
+      "name": "Qedimi Ev",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/q_dim_ev.wepb"
+    },
+    {
+      "id": 120,
+      "name": "Rich Saat",
+      "category": "Aksesuarlar / Suvenirlər / Zinyət əşyaları",
+      "discount": 15,
+      "img": "../public/images/272184685_107975325118940_7760503174356818284_n.wepb"
+    },
+    {
+      "id": 121,
+      "name": "Safa Store",
+      "category": "Supermarketlər",
+      "discount": 1,
+      "img": "../public/images/safa_store-1.wepb"
+    },
+    {
+      "id": 122,
+      "name": "San Tortino",
+      "category": "Digәr mağazalar və xidmətləri",
+      "discount": 3,
+      "img": "../public/images/san_tartino_logo.wepb"
+    },
+    {
+      "id": 123,
+      "name": "Simit Sarayı",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/simit_saray_logo.wepb"
+    },
+    {
+      "id": 124,
+      "name": "Sirr şirniyyat evi",
+      "category": "Şirniyyat",
+      "discount": 5,
+      "img": "../public/images/sir_logo.wepb"
+    },
+    {
+      "id": 125,
+      "name": "Şirvanşah Muzey Restoran",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/irvansahlar_logo.wepb"
+    },
+    {
+      "id": 126,
+      "name": "Skandinaviya evi",
+      "category": "Ev və məişət əşyaları",
+      "discount": 5,
+      "img": "../public/images/skandibaviya_evi.wepb"
+    },
+    {
+      "id": 127,
+      "name": "Slide",
+      "category": "Uşaq aləmi",
+      "discount": 4,
+      "img": "../public/images/1.wepb"
+    },
+    {
+      "id": 128,
+      "name": "Smart Electronics",
+      "category": "Məişət texnikası və komputerlər",
+      "discount": 2,
+      "img": "../public/images/smart_electronics.wepb"
+    },
+    {
+      "id": 129,
+      "name": "Sofi Coffee",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/sofi_coffee.wepb"
+    },
+    {
+      "id": 130,
+      "name": "Soliton",
+      "category": "Məişət texnikası və komputerlər",
+      "discount": 1,
+      "img": "../public/images/solitonltd_logo.wepb"
+    },
+    {
+      "id": 131,
+      "name": "Şor qoğalı",
+      "category": "Şirniyyat",
+      "discount": 3,
+      "img": "../public/images/sor_qogal-template.wepb"
+    },
+    {
+      "id": 132,
+      "name": "Status Avto",
+      "category": "Avtoservis xidmətləri və ehtiyat hissələri",
+      "discount": 5,
+      "img": "../public/images/51341443_286160165407973_7086660269912358912_n.wepb"
+    },
+    {
+      "id": 133,
+      "name": "Sufle konditer evi",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/sufle_jpg.wepb"
+    },
+    {
+      "id": 134,
+      "name": "Supertoys.az",
+      "category": "Digәr mağazalar və xidmətləri",
+      "discount": 3,
+      "img": "../public/images/cashback_sayt_template-02_5.wepb"
+    },
+    {
+      "id": 135,
+      "name": "Sushi Baku",
+      "category": "Restoranlar və kafelər",
+      "discount": 5,
+      "img": "../public/images/sushi_baku_logo.wepb"
+    },
+    {
+      "id": 136,
+      "name": "Sushi Oki",
+      "category": "Restoranlar və kafelər",
+      "discount": 7,
+      "img": "../public/images/sushi_okiimage.wepb"
+    },
+    {
+      "id": 137,
+      "name": "SushiTV",
+      "category": "Restoranlar və kafelər",
+      "discount": 3,
+      "img": "../public/images/logo_daily_18-03.wepb"
+    },
+    {
+      "id": 138,
+      "name": "Şərq Motors",
+      "category": "Avtoservis xidmətləri və ehtiyat hissələri",
+      "discount": 3,
+      "img": "../public/images/rg_motors.wepb"
+    },
+    {
+      "id": 139,
+      "name": "T-Dönər",
+      "category": "Restoranlar və kafelər",
+      "discount": 10,
+      "img": "../public/images/39129ceb.wepb"
+    },
+    {
+      "id": 140,
+      "name": "Teatro Rooms Hamam",
+      "category": "Hotellər",
+      "discount": 5,
+      "img": "../public/images/25f99a31-f1cb-4763-9c6c-1f4cd5c6daac.wepb"
+    },
+    {
+      "id": 141,
+      "name": "Teatro Rooms Hotel",
+      "category": "Hotellər",
+      "discount": 5,
+      "img": "../public/images/ff1ebc94-ce5e-429c-a35f-076c74db92bd.wepb"
+    },
+    {
+      "id": 142,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 143,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 144,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 145,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 146,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 147,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 148,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 149,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 150,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 151,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 152,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 153,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 154,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 155,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 156,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 157,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 158,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 159,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 160,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 161,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 162,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 163,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 164,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 165,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 166,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 167,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 168,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    },
+    {
+      "id": 169,
+      "name": "",
+      "category": "",
+      "discount": 5,
+      "img": "../public/images/.wepb"
+    }
   ]
 }
