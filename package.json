@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "db": "npx  json-server --watch db.json --port 4000"
+    "db": "npx  json-server db.json --port 4000"
   },
   "author": "Muxammed",
   "license": "ISC",
   "dependencies": {
-    "json-server": "*"
+    "json-server": "^1.0.0-alpha.13"
   }
 }
