@@ -65,6 +65,7 @@ function fillBars() {
 var swiper = new Swiper(".storiesSwiper", {
   cssMode: true,
   loop:true,
+  slidesPerView: 1,
   autoplay: {
     delay: 10000,
     disableOnInteraction: false,
