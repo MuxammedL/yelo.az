@@ -63,7 +63,7 @@ window.addEventListener("resize", () => {
   }
 });
 
-if (sessionStorage.getItem("status") != "hide") {
+if (sessionStorage.getItem("status") != "hide"&&window.innerWidth>768) {
   mobileTop.classList.add("show");
   header.style.paddingTop = "120px";
   main.style.paddingTop = "120px";

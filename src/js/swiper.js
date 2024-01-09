@@ -46,16 +46,16 @@ function fillBars() {
   const item = document.querySelector(".modals .swiper-slide-active");
   if(item){
     const holder0 = document.querySelector(".index-0");
-    const label = item.dataset.swiperSlideIndex;
+    const label = item.dataset.index;
     switch (+label) {
-      case 0:
+      case 1:
         holder0.style.animation = `fillBar 10.2s linear infinite`;
         break;
-      case 1:
+      case 2:
         const holder1 = document.querySelector(".index-1");
         holder1.style.animation = `fillBar 10.2s linear infinite`;
         break;
-      case 2:
+      case 3:
         const holder2 = document.querySelector(".index-2");
         holder2.style.animation = `fillBar 10.2s linear infinite`;
         break;
@@ -64,6 +64,7 @@ function fillBars() {
 }
 var swiper = new Swiper(".storiesSwiper", {
   cssMode: true,
+  loop:true,
   autoplay: {
     delay: 10000,
     disableOnInteraction: false,
@@ -97,7 +98,7 @@ const stories = document.querySelectorAll(".story a");
 stories.forEach((story) => {
   story.addEventListener("click", () => {
     const slideNumber = +story.dataset.slide;
-
+    
     const handleCommonActions = (slideLabel) => {
       modals.classList.add('active');
       setTimeout(() => {

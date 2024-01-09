@@ -9,6 +9,8 @@
   position: relative;
   span {
     transition: none;
+    position: relative;
+    z-index: 1;
   }
   &::after {
     content: "";
@@ -20,7 +22,6 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: -1;
   }
   @media (min-width: 992px) {
     border-radius: 0;

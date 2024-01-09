@@ -547,7 +547,7 @@
     <main>
       <!-- Entrance -->
 
-      <section class="entrance cashback">
+      <section class="entrance cashback_slide">
         <div class="swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -574,6 +574,58 @@
             </div>
           </div>
           <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Cashback Section -->
+
+      <section class="cashback">
+        <div class="container">
+          <div class="section_head">
+            <div class="search_bar">
+              <input
+                type="text"
+                class="cashback_search"
+                placeholder="Brend adı və ya kateqoriya üzrə axtarış"
+                style="background-image: url(../public/images/search.svg)"
+              />
+              <div class="popular_topics">
+                <ul class="popular">
+                  <li>
+                    <a href="javascript:void(0)" data-cat="1347"
+                      >Restoranlar və kafelər</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" data-cat="1345"
+                      >Geyim mağazaları</a
+                    >
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)" data-cat="1373"
+                      >Apteklər və optika</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter">
+              <select
+                id="cashback_select_cat"
+                style="background-image: url(../public/images/s_curr.svg)"
+              >
+                <option value="">Kateqoriyanı seç</option>
+              </select>
+            </div>
+          </div>
+          <div class="common_list">
+            <div class="cashback_items"></div>
+            <div class="load_more">
+              <a href="javascript:void(0)" class="yelo-btn hide cashback_more"
+                >Daha çox</a
+              >
+            </div>
+          </div>
         </div>
       </section>
 
@@ -820,7 +872,7 @@
         </div>
         <div class="foot-bottom">
           <a class="logo">
-            <img src="images/logo.svg" alt="logo">
+            <img src="images/logo.svg" alt="logo" />
           </a>
           <ul>
             <li>
@@ -849,7 +901,7 @@
           </ul>
           <div class="me">
             <p>Site by</p>
-            <a href="https://github.com/MuxammedL" target="_blank" 
+            <a href="https://github.com/MuxammedL" target="_blank"
               >Muxammed Layicov</a
             >
           </div>

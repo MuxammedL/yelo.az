@@ -77,6 +77,8 @@
 }
 .entrance .swiper .swiper-slide .slide-content .content-inner a .curved-btn span, .curved-btn span {
   transition: none;
+  position: relative;
+  z-index: 1;
 }
 .entrance .swiper .swiper-slide .slide-content .content-inner a .curved-btn::after, .curved-btn::after {
   content: "";
@@ -88,7 +90,6 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: -1;
 }
 @media (min-width: 992px) {
   .entrance .swiper .swiper-slide .slide-content .content-inner a .curved-btn, .curved-btn {
@@ -1184,6 +1185,9 @@ footer .foot-nav div h3 {
 footer .foot-nav div h3 a {
   color: #000;
 }
+footer .foot-nav div h3 a:hover {
+  text-decoration: underline;
+}
 footer .foot-nav div ul li {
   padding: 0 0 8px;
   font-size: 16px;
@@ -1191,6 +1195,10 @@ footer .foot-nav div ul li {
 }
 footer .foot-nav div ul li a {
   color: rgba(0, 0, 0, 0.5019607843);
+}
+footer .foot-nav div ul li a:hover {
+  color: rgba(0, 0, 0, 0.7490196078);
+  text-decoration: underline;
 }
 footer .foot-top {
   border-bottom: 1px solid #ececec;
@@ -1212,6 +1220,9 @@ footer .foot-top .socials li a {
   border-radius: 50%;
   background: #f3f1f7 no-repeat center;
   transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
+}
+footer .foot-top .socials li a:hover {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.35);
 }
 footer .foot-top .show-mobile {
   padding: 20px;
@@ -1367,6 +1378,9 @@ footer .foot-bottom ul li a {
   color: rgba(0, 0, 0, 0.5019607843);
   text-decoration: underline;
 }
+footer .foot-bottom ul li a:hover {
+  text-decoration: none;
+}
 footer .foot-bottom .me {
   margin-top: 10px;
   color: rgba(0, 0, 0, 0.5019607843);
@@ -1378,6 +1392,10 @@ footer .foot-bottom .me a {
   display: inline-block;
   color: rgba(0, 0, 0, 0.6);
   text-decoration: underline;
+}
+footer .foot-bottom .me a:hover {
+  text-decoration: none;
+  color: black;
 }
 @media (min-width: 992px) {
   footer {
@@ -2022,7 +2040,7 @@ section {
   transform-origin: center;
   width: 130px;
   height: 210px;
-  left: -47%;
+  left: -20%;
   overflow: hidden;
 }
 .loan-calculator .col .card .card-desc {
@@ -3794,12 +3812,174 @@ section {
   }
 }
 
-.cashback .swiper {
+.cashback_slide .swiper {
   height: auto;
 }
 @media (min-width: 992px) {
-  .cashback .swiper {
+  .cashback_slide .swiper {
     height: 505px;
+  }
+}
+
+.cashback .section_head {
+  text-align: center;
+  margin: 0 auto 20px;
+  padding: 10px 0 0;
+}
+.cashback .section_head .search_bar input {
+  height: 55px;
+  font-size: 16px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  width: 100%;
+  background: no-repeat right center;
+}
+.cashback .section_head .search_bar .popular_topics {
+  display: none;
+}
+.cashback .section_head .filter {
+  margin: 15px 0 0 0;
+}
+.cashback .section_head .filter select {
+  cursor: pointer;
+  height: 55px;
+  font-size: 16px;
+  padding: 0 15px;
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  border-radius: 10px;
+  background: no-repeat 92% 49%;
+  background-size: 12px;
+}
+.cashback .cashback_items {
+  padding: 15px 0 0 0;
+}
+@media (min-width: 480px) {
+  .cashback .cashback_items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+  }
+}
+.cashback .cashback_items .cashback_item {
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  margin: 0 0 15px 0;
+}
+.cashback .cashback_items .cashback_item .cb_image {
+  height: 160px;
+  background: no-repeat center/80%;
+  border-radius: 10px 10px 0 0;
+}
+.cashback .cashback_items .cashback_item .cb_desc {
+  padding: 15px 95px 15px 20px;
+  position: relative;
+}
+.cashback .cashback_items .cashback_item .cb_desc b {
+  font-size: 18px;
+  color: black;
+  line-height: 24px;
+  font-family: "TT Commons Bold";
+}
+.cashback .cashback_items .cashback_item .cb_desc p {
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+.cashback .cashback_items .cashback_item .cb_desc .discount {
+  background: #ffc628;
+  color: black;
+  border-radius: 5px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 28px;
+  min-width: 50px;
+  height: 50px;
+  text-align: center;
+  padding: 5px 10px;
+}
+.cashback .cashback_items .cashback_item .cb_desc .discount span {
+  font-size: 19px;
+}
+.cashback .load_more {
+  margin: 30px 0 0 0;
+  text-align: center;
+}
+.cashback .load_more a {
+  width: calc(33.333% - 20px);
+}
+.cashback .load_more a.hide {
+  display: none;
+}
+@media (min-width: 992px) {
+  .cashback .section_head {
+    text-align: center;
+    margin: 0 auto 50px auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .cashback .section_head .search_bar {
+    width: calc(100% - 340px);
+    text-align: left;
+  }
+  .cashback .section_head .search_bar input {
+    height: 65px;
+    font-size: 18px;
+    padding: 0 25px;
+  }
+  .cashback .section_head .search_bar .popular_topics {
+    display: block;
+  }
+  .cashback .section_head .search_bar .popular_topics .popular {
+    margin: 15px 0 0 0;
+  }
+  .cashback .section_head .search_bar .popular_topics .popular li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+  }
+  .cashback .section_head .search_bar .popular_topics .popular li a {
+    height: 36px;
+    color: black;
+    background: #ffc628;
+    display: block;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    transition: all 0.2s cubic-bezier(0.52, 0.01, 0.16, 1);
+  }
+  .cashback .section_head .search_bar .popular_topics .popular li a.active {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.6);
+  }
+  .cashback .section_head .filter {
+    width: 315px;
+    margin: 0;
+  }
+  .cashback .section_head .filter select {
+    height: 65px;
+    font-size: 18px;
+    padding: 0 50px 0 25px;
+  }
+  .cashback .cashback_items {
+    padding: 0;
+  }
+  .cashback .cashback_items .cashback_item {
+    margin: 0;
+  }
+  .cashback .cashback_items .cashback_item .cb_desc {
+    padding: 20px 95px 20px 30px;
+  }
+  .cashback .cashback_items .cashback_item .cb_desc b {
+    font-size: 20px;
+  }
+  .cashback .cashback_items .cashback_item .cb_desc p {
+    font-size: 18px;
+  }
+  .cashback .cashback_items .cashback_item .cb_desc .discount {
+    right: 25px;
+    top: 20px;
   }
 }
 

@@ -247,6 +247,9 @@ window.addEventListener("resize", () => {
   }
 });
 
+if (window.innerWidth < 992) {
+  centerImage();
+}
 function centerImage() {
   const containerWidth = container.offsetWidth;
   const offsetX = (containerWidth - 564) / 2;
