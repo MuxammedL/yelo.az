@@ -97,7 +97,7 @@ async function getNews() {
               .children[0].textContent;
           textArea.value = text;
           updatedId = editBtn.dataset.id;
-          updateDate = data[+updatedId - 1].date;
+          updateDate = data.find(item => item.id === updatedId).date;
           isUpdate = true;
         });
       });
