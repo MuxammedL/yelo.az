@@ -601,7 +601,7 @@
       "hasAForm": false,
       "form_class": "",
       "isTheCard": true,
-      "url": "../cardOrder.html",
+      "url": "../public/cardOrder.html",
       "img": "../public/images/yelo.png",
       "id": "d7a9"
     }
